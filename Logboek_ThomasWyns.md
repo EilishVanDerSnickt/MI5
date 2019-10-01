@@ -7,8 +7,8 @@
 ### 27/09/2019 - 1 uur 40
 * Online course introduction to PWA
 
-# Week 2
-01/10/2019 - 4 uur
+## Week 2
+### 01/10/2019 - 4 uur
 * onderzoeken api om te gebruiken
 * react bekijken
 
