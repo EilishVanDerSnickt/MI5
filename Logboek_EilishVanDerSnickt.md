@@ -9,4 +9,4 @@
 
 ## Week 2
 ### 01/10/2019 - 4 uur
-* Presentatie, mockups eerste schermen, zoeken API
+* Presentatie, mockups eerste schermen, zoeken API, react eerste app maken
