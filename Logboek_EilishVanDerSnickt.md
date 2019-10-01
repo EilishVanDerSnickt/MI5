@@ -1,6 +1,6 @@
 Logboek MI5 Eilish Van Der Snickt
 
-#Week 1
+# Week 1
 24/09/2019 - 4 uur
 *Presentatie, info PWA vergaren, codelab Your First Progressive Webapp, tutorial: introduction to react
 
