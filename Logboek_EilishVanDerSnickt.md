@@ -11,3 +11,6 @@
 ### 01/10/2019 - 5 uur 40 minuten
 * Presentatie, mockups eerste schermen, zoeken API, react eerste app maken
 * React tutorial # 1 - 5.5
+
+### 02/10/2019 - 1 uur 15 minuten
+* React tutorial # 6 - 10
