@@ -16,5 +16,5 @@
 ### 4/10/2019 - 3 uur
 * video bekijken react
 * mee uitproberen maar mislukt (verouderde tutorial niet meer goed)
-* nieuwe tutorial gestart
+* nieuwe tutorial gestart (tot video #2)
 
