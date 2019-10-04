@@ -11,6 +11,7 @@
 ### 01/10/2019 - 4 uur
 * onderzoeken api om te gebruiken
 * react bekijken
+* mockups maken
 
 ### 4/10/2019 - 3 uur
 * video bekijken react
