@@ -12,7 +12,8 @@
 * onderzoeken api om te gebruiken
 * react bekijken
 
-### 4/10/2019 - 2 uur
+### 4/10/2019 - 3 uur
 * video bekijken react
-* mee uitproberen maar mislukt
+* mee uitproberen maar mislukt (verouderde tutorial niet meer goed)
+* nieuwe tutorial gestart
 
