@@ -12,7 +12,7 @@
 * onderzoeken api om te gebruiken
 * react bekijken
 
-### 4/10/2019
+### 4/10/2019 - 1 uur
 * video bekijken react
 * mee uitproberen maar mislukt
 
