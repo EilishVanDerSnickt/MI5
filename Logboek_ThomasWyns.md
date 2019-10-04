@@ -1,4 +1,4 @@
-# Logboek MI5 Eilish Van Der Snickt
+# Logboek MI5 Thomas Wyns
 
 ## Week 1 
 ### 24/09/2019 - 4 uur
