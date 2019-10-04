@@ -14,3 +14,6 @@
 
 ### 02/10/2019 - 1 uur 48 minuten
 * React tutorial # 6 - 13
+
+### 04/10/2019 - 1 uur
+* Online course introduction to PWA
