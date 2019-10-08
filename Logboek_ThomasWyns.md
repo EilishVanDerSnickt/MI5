@@ -18,6 +18,7 @@
 * mee uitproberen maar mislukt (verouderde tutorial niet meer goed)
 * nieuwe tutorial gestart (tot video #2)
 
-## Week 3 - 2 uur
+## Week 3
+### 07/10/2019 - 2 uur
 * verder kijken tutorial (tot video #11) (zit vast met props vragen!)
 
