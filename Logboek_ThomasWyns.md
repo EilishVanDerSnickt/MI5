@@ -20,5 +20,5 @@
 
 ## Week 3
 ### 07/10/2019 - 2 uur
-* verder kijken tutorial (tot video #11) (zit vast met props vragen!)
+* verder kijken tutorial (tot video #13) (zit vast met props vragen!)
 
