@@ -19,6 +19,7 @@
 * Online course introduction to PWA
 
 ## Week 3
-### 08/10/2019 - 4 uur
+### 08/10/2019 - 5 uur 15 minuten
 * Verder uitwerken mockups, bespreken met document over mockups en verloop van PWA, quizzes uitwerken
 * data ophalen uit API in react tutorial
+* Online course introduction to PWA
