@@ -23,3 +23,6 @@
 * Verder uitwerken mockups, bespreken met document over mockups en verloop van PWA, quizzes uitwerken
 * data ophalen uit API in react tutorial
 * Online course introduction to PWA
+
+### 11/10/2019 - 1 uur 25 minuten
+* Online course introduction to PWA
