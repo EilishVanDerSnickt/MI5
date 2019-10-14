@@ -27,3 +27,7 @@
 * bespreken idee project
 * verder kijken react tutorial
 
+##Week 4
+### 14/10/2019 - 2 uur
+* verder kijken react tutorial
+
