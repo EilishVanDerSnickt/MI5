@@ -22,3 +22,8 @@
 ### 07/10/2019 - 2 uur
 * verder kijken tutorial (tot video #13) (zit vast met props vragen!)
 
+### 08/10/2019 - 4 uur
+* verder maken mockups
+* bespreken idee project
+* verder kijken react tutorial
+
