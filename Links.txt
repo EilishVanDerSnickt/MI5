@@ -16,3 +16,6 @@ https://makandracards.com/reactjs-quick/52419-install-reactjs-windows
 
 --Ophalen API data with react
 https://www.youtube.com/watch?v=hzLDsxPGctY
+
+--Aanmaken react app
+https://github.com/facebook/create-react-app

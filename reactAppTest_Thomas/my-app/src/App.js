@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       
-      <h1>My first react app!</h1>
+      <h1>Hallo!</h1>
 
       <p>Welcome :p</p>       
        {/*<Thomaach value={persoon}/>*/}
