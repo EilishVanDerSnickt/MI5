@@ -40,3 +40,45 @@ class Info extends React.Component {
 }
 
 export default Info;
+
+import React from 'react'
+
+const Info = () => {
+    return (
+        <h1>Info</h1>
+    )
+}
+
+export default Info;
+
+
+ var source = items.data[0].attributes.posterImage.tiny
+            return (
+                <BrowserRouter>
+                    <div>
+                        <Link to="/info">
+                            <img src={source} alt="One Piece poster"></img>
+                        </Link>
+                        <Route path='/info' component={Info}/>
+                    </div>
+                </BrowserRouter>
+            );
+
+
+            items.forEach(item => {
+                this.item = items.data[i].id;
+                i++;
+                return <p>{item}</p>
+            });
+
+ ids = ids.map(function(item, index){
+                return(
+                    <li key={index}>{item}</li>
+                );
+            });
+
+            return (
+                <div>
+                    <ul>{ids}</ul>
+                </div>
+            );

@@ -1,12 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './home.css';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Link} from 'react-router-dom';
 import Info from './info';
 
 //require('./home.css');
-
-
-
 
 class Home extends React.Component {
     constructor(props){
@@ -18,7 +15,7 @@ class Home extends React.Component {
     } //constructor
 
     componentDidMount(){
-        fetch('https://kitsu.io/api/edge/anime?filter[text]=one%20piece')
+        fetch('https://kitsu.io/api/edge/trending/anime')
         .then(res => res.json())
         .then(json => {
             this.setState({
@@ -33,16 +30,31 @@ class Home extends React.Component {
         if (!isLoaded){
             return <h1>Loading ... </h1>
         } else {
-            var source = items.data[0].attributes.posterImage.tiny
+            var ids = [];
+            var posters = [];
+
+            for (let i = 0; i < 10; i++){
+                ids[i] = items.data[i].id;
+                posters[i] = items.data[i].attributes.posterImage.tiny;
+            }
+
+            posters = posters.map(function(item, index){
+                return(
+                    <BrowserRouter>
+                        <div>
+                            <Link to="/info">
+                                <img src={item} key={index} alt={items.data[index].id}></img>
+                            </Link>
+                            <Route path='/info' component={Info}/>
+                        </div>
+                    </BrowserRouter>
+                );
+            });
+
             return (
-                <BrowserRouter>
-                    <div>
-                        <a id="LinktoInfo" href="./info">
-                            <img src={source} alt="One Piece poster"></img>
-                        </a>
-                        <Route path='/info' Component={Info}/>
-                    </div>
-                </BrowserRouter>
+                <div>
+                    <ul>{posters}</ul>
+                </div>
             );
         }
     } //render
