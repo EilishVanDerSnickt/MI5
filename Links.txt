@@ -19,3 +19,6 @@ https://www.youtube.com/watch?v=hzLDsxPGctY
 
 --Aanmaken react app
 https://github.com/facebook/create-react-app
+
+--site url hosting firebase
+https://anime-ad027.firebaseapp.com/
