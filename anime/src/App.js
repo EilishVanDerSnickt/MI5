@@ -1,5 +1,6 @@
 import React from 'react';
 import Thomaach from './thomaach';
+import footer from './footer';
 
 
 function App() {
@@ -16,10 +17,17 @@ function App() {
   return (
     <div className="App">
       
-      <h1>Hallo!</h1>
+      <div className="inputDiv"><input type="text" className="input" placeholder="Search..." /></div>
 
-      <p>Welcome :p</p>       
-       <Thomaach value={lijst}/>
+      <h1 className="Anime">AniME</h1>
+
+      <Thomaach value={lijst}/>
+      <footer/>
+      <div className="footer">
+      <a href="">AnimeList</a>
+      <a href="">Quiz</a>
+      </div>
+       
     </div>
   );
 }

@@ -32,10 +32,22 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2vw;
+  margin-bottom: 5vw;
 }
 
 .ninja {
   display: grid;
   grid-template-columns: repeat(2,50vw);
+}
+
+.footer {
+    position: fixed;
+    bottom: 2%;
+    display: grid;
+    grid-template-columns: repeat(2,50vw);
+  }
+
+
+.anime {
+  
 }
