@@ -26,3 +26,6 @@
 
 ### 11/10/2019 - 1 uur 25 minuten
 * Online course introduction to PWA
+
+### Week 4
+
