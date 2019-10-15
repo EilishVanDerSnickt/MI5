@@ -30,4 +30,8 @@
 ## Week 4
 ### 14/10/2019 - 2 uur
 * verder kijken react tutorial
+### 15/10/2019 - 6 uur
+* beginnen site
+* hosting
+* api bekijken
 

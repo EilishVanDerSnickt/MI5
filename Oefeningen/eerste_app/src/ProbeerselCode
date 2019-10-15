@@ -1,0 +1,42 @@
+ <Route path='/info' Component={Info}>
+
+import React from 'react';
+
+class Info extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            items: [],
+            isLoaded: false,
+        }
+    } //constructor
+
+    componentDidMount(){
+        fetch('https://kitsu.io/api/edge/anime?filter[text]=one%20piece')
+        .then(res => res.json())
+        .then(json => {
+            this.setState({
+                isLoaded: true,
+                items: json,
+            })
+        });
+    } //componentDidMount
+
+    render(){
+        var {isLoaded, items} = this.state;
+        if (!isLoaded){
+            return <h1>Loading ... </h1>
+        } else {
+            var title = items.data[0].attributes.titles.en;
+            var startDate = items.data[0].attributes.startDate;
+            return (
+                <div>
+                   <h1>{title}</h1>
+                   <p className="startDate">{startDate}</p>
+                </div>
+            );
+        }
+    } //render
+}
+
+export default Info;
