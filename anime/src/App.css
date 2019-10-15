@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.Div-anime {
+  height: 50vw;
+  width: 40vw;
+  border-style: solid;
+  border-color: red;
+}
+
+.Thomaach {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2vw;
+}
+
+.ninja {
+  display: grid;
+  grid-template-columns: repeat(2,50vw);
+}
