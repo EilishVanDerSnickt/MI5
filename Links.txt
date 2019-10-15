@@ -19,3 +19,7 @@ https://www.youtube.com/watch?v=hzLDsxPGctY
 
 --Aanmaken react app
 https://github.com/facebook/create-react-app
+
+--Routering react
+https://www.youtube.com/watch?v=QUz3k2O3ZJU
+https://www.youtube.com/watch?v=AILU8hl-dmo
