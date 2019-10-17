@@ -1,10 +1,11 @@
 import React from 'react';
 import Thomaach from './thomaach';
+import AddNinja from './AddNinja';
 
 
-function App() {
+class App extends React.Component {
 
-  const lijst = {
+  state = {
     personen : [
       {name: "thomas", age: 20, belt: "green", id: 1},
       {name: "ruben", age: 20, belt: "red", id: 2},
@@ -18,8 +19,14 @@ function App() {
     belt: "green"
   };*/
 
-  
-  
+  addNinja = (ninja) => {
+    ninja.id = Math.random()
+    let ninjas = [...this.state.personen, ninja]
+    this.setState({
+      personen: ninjas
+    })
+  }
+  render(){
   return (
     <div className="App">
       
@@ -27,9 +34,12 @@ function App() {
 
       <p>Welcome :p</p>       
        {/*<Thomaach value={persoon}/>*/}
-       <Thomaach value={lijst}/>
+       <Thomaach value={this.state}/>
+       <AddNinja addNinja={this.addNinja}></AddNinja>
+
     </div>
   );
+  }
 }
 
 
