@@ -34,3 +34,6 @@
 * Tonen van een lijst van gegevens uit de API
 * Toon in een andere klasse specifieke info over 1 object
 
+### 18/10/2019 - 47 minuten
+* Online course introduction to PWA afwerken
+
