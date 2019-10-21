@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Thomaach({value}) {
+function Thomaach({value, deletePersoon}) {
 
     //console.log(value.name)
 
@@ -41,9 +41,11 @@ function Thomaach({value}) {
                     <div>Name: {persoon.name}</div>
                     <div>Age: {persoon.age}</div>
                     <div>Belt: {persoon.belt}</div>
+                    <button onClick={() => {deletePersoon(persoon.id)}}>Delete Persoon</button>
                     <br></br>
                     </div>
-                    )}
+                )}
+                    return null
                 })
             }
         </div>

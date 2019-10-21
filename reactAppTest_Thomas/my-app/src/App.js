@@ -26,6 +26,16 @@ class App extends React.Component {
       personen: ninjas
     })
   }
+
+ deletePersoon = (id) => {
+   let personen = this.state.personen.filter(persoon => {
+     return persoon.id !== id
+   })
+   this.setState({
+     personen: personen
+   })
+ }
+
   render(){
   return (
     <div className="App">
@@ -34,7 +44,7 @@ class App extends React.Component {
 
       <p>Welcome :p</p>       
        {/*<Thomaach value={persoon}/>*/}
-       <Thomaach value={this.state}/>
+       <Thomaach deletePersoon={this.deletePersoon} value={this.state}/>
        <AddNinja addNinja={this.addNinja}></AddNinja>
 
     </div>
