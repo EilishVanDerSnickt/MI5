@@ -36,6 +36,16 @@ class App extends React.Component {
    })
  }
 
+ //zie wanneer een component gemount wordt
+  componentDidMount(){
+    console.log("component moutned")
+  }
+  //zie wanneer een component geupdated wordt
+  componentDidUpdate(prevProps, prevState){
+    console.log("component updated")
+    console.log(prevProps, prevState)
+  }
+
   render(){
   return (
     <div className="App">
