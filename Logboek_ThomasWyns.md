@@ -35,3 +35,8 @@
 * hosting
 * api bekijken
 
+## Week 5
+### 21/10/2019 - 2 uur
+* react tutorial verder kijken
+* opstarten todo app
+
