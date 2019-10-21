@@ -20,6 +20,9 @@ https://www.youtube.com/watch?v=hzLDsxPGctY
 --Aanmaken react app
 https://github.com/facebook/create-react-app
 
+--React lifecycle interactive map
+http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
 <<<<<<< HEAD
 --site url hosting firebase
 https://anime-ad027.firebaseapp.com/
