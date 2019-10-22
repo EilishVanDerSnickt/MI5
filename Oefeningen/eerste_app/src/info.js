@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './home';
+import Poster from './poster';
 
 class Info extends React.Component {
     //initialiseer constructor en zet de state gelijk aan een array van items en een boolean isLoaded
@@ -9,10 +10,15 @@ class Info extends React.Component {
             items: [],
             isLoaded: false,
         }
+
+        console.log(props);
     } //constructor
 
-    toonAnime = (id) => {
+    componentDidMount(){
+        var id = this.props.animeID;
+        console.log(this.props.animeID);
         console.log(id);
+        //fecth de juiste url en vul de gegevens in de array en zet de isLoaded bool op true
         fetch('https://kitsu.io/api/edge/anime/' + {id})
         .then(res => res.json())
         .then(json => {
@@ -21,16 +27,14 @@ class Info extends React.Component {
                 items: json,
             })
         });
-        
-    }
 
-    componentDidMount(){
-        //fecth de juiste url en vul de gegevens in de array en zet de isLoaded bool op true
-        
+        console.log('https://kitsu.io/api/edge/anime/' + {id})
        
     } //componentDidMount
 
     render(){
+        return(<h1>{this.props.animeID}</h1>);
+        {/*
         // zet 2 variabelen gelijk aan de staat
         var {isLoaded, items} = this.state;
         //wanneer de staat niet geladen is, toon Loading
@@ -38,7 +42,7 @@ class Info extends React.Component {
             return <h1>Loading ... </h1>
         } else {
             //wanneer de staat wel geladen is maak variabelen aan met de geladen info die je nodig hebt
-            var title = items.data[0].attributes.titles.en;
+            var title = items.data.attributes.titles.en;
             var japanesetitle = items.data[0].attributes.titles.ja_jp;
             var startDate = items.data[0].attributes.startDate;
             var synopsis = items.data[0].attributes.synopsis;
@@ -52,7 +56,7 @@ class Info extends React.Component {
             //toon de variabelen
             return (
                 <div>
-                    <Home toonAnime={this.toonAnime} value={this.toonAnime}/>
+                   <h1>{this.props.id}</h1>
                    <h1>{title} - {japanesetitle}</h1>
                    <img src={poster} alt="One Piece"></img>
                    <p className="startDate">{startDate}</p>
@@ -62,6 +66,7 @@ class Info extends React.Component {
                 </div>
             );
         }
+    */}
     } //render
 }
 

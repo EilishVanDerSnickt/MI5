@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './home.css';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import Info from './info';
+import Poster from './poster';
 
 //require('./home.css');
 
@@ -62,7 +63,8 @@ class Home extends React.Component {
                             {/** specifieer de link naar de page waarnaar je wilt verwijzen */}
                             <Link to="/info">
                                 {/** geef de posterimage weer en overschrijf deze op als image in de array posters ipv de url die reeds opgeslagen was in deze array */}
-                                <img src={item} key={index} alt={items.data[index].id} ></img>
+                                <Poster id={items.data[index].id} foto={item} i={index}/>
+                                {/**<img src={item} key={index} alt={items.data[index].id} onClick={() => {<Info id={items.data[index].id}/>}}></img>*/}
                             </Link>
                             {/** specifieer het pad naar de juiste page en de component die hiermee verbonden wordt */}
                             <Route path='/info' component={Info}/>
@@ -73,7 +75,7 @@ class Home extends React.Component {
             //toon de geupdate array van images op de page
             return (
                 <div>
-                    <button onClick={() => {this.props.toonAnime(items.data[0].id)}}>Klik op de button</button>
+                    {/**<Info id={items.data[0].id}/>*/}
                     <ul>{posters}</ul>
                 </div>
             );
