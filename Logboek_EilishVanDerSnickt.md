@@ -40,4 +40,8 @@
 ## Week 5
 ### 22/10/2019 - 4 uur
 * problemen API meegeven property functie proberen implementeren en oplossen
+* firebase hosting toevoegen aan eerste_app
+* service worker en manifest file in orde brengen voor eerste_app
+* eerste_app op het startscherm van mobiele telefoon zetten
+* nieuw project aanmaken voor met props te leren werken
 
