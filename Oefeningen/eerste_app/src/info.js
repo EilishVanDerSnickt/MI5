@@ -1,4 +1,5 @@
 import React from 'react';
+import Home from './home';
 
 class Info extends React.Component {
     //initialiseer constructor en zet de state gelijk aan een array van items en een boolean isLoaded
@@ -10,9 +11,9 @@ class Info extends React.Component {
         }
     } //constructor
 
-    componentDidMount(){
-        //fecth de juiste url en vul de gegevens in de array en zet de isLoaded bool op true
-        fetch('https://kitsu.io/api/edge/anime?filter[text]=one%20piece')
+    toonAnime = (id) => {
+        console.log(id);
+        fetch('https://kitsu.io/api/edge/anime/' + {id})
         .then(res => res.json())
         .then(json => {
             this.setState({
@@ -20,6 +21,13 @@ class Info extends React.Component {
                 items: json,
             })
         });
+        
+    }
+
+    componentDidMount(){
+        //fecth de juiste url en vul de gegevens in de array en zet de isLoaded bool op true
+        
+       
     } //componentDidMount
 
     render(){
@@ -44,6 +52,7 @@ class Info extends React.Component {
             //toon de variabelen
             return (
                 <div>
+                    <Home toonAnime={this.toonAnime} value={this.toonAnime}/>
                    <h1>{title} - {japanesetitle}</h1>
                    <img src={poster} alt="One Piece"></img>
                    <p className="startDate">{startDate}</p>

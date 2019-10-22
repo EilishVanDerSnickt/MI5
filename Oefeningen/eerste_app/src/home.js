@@ -27,6 +27,15 @@ class Home extends React.Component {
         });
     } //componentDidMount
 
+    handleOnclick = () => {
+        /**this.props.toonAnime(id);
+        this.setState({
+            items: null,
+            isLoaded: null
+        })*/
+        console.log("Test")
+    }
+
     render(){
         // zet 2 variabelen gelijk aan de staat
         var {isLoaded, items} = this.state;
@@ -49,11 +58,11 @@ class Home extends React.Component {
                 return(
                     // specifieer de routering
                     <BrowserRouter>
-                        <div>
+                        <div >
                             {/** specifieer de link naar de page waarnaar je wilt verwijzen */}
                             <Link to="/info">
                                 {/** geef de posterimage weer en overschrijf deze op als image in de array posters ipv de url die reeds opgeslagen was in deze array */}
-                                <img src={item} key={index} alt={items.data[index].id}></img>
+                                <img src={item} key={index} alt={items.data[index].id} ></img>
                             </Link>
                             {/** specifieer het pad naar de juiste page en de component die hiermee verbonden wordt */}
                             <Route path='/info' component={Info}/>
@@ -64,6 +73,7 @@ class Home extends React.Component {
             //toon de geupdate array van images op de page
             return (
                 <div>
+                    <button onClick={() => {this.props.toonAnime(items.data[0].id)}}>Klik op de button</button>
                     <ul>{posters}</ul>
                 </div>
             );
