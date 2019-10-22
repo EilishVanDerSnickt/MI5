@@ -27,7 +27,7 @@
 ### 11/10/2019 - 1 uur 25 minuten
 * Online course introduction to PWA
 
-## Week 4
+## Week 4 - 6 uur 57 minuten
 ### 15/10/2019 - 6 uur 10 minuten
 * Data ophalen uit API anime en tonen
 * react routering onderzoeken en toepassen
@@ -36,4 +36,8 @@
 
 ### 18/10/2019 - 47 minuten
 * Online course introduction to PWA afwerken
+
+## Week 5
+### 22/10/2019 - 4 uur
+* problemen API meegeven property functie proberen implementeren en oplossen
 
