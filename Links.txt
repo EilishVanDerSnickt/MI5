@@ -31,3 +31,6 @@ https://anime-ad027.firebaseapp.com/
 https://www.youtube.com/watch?v=QUz3k2O3ZJU
 https://www.youtube.com/watch?v=AILU8hl-dmo
 >>>>>>> 32419b2762819f423d4216e71a86c00c76d07de5
+
+-- werken met props in react 
+https://www.robinwieruch.de/react-pass-props-to-component
