@@ -40,3 +40,11 @@
 * react tutorial verder kijken
 * opstarten todo app
 
+### 22/10/2019 - 4 uur
+* react tutorial verder kijken
+* samen met eilish prop problemen oplossen
+
+## Week 6
+### 29/10/2019 - 4 uur
+* uit de api de characters halen van een specifieke anime
+
