@@ -6,20 +6,24 @@ class Info extends React.Component {
     //initialiseer constructor en zet de state gelijk aan een array van items en een boolean isLoaded
     constructor(props){
         super(props);
+       
+
+        console.log(this.props);
+
         this.state = {
             items: [],
             isLoaded: false,
+            id: this.props.animeID,
         }
-
-        console.log(props);
     } //constructor
 
     componentDidMount(){
-        var id = this.props.animeID;
+        var id1 = this.props.animeID;
         console.log(this.props.animeID);
-        console.log(id);
-        //fecth de juiste url en vul de gegevens in de array en zet de isLoaded bool op true
-        fetch('https://kitsu.io/api/edge/anime/' + {id})
+        //console.log(id);
+        if(id1 != undefined){
+             //fecth de juiste url en vul de gegevens in de array en zet de isLoaded bool op true
+        fetch('https://kitsu.io/api/edge/anime/' + {id1})
         .then(res => res.json())
         .then(json => {
             this.setState({
@@ -27,13 +31,20 @@ class Info extends React.Component {
                 items: json,
             })
         });
-
-        console.log('https://kitsu.io/api/edge/anime/' + {id})
+        console.log({id1});
+        }
+        console.log('https://kitsu.io/api/edge/anime/' + {id1})
        
     } //componentDidMount
 
     render(){
-        return(<h1>{this.props.animeID}</h1>);
+        var {isLoaded, items, id} = this.state;
+        if (!isLoaded){
+            return(<h1>Loading ...</h1>)
+        } else {
+            return(<h1>{this.props.animeID}</h1>);
+        }
+        
         {/*
         // zet 2 variabelen gelijk aan de staat
         var {isLoaded, items} = this.state;
