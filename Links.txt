@@ -34,3 +34,7 @@ https://www.youtube.com/watch?v=AILU8hl-dmo
 
 -- werken met props in react 
 https://www.robinwieruch.de/react-pass-props-to-component
+https://reactjs.org/docs/components-and-props.html
+
+--Handle events
+https://reactjs.org/docs/handling-events.html
