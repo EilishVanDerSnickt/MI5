@@ -37,7 +37,7 @@
 ### 18/10/2019 - 47 minuten
 * Online course introduction to PWA afwerken
 
-## Week 5
+## Week 5 - 5 uur 45 minuten
 ### 22/10/2019 - 5 uur 45 minuten
 * problemen API meegeven property functie proberen implementeren en oplossen
 * firebase hosting toevoegen aan eerste_app
@@ -46,3 +46,6 @@
 * nieuw project aanmaken voor met props te leren werken
 * problemen props oplossen
 
+## Week 6
+### 30/10/2019 - 1 uur
+* Props undefined proberen oplossen
