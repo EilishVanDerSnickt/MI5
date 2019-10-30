@@ -47,5 +47,6 @@
 * problemen props oplossen
 
 ## Week 6
-### 30/10/2019 - 1 uur
+### 30/10/2019 - 1 uur 30 minuten
 * Props undefined proberen oplossen
+* oefening op props
