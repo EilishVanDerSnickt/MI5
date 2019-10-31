@@ -38,7 +38,7 @@ class Home extends React.Component {
     }
 
     render(){
-        // zet 2 variabelen gelijk aan de staat
+            // zet 2 variabelen gelijk aan de staat
         var {isLoaded, items} = this.state;
         //wanneer de staat niet geladen is, toon Loading
         if (!isLoaded){

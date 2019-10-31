@@ -82,3 +82,30 @@ export default Info;
                     <ul>{ids}</ul>
                 </div>
             );
+
+import firebase from "firebase";
+
+if (!firebase.apps.length) {
+    // Initialize Cloud Firestore through Firebase
+    const firebaseApp = firebase.initializeApp({
+        apiKey: 'AIzaSyBQmDSKrot-kkHU9YtFrI1PMCr3YY0156Y',
+        authDomain: 'https://animereactapp.firebaseapp.com/',
+        projectId: 'animereactapp',
+        databaseURL: "https://animereactapp.firebaseio.com/",
+        storageBucket: "gs://animereactapp.appspot.com",
+        messagingSenderId: "863356677005"
+    });
+
+    var db = firebaseApp.firestore();
+
+     db.collection("TrendingAnime").add({
+        id: ids[i],
+        posterURL: posters[i]
+    })
+    .then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
+    });
+
