@@ -41,3 +41,6 @@ https://reactjs.org/docs/handling-events.html
 
 --Add firestore to react
 https://sebhastian.com/react-firestore
+
+--Multiple firebase apps error
+https://github.com/zeit/next.js/issues/1999

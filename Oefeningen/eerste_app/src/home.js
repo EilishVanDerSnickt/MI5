@@ -3,6 +3,7 @@ import './home.css';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import Info from './info';
 import Poster from './poster';
+import Firebase from './firebaseInit';
 
 //require('./home.css');
 
@@ -38,7 +39,7 @@ class Home extends React.Component {
     }
 
     render(){
-            // zet 2 variabelen gelijk aan de staat
+        // zet 2 variabelen gelijk aan de staat
         var {isLoaded, items} = this.state;
         //wanneer de staat niet geladen is, toon Loading
         if (!isLoaded){
@@ -52,6 +53,9 @@ class Home extends React.Component {
                 //vul de arrays met de opgehaalde data
                 ids[i] = items.data[i].id;
                 posters[i] = items.data[i].attributes.posterImage.tiny;
+
+                console.log(Firebase.name);
+               
             }
             
             // geef in de array voor posters de combinatie van de inhoud met de index mee
