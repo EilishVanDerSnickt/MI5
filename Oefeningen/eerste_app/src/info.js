@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './home';
 import Poster from './poster';
+import Firebase from './firebaseInit';
 
 class Info extends React.Component {
     //initialiseer constructor en zet de state gelijk aan een array van items en een boolean isLoaded
@@ -38,7 +39,16 @@ class Info extends React.Component {
     } //componentDidMount
 
     render(){
+        var db = Firebase;
         var {isLoaded, items, id} = this.state;
+
+        //lees firestore data in console.log
+        db.collection("TrendingAnime").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                console.log(`${doc.id} => ${doc.data()}`);
+            });
+        });
+        
         if (!isLoaded){
             return(<h1>Loading ...</h1>)
         } else {

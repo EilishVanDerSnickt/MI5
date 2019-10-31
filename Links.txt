@@ -44,5 +44,8 @@ https://sebhastian.com/react-firestore
 (via CMD)
 https://www.codementor.io/yurio/all-you-need-is-react-firebase-4v7g9p4kf
 
+--firestore code toevoegen project
+https://firebase.google.com/docs/firestore/quickstart
+
 --Multiple firebase apps error
 https://github.com/zeit/next.js/issues/1999
