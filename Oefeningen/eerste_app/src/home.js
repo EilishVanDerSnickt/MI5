@@ -39,6 +39,9 @@ class Home extends React.Component {
     }
 
     render(){
+        //initialiseer firebase
+        var db = Firebase;
+
         // zet 2 variabelen gelijk aan de staat
         var {isLoaded, items} = this.state;
         //wanneer de staat niet geladen is, toon Loading
@@ -54,9 +57,6 @@ class Home extends React.Component {
                 ids[i] = items.data[i].id;
                 posters[i] = items.data[i].attributes.posterImage.tiny;
 
-                console.log(Firebase.name);
-                var db = Firebase;
-
                 db.collection("TrendingAnime").add({
                     id: ids[i],
                     posterURL: posters[i]
@@ -67,7 +67,6 @@ class Home extends React.Component {
                 .catch(function(error) {
                     console.error("Error adding document: ", error);
                 });
-               
             }
             
             // geef in de array voor posters de combinatie van de inhoud met de index mee
@@ -88,6 +87,7 @@ class Home extends React.Component {
                     </BrowserRouter>
                 );
             });
+            
             //toon de geupdate array van images op de page
             return (
                 <div>

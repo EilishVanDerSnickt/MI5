@@ -46,6 +46,7 @@ https://www.codementor.io/yurio/all-you-need-is-react-firebase-4v7g9p4kf
 
 --firestore code toevoegen project
 https://firebase.google.com/docs/firestore/quickstart
+https://medium.com/@aaron_lu1/firebase-cloud-firestore-add-set-update-delete-get-data-6da566513b1b
 
 --Multiple firebase apps error
 https://github.com/zeit/next.js/issues/1999

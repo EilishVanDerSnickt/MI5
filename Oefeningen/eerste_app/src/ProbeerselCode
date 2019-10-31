@@ -109,3 +109,120 @@ if (!firebase.apps.length) {
         console.error("Error adding document: ", error);
     });
 
+
+var Trending = db.collection("TrendingAnime");
+var query = Trending.where("id", "==", ids[i]);
+Trending.doc(query).update({posterURL: posters[i]});
+
+db.collection("cities").where("capital", "==", true)
+    .get()
+    .then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+        });
+    })
+    .catch(function(error) {
+        console.log("Error getting documents: ", error);
+    });
+
+
+db.collection("TrendingAnime").where("id", "==", ids[i])
+                    .get()
+                    .then(function(querySnapshot) {
+                        querySnapshot.forEach(function(doc) {
+                            db.collection("TrendingAnime").doc(doc.id).update({posterURL: posters[i]});
+                            // doc.data() is never undefined for query doc snapshots
+                            console.log(doc.id, " => ", doc.data());
+                        });
+                    })
+                    .catch(function(error) {
+                        console.log("Error getting documents: ", error);
+                    });
+
+if (!db.collection("TrendingAnime")){
+    db.collection("TrendingAnime").add({
+        id: ids[i],
+        posterURL: posters[i]
+    })
+    .then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
+    });
+    } else {
+    db.collection("TrendingAnime").where("id", "==", ids[i])
+    .get()
+    .then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+            var Trending = db.collection("TrendingAnime");
+            // Set the "capital" field of the city 'DC'
+            return Trending.doc(doc.id).update({
+                posterURL: posters[i]
+            })
+            .then(function() {
+                console.log("Document successfully updated!");
+            })
+            .catch(function(error) {
+                // The document probably doesn't exist.
+                console.error("Error updating document: ", error);
+            });
+        });
+    })
+    .catch(function(error) {
+        console.log("Error getting documents: ", error);
+    });
+
+    }
+
+     return Trending.doc(doc.id).update({
+                                posterURL: posters[i]
+                            })
+                            .then(function() {
+                                console.log("Document successfully updated!");
+                            })
+                            .catch(function(error) {
+                                // The document probably doesn't exist.
+                                console.error("Error updating document: ", error);
+                            });
+
+if (!db.collection("TrendingAnime")){
+    db.collection("TrendingAnime").add({
+        id: ids[i],
+        posterURL: posters[i]
+    })
+    .then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
+    });
+} else {
+    /** 
+    db.collection("TrendingAnime").where("id", "==", ids[i])
+    .get()
+    .then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+            var Trending = db.collection("TrendingAnime");
+            
+            db.collection("TrendingAnime").doc(doc.id).set({
+                posterURL: posters[i]
+            })
+            .then(function() {
+                console.log("Document successfully written!");
+            })
+            .catch(function(error) {
+                console.error("Error writing document: ", error);
+            });
+        });
+    })
+    .catch(function(error) {
+        console.log("Error getting documents: ", error);
+    });*/
+    
+}

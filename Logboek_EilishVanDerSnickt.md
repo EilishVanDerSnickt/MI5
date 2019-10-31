@@ -50,3 +50,10 @@
 ### 30/10/2019 - 1 uur 30 minuten
 * Props undefined proberen oplossen
 * oefening op props
+
+### 31/10/2019 - 3 uur 30 minuten
+* firestore toevoegen eerste_app
+* firestore initialiseren eerste_app
+* wegschrijven data naar de firestore
+* tonen van de data in de firestore
+* queries en updaten van documents in firestore
