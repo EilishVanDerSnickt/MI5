@@ -55,6 +55,18 @@ class Home extends React.Component {
                 posters[i] = items.data[i].attributes.posterImage.tiny;
 
                 console.log(Firebase.name);
+                var db = Firebase;
+
+                db.collection("TrendingAnime").add({
+                    id: ids[i],
+                    posterURL: posters[i]
+                })
+                .then(function(docRef) {
+                    console.log("Document written with ID: ", docRef.id);
+                })
+                .catch(function(error) {
+                    console.error("Error adding document: ", error);
+                });
                
             }
             
