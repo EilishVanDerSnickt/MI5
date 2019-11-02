@@ -49,6 +49,7 @@ https://firebase.google.com/docs/firestore/quickstart
 https://medium.com/@aaron_lu1/firebase-cloud-firestore-add-set-update-delete-get-data-6da566513b1b
 --delete a collection from the firestore
 https://kalkus.dev/2019/08/05/how-to-delete-all-documents-from-a-collection-in-google-cloud-firestore/
+https://github.com/googleapis/nodejs-firestore/issues/64
 
 --Multiple firebase apps error
 https://github.com/zeit/next.js/issues/1999
