@@ -226,3 +226,25 @@ if (!db.collection("TrendingAnime")){
     });*/
     
 }
+
+db.collection("TrendingAnime").where("posterURL", "==", posters[i])
+.get()
+.then(function(querySnapshot) {
+    querySnapshot.forEach(function(doc) {
+        // doc.data() is never undefined for query doc snapshots
+        console.log("Geen aanpassing is gemaakt");
+    });
+})
+.catch(function(error) {
+    console.log("Error getting documents: ", error);
+});
+
+
+// delete a collection
+db.collection("TrendingAnime")
+.get()
+.then(res => {
+    res.forEach(element => {
+    element.ref.delete();
+    });
+});

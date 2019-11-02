@@ -57,24 +57,16 @@ class Home extends React.Component {
                 ids[i] = items.data[i].id;
                 posters[i] = items.data[i].attributes.posterImage.tiny;
 
-                //maak een variabele aan met de collectie 
-                var trendingCollection = db.collection("TrendingAnime");
-
-                //check of de collectie al bestaat / wanneer deze nog niet bestaat maak ze dan 
-                if (trendingCollection == null)
-                {
-                    db.collection("TrendingAnime").add({
-                        id: ids[i],
-                        posterURL: posters[i]
-                    })
-                    .then(function(docRef) {
-                        console.log("Document written with ID: ", docRef.id);
-                    })
-                    .catch(function(error) {
-                        console.error("Error adding document: ", error);
-                    });
-                }
-                
+                db.collection("TrendingAnime").add({
+                    id: ids[i],
+                    posterURL: posters[i]
+                })
+                .then(function(docRef) {
+                    console.log("Document written with ID: ", docRef.id);
+                })
+                .catch(function(error) {
+                    console.error("Error adding document: ", error);
+                });
             }
             
             // geef in de array voor posters de combinatie van de inhoud met de index mee
