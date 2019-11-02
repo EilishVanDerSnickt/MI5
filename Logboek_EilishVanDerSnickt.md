@@ -57,3 +57,9 @@
 * wegschrijven data naar de firestore
 * tonen van de data in de firestore
 * queries en updaten van documents in firestore
+
+### 02/11/2019 - 2 uur 15 minuten
+* firebase deploy en update uitvoeren op verschillende projecten
+* audit PWA checken
+* proberen te vinden hoe te checken of een firestore collection bestaat
+* een hele firestore collection verwijderen
