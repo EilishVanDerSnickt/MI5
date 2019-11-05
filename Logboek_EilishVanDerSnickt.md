@@ -46,7 +46,7 @@
 * nieuw project aanmaken voor met props te leren werken
 * problemen props oplossen
 
-## Week 6
+## Week 6 - 7 uur 15 minuten
 ### 30/10/2019 - 1 uur 30 minuten
 * Props undefined proberen oplossen
 * oefening op props
@@ -63,3 +63,6 @@
 * audit PWA checken
 * proberen te vinden hoe te checken of een firestore collection bestaat
 * een hele firestore collection verwijderen
+
+## Week 7
+### 05/11/2019
