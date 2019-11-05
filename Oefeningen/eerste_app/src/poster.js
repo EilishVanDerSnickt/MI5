@@ -22,7 +22,7 @@ class Poster extends Component{
     toonAnime = (id) => {
         console.log(id);
 
-        return <Info animeID={id}/>
+        return (<Info animeID={id}/>);
     }
 }
 

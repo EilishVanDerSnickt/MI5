@@ -7,9 +7,20 @@ class App extends React.Component {
     super(props);
     this.state = {
       items: [],
-      isLoaded: false,
+      isLoadedAnime: false,
     }
   } //constructor
+
+  componentDidMount() {
+    fetch('https://kitsu.io/api/edge/trending/anime')
+    .then(res => res.json())
+    .then(json => {
+        this.setState({
+            items: json,
+            isLoadedAnime: true,
+        })
+    });
+  } //componentDidMount
 
   render(){
     return (
@@ -27,19 +38,9 @@ class App extends React.Component {
   toonAnime = () => {
     console.log("Trending anime");
 
-    fetch('https://kitsu.io/api/edge/trending/anime')
-    .then(res => res.json())
-    .then(json => {
-        this.setState({
-            items: json,
-            isLoaded: true,
-        })
-    });
+    var {items, isLoadedAnime} = this.state;
 
-
-    var {items, isLoaded} = this.state;
-
-    if (!isLoaded) {
+    if (!isLoadedAnime) {
       return <p>Loading ... </p>
     } else {
       var ids = [];
@@ -61,8 +62,6 @@ class App extends React.Component {
         }); 
       }
     }
-
-   
   } //toonAnime
 
   toonPosters = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './home';
+//import Home from './home';
 import Poster from './poster';
 import Firebase from './firebaseInit';
 
@@ -20,7 +20,7 @@ class Info extends React.Component {
 
     componentDidMount(){
         var id1 = this.props.animeID;
-        console.log(this.props.animeID);
+        console.log(this.props);
         //console.log(id);
         //if(id1 != undefined){
              //fecth de juiste url en vul de gegevens in de array en zet de isLoaded bool op true
@@ -53,8 +53,8 @@ class Info extends React.Component {
             return(<h1>Loading ...</h1>)
         } else {
             return(
-                <div>
-                    <h1>{this.props.animeID}</h1>
+                <div>                    
+                    {/**<h1>{this.props.animeID}</h1>*/}
                     {/**<p>{items.data[0].attributes.titles.ja_jp}</p>*/}
                 </div>
                 );
