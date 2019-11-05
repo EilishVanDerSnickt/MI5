@@ -66,3 +66,5 @@
 
 ## Week 7
 ### 05/11/2019
+* props troubleshooten
+* aniME app bewerken - toon trending animes
