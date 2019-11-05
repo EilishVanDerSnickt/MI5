@@ -57,6 +57,8 @@ class Home extends React.Component {
                 ids[i] = items.data[i].id;
                 posters[i] = items.data[i].attributes.posterImage.tiny;
 
+                /**
+                 * // voeg een collectie TrendingAnime toe aan firebase
                 db.collection("TrendingAnime").add({
                     id: ids[i],
                     posterURL: posters[i]
@@ -67,6 +69,7 @@ class Home extends React.Component {
                 .catch(function(error) {
                     console.error("Error adding document: ", error);
                 });
+                */
             }
             
             // geef in de array voor posters de combinatie van de inhoud met de index mee
@@ -79,6 +82,7 @@ class Home extends React.Component {
                             <Link to="/info">
                                 {/** geef de posterimage weer en overschrijf deze op als image in de array posters ipv de url die reeds opgeslagen was in deze array */}
                                 <Poster id={items.data[index].id} foto={item} i={index}/>
+                                <Info animeID={items.data[index].id}/>
                                 {/**<img src={item} key={index} alt={items.data[index].id} onClick={() => {<Info id={items.data[index].id}/>}}></img>*/}
                             </Link>
                             {/** specifieer het pad naar de juiste page en de component die hiermee verbonden wordt */}

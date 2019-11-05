@@ -9,7 +9,7 @@ class Info extends React.Component {
         super(props);
        
 
-        console.log(this.props);
+        console.log(props);
 
         this.state = {
             items: [],
@@ -22,9 +22,9 @@ class Info extends React.Component {
         var id1 = this.props.animeID;
         console.log(this.props.animeID);
         //console.log(id);
-        if(id1 != undefined){
+        //if(id1 != undefined){
              //fecth de juiste url en vul de gegevens in de array en zet de isLoaded bool op true
-        fetch('https://kitsu.io/api/edge/anime/' + {id1})
+        fetch('https://kitsu.io/api/edge/anime/' + id1)
         .then(res => res.json())
         .then(json => {
             this.setState({
@@ -33,29 +33,33 @@ class Info extends React.Component {
             })
         });
         console.log({id1});
-        }
-        console.log('https://kitsu.io/api/edge/anime/' + {id1})
+        //console.log(items);
+        //}
+        console.log('https://kitsu.io/api/edge/anime/' + id1)
        
     } //componentDidMount
 
     render(){
         var db = Firebase;
         var {isLoaded, items, id} = this.state;
-
+        /** 
         //lees firestore data in console.log
         db.collection("TrendingAnime").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 console.log(`${doc.id} => ${doc.data()}`);
             });
-        });
-        
+        }); */
         if (!isLoaded){
             return(<h1>Loading ...</h1>)
         } else {
-            return(<h1>{this.props.animeID}</h1>);
+            return(
+                <div>
+                    <h1>{this.props.animeID}</h1>
+                    {/**<p>{items.data[0].attributes.titles.ja_jp}</p>*/}
+                </div>
+                );
         }
-        
-        {/*
+        /** 
         // zet 2 variabelen gelijk aan de staat
         var {isLoaded, items} = this.state;
         //wanneer de staat niet geladen is, toon Loading
@@ -86,8 +90,7 @@ class Info extends React.Component {
                    <p className="Synopsis">{synopsis}</p>
                 </div>
             );
-        }
-    */}
+        } */
     } //render
 }
 

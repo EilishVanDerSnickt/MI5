@@ -8,9 +8,6 @@ class Poster extends Component{
         console.log(props);
     }
 
-   
-
-
     render(){
         //console.log(this.props.id);
         return(
