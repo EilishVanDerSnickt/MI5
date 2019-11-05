@@ -47,4 +47,9 @@
 ## Week 6
 ### 29/10/2019 - 4 uur
 * uit de api de characters halen van een specifieke anime
+### 30/10/2019 - 5 uur
+* pwa cursus udemy volgen
+
+## Week 7 
+### 5/11/2019 - 
 
