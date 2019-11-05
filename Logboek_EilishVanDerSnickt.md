@@ -65,9 +65,11 @@
 * een hele firestore collection verwijderen
 
 ## Week 7
-### 05/11/2019 - 4 uur
+### 05/11/2019 - 5 uur 40 minuten
 * props troubleshooten
 * aniME app bewerken - toon trending animes
 * QuizAniME project aanmaken
 * firestore toevoegen aan QuizAniME
 * collectie trending anime toevoegen 
+* collecties posters, titles en synopsis toevoegen
+* proberen alle characters van de trending anime's te verkrijgen
