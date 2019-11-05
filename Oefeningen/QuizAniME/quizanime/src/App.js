@@ -1,13 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Firebase from './firebaseInit';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Welcome to the quiz!</h1>
-    </div>
-  );
+class App extends React.Component {
+  render(){
+    return (
+      <div className="App">
+        <h1>Welcome to the quiz!</h1>
+        <button onClick={() => {this.toonAnime()}}>Show trending anime</button>
+        <button onClick={() => {this.toonPosters()}}>Show posters</button>
+        <button onClick={() => {this.toonTitles()}}>Show titles</button>
+        <button onClick={() => {this.toonSynopsis()}}>Show synopsis'</button>
+        <button onClick={() => {this.toonCharacters()}}>Show characters</button>
+      </div>
+    );
+  }
+
+  toonAnime = () => {
+    console.log("Trending anime");
+  }
+
+  toonPosters = () => {
+    console.log("Posters");
+  }
+
+  toonTitles = () => {
+    console.log("Titles");
+  }
+
+  toonSynopsis = () => {
+    console.log("Synopsis");
+  }
+
+  toonCharacters = () => {
+    console.log("Characters");
+  }
+  
 }
+
+
 
 export default App;
