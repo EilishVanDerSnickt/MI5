@@ -5,7 +5,7 @@ function Thomaach({value}) {
 
 
     const {personen} = value
-  
+
     return(
         <div className="ninja">
             { 
@@ -20,6 +20,7 @@ function Thomaach({value}) {
             }
         </div>
     )
+    
   }
 
 
