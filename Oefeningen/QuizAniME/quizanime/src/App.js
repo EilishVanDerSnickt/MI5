@@ -196,7 +196,7 @@ class App extends React.Component {
 
   haalCharacterIDsOp = (id) => {
    console.log(id);
-
+   
    var characterIDs = [];
    var request = new XMLHttpRequest();
    var request2 = new XMLHttpRequest();
