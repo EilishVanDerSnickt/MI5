@@ -53,3 +53,5 @@ https://github.com/googleapis/nodejs-firestore/issues/64
 
 --Multiple firebase apps error
 https://github.com/zeit/next.js/issues/1999
+
+Figure en figcaption voor de homepage trending anime posters en naam
