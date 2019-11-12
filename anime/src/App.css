@@ -22,10 +22,9 @@
 }
 
 .Div-anime {
-  height: 50vw;
-  width: 40vw;
-  border-style: solid;
-  border-color: red;
+  height: 60vw;
+  width: 38vw;
+ 
 }
 
 .Thomaach {
@@ -41,8 +40,6 @@
 }
 
 .footer {
-    position: fixed;
-    bottom: 2%;
     display: grid;
     grid-template-columns: repeat(2,50vw);
   }

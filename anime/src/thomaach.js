@@ -13,7 +13,9 @@ function Thomaach({value}) {
                 personen.map(persoon => {
                 
                     return (<div className="Thomaach" key={persoon.id}>
-                    <div className="Div-anime">Name: {persoon.name}</div>
+                    <div className="Div-anime"><img src={persoon.poster} alt="Poster Anime"></img>{persoon.name} </div>
+                    
+                    
                     </div>
                     )
                 })
