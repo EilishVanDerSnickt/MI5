@@ -209,6 +209,8 @@ class App extends React.Component {
 
       for (let i = 0; i < 10; i++){
         characterIDs[i] = ourdata.data[i].id;
+        console.log("IDs")
+        console.log(characterIDs[i]);
         
         // Haalt maar bepaalde data op
         request2.open('GET', 'https://kitsu.io/api/edge/media-characters/' + characterIDs[i] + '/character');
@@ -218,6 +220,17 @@ class App extends React.Component {
           console.log(ourdata);
           var naam = ourdata.data.attributes.names.en;
           console.log(naam);
+
+          Firebase.collection("Characters").add({
+            ID: characterIDs[i],
+            Name: naam,
+          })
+          .then(function(docRef) {
+              console.log("Document written with ID: ", docRef.id);
+          })
+          .catch(function(error) {
+              console.error("Error adding document: ", error);
+          }); 
         }
         request2.send();
 
