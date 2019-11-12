@@ -14,6 +14,8 @@ function Thomaach({value}) {
                 
                     return (<div className="Thomaach" key={persoon.id}>
                     <div className="Div-anime">Name: {persoon.name}</div>
+                    <img src={persoon.poster} alt="Poster Anime"></img>
+                    
                     </div>
                     )
                 })

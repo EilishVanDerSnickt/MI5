@@ -6,33 +6,42 @@ import footer from './footer';
 
 class App extends React.Component {
 
-  state = {
-    personen : [
-      {name: "One Piece", posterUrl:"dd", id: 1},
-      {name: "One Punch Man", posterUrl:"dd", id: 2},
-      {name: "My Hero Academy", posterUrl:"dd", id: 3}
-    ]
+  constructor(props) {
+    super(props);
+    this.state = {
+      personen : [
+        {name: "One Piece", poster:"dd", id: 1},
+        {name: "One Punch Man", poster:"dd", id: 2},
+        {name: "My Hero Academy", poster:"dd", id: 3}
+      ],
+      info : []
+    }
+  }
+  
+  addAnime(anime) {
+    //console.log("ok")
+    let animes = [...this.state.personen, anime]
+    this.setState({
+      personen: animes
+    })
+    console.log(this.state)
   }
   
   componentDidMount() {
 
-    /*
-    function addAnime(anime) {
-      let animes = [...this.state.personen, anime]
-      this.setState({
-        personen: animes
-      })
-    }*/
+    const StatePls = (anime) =>  {
+      return this.addAnime(anime)
+    }
 
     var anime = function(name, poster, id) {
       this.name = name
       this.poster = poster
       this.id = id
     }
-        var ids = [];
-        var posters = [];
-        var names = [];
-    
+
+     var ids = [];
+     var posters = [];
+     var names = [];
         
     
         fetch('https://kitsu.io/api/edge/trending/anime')
@@ -47,14 +56,16 @@ class App extends React.Component {
               ids[i] = data.data[i].id;
               posters[i] = data.data[i].attributes.posterImage.tiny; 
               names[i] = data.data[i].attributes.canonicalTitle;
-    
-    
-              //addAnime(new anime(data.data[i].attributes.canonicalTitle, data.data[i].attributes.posterImage.tiny, data.data[i].id));
-    
+            }
+        }).then(function addToState() {
+            for (let i = 0; i < ids.length; i++) {
+            StatePls(new anime(names[i], posters[i] ,ids[i]))
+            //this.addAnime(new anime(names[i], posters[i] ,ids[i]));
+              //console.log(i)
+              
             }
         })
-  }
-
+      }
   
   
 render(){
@@ -79,3 +90,4 @@ render(){
 
 
 export default App;
+
