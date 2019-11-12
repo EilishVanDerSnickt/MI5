@@ -169,9 +169,9 @@ class App extends React.Component {
   
       for (let i = 0; i < 10; i++) {
         ids[i] = items.data[i].id;
-        console.log(ids[i]);
+        //console.log(ids[i]);
 
-        this.haalCharactersOp(ids[i]);
+        this.haalCharacterIDsOp(ids[i]);
         
         //var charactersOpgehaald = false;
 
@@ -194,21 +194,41 @@ class App extends React.Component {
     }
   } //toonCharacters
 
-  haalCharactersOp = (id) => {
-   console.log(id);
+  haalCharacterIDsOp = (id) => {
+   //console.log(id);
 
+   var characterIDs = [];
    var request = new XMLHttpRequest();
+   var request2 = new XMLHttpRequest();
 
-    request.open('GET', 'https://kitsu.io/api/edge/anime/' + id);
+    request.open('GET', 'https://kitsu.io/api/edge/anime/' + id + '/characters');
 
     request.onload = function(){
       var ourdata = JSON.parse(request.responseText);
-      console.log(ourdata);
-      //var character = ourdata.data[0].id;
-      //console.log(character);
-    }
+      //console.log(ourdata);
 
+      for (let i = 0; i < 10; i++){
+        characterIDs[i] = ourdata.data[i].id;
+        //console.log(characterIDs[i]);
+
+        request2.open('GET', 'https://kitsu.io/api/edge/media-characters/' + characterIDs[i] + '/character');
+
+        request2.onload = function() {
+          var ourdata = JSON.parse(request2.responseText);
+          console.log(ourdata);
+          var naam = ourdata.data.attributes.names.en;
+          console.log(naam);
+        }
+        request2.send();
+        
+        //this.haalCharactersOp(characterIDs[i]);
+      }
+    }
     request.send();
+  } //haalCharacterIDsOp
+
+  haalCharactersOp = (characterID) => {
+    var request = new XMLHttpRequest();
 
     
   } //haalCharactersOp
