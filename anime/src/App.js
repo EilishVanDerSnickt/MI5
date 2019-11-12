@@ -9,12 +9,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      personen : [
-        {name: "One Piece", poster:"dd", id: 1},
-        {name: "One Punch Man", poster:"dd", id: 2},
-        {name: "My Hero Academy", poster:"dd", id: 3}
-      ],
-      info : []
+      personen : [],
     }
   }
   
@@ -75,7 +70,7 @@ render(){
         <div className="inputDiv"><input type="text" className="input" placeholder="Search..." /></div>
 
         <h1 className="Anime">AniME</h1>
-        <Thomaach value={this.state} /*ids={ids} posters={posters} names={names}*//>
+        <Thomaach value={this.state} />
         <footer/>
         <div className="footer">
           
