@@ -268,3 +268,14 @@ db.collection('TrendingAnime').where('id','==', ids[i]).get()
     // Delete completed!
     // ...
 }); 
+
+var request = new XMLHttpRequest();
+
+        request.open('GET', 'https://kitsu.io/api/edge/anime/' + ids[i])
+
+        request.onload = function(){
+          var ourdata = JSON.parse(request.responseText);
+          console.log(ourdata);
+        }
+
+        request.send();

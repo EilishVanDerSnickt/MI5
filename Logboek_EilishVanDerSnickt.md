@@ -64,7 +64,7 @@
 * proberen te vinden hoe te checken of een firestore collection bestaat
 * een hele firestore collection verwijderen
 
-## Week 7
+## Week 7 - 5 uur 40 minuten
 ### 05/11/2019 - 5 uur 40 minuten
 * props troubleshooten
 * aniME app bewerken - toon trending animes

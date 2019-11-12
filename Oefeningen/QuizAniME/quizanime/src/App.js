@@ -9,7 +9,7 @@ class App extends React.Component {
       items: [],
       isLoadedAnime: false,
       APIcharacters: [],
-      isLoadedCharacters: false,
+      isLoadedCharacters: false
     }
   } //constructor
 
@@ -169,49 +169,49 @@ class App extends React.Component {
   
       for (let i = 0; i < 10; i++) {
         ids[i] = items.data[i].id;
-        var charactersOpgehaald = false;
+        console.log(ids[i]);
 
-        var charactersOpgehaald = this.haalCharactersOp(ids[i]);
+        this.haalCharactersOp(ids[i]);
+        
+        //var charactersOpgehaald = false;
+
+        //var charactersOpgehaald = this.haalCharactersOp(ids[i]);
 
         //this.haalCharactersOp(ids[i]);
 
-        if (isLoadedCharacters){
-          console.log(charactersOpgehaald);
-          console.log(APIcharacters);
+        /** 
 
-          for (let i = 0; i < 10; i++) {
-            characters[i] = APIcharacters.data[i].id;
+        if (isLoadedCharacters){
+          console.log(APIcharacters);
+          for (let j = 0; j < 10; j++) {
+            characters[i] = ourdata.data[j].id;
           
             console.log(characters[i]);
           }
-        }
+          
+        } */
       }
     }
   } //toonCharacters
 
   haalCharactersOp = (id) => {
-    console.log(id);
-    console.log('https://kitsu.io/api/edge/anime/' + id);
+   console.log(id);
 
-    var isOpgehaald = false;
+   var request = new XMLHttpRequest();
 
-    fetch('https://kitsu.io/api/edge/anime/' + id)
-    .then(res => res.json())
-    .then(json => {
-        this.setState({
-            APIcharacters: json,
-        })
+    request.open('GET', 'https://kitsu.io/api/edge/anime/' + id);
 
-        isOpgehaald = true;
+    request.onload = function(){
+      var ourdata = JSON.parse(request.responseText);
+      console.log(ourdata);
+      //var character = ourdata.data[0].id;
+      //console.log(character);
+    }
 
-        if (!isOpgehaald){
-          console.log('API nog niet opgehaald')
-        }else {
-          return isOpgehaald;
-        }
-    });
+    request.send();
+
+    
   } //haalCharactersOp
-  
 }
 
 export default App;
