@@ -300,3 +300,14 @@ var request = new XMLHttpRequest();
           return isOpgehaald;
         }
     }); 
+
+
+     request2.open('GET', 'https://kitsu.io/api/edge/media-characters/' + characterIDs[i] + '/character');
+
+        request2.onload = function() {
+          var ourdata = JSON.parse(request2.responseText);
+          console.log(ourdata);
+          var naam = ourdata.data.attributes.names.en;
+          console.log(naam);
+        }
+        request2.send();

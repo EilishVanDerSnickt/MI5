@@ -209,8 +209,8 @@ class App extends React.Component {
 
       for (let i = 0; i < 10; i++){
         characterIDs[i] = ourdata.data[i].id;
-        //console.log(characterIDs[i]);
-
+        
+        // Haalt maar bepaalde data op
         request2.open('GET', 'https://kitsu.io/api/edge/media-characters/' + characterIDs[i] + '/character');
 
         request2.onload = function() {
@@ -220,8 +220,17 @@ class App extends React.Component {
           console.log(naam);
         }
         request2.send();
-        
-        //this.haalCharactersOp(characterIDs[i]);
+
+        /** Haalt alle data op maar is undefined
+        fetch('https://kitsu.io/api/edge/media-characters/' + characterIDs[i] + '/character')
+        .then(response => {
+          if(response.ok) return response.json();
+          throw new Error(response.statusText)
+        })
+        .then(function handledata(data){
+          console.log(data.data.attributes.name.en);
+        })
+        */
       }
     }
     request.send();
