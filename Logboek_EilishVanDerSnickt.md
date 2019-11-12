@@ -73,3 +73,9 @@
 * collectie trending anime toevoegen 
 * collecties posters, titles en synopsis toevoegen
 * proberen alle characters van de trending anime's te verkrijgen
+
+## Week 8 
+### 12/11/2019 - 4 uur
+* Characters ophalen via requests
+* troubleshooten characters ophalen
+* characters toevoegen aan de firestore collectie Characters

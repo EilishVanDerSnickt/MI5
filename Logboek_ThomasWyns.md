@@ -51,5 +51,10 @@
 * pwa cursus udemy volgen
 
 ## Week 7 
-### 5/11/2019 - 
+### 5/11/2019 - 6 uur
+* poster in state proberen krijgen
+
+## Week 8 
+### 12/11/2019 - 4 uur
+* poster in state gekregen en ook kunnen displayen
 

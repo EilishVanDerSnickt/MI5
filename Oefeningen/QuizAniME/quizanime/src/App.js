@@ -196,7 +196,7 @@ class App extends React.Component {
 
   haalCharacterIDsOp = (id) => {
    console.log(id);
-
+   
    var characterIDs = [];
    var request = new XMLHttpRequest();
    var request2 = new XMLHttpRequest();
@@ -209,8 +209,10 @@ class App extends React.Component {
 
       for (let i = 0; i < 10; i++){
         characterIDs[i] = ourdata.data[i].id;
-        //console.log(characterIDs[i]);
-
+        console.log("IDs")
+        console.log(characterIDs[i]);
+        
+        // Haalt maar bepaalde data op
         request2.open('GET', 'https://kitsu.io/api/edge/media-characters/' + characterIDs[i] + '/character');
 
         request2.onload = function() {
@@ -218,10 +220,30 @@ class App extends React.Component {
           console.log(ourdata);
           var naam = ourdata.data.attributes.names.en;
           console.log(naam);
+
+          Firebase.collection("Characters").add({
+            ID: characterIDs[i],
+            Name: naam,
+          })
+          .then(function(docRef) {
+              console.log("Document written with ID: ", docRef.id);
+          })
+          .catch(function(error) {
+              console.error("Error adding document: ", error);
+          }); 
         }
         request2.send();
-        
-        //this.haalCharactersOp(characterIDs[i]);
+
+        /** Haalt alle data op maar is undefined
+        fetch('https://kitsu.io/api/edge/media-characters/' + characterIDs[i] + '/character')
+        .then(response => {
+          if(response.ok) return response.json();
+          throw new Error(response.statusText)
+        })
+        .then(function handledata(data){
+          console.log(data.data.attributes.name.en);
+        })
+        */
       }
     }
     request.send();
