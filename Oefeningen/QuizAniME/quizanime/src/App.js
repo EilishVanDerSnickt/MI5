@@ -195,7 +195,7 @@ class App extends React.Component {
   } //toonCharacters
 
   haalCharacterIDsOp = (id) => {
-   //console.log(id);
+   console.log(id);
 
    var characterIDs = [];
    var request = new XMLHttpRequest();
@@ -226,12 +226,6 @@ class App extends React.Component {
     }
     request.send();
   } //haalCharacterIDsOp
-
-  haalCharactersOp = (characterID) => {
-    var request = new XMLHttpRequest();
-
-    
-  } //haalCharactersOp
 }
 
 export default App;

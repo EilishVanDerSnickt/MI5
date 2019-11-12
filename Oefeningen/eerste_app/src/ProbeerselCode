@@ -279,3 +279,24 @@ var request = new XMLHttpRequest();
         }
 
         request.send();
+
+         console.log(id);
+    console.log('var ourRequest = new XMLHttpRequest(););
+
+    var isOpgehaald = false;
+
+    fetch('https://kitsu.io/api/edge/anime/' + id)
+    .then(res => res.json())
+    .then(json => {
+        this.setState({
+            APIcharacters: json,
+        })
+
+        isOpgehaald = true;
+
+        if (!isOpgehaald){
+          console.log('API nog niet opgehaald')
+        }else {
+          return isOpgehaald;
+        }
+    }); 
