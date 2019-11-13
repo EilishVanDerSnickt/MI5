@@ -79,3 +79,7 @@
 * Characters ophalen via requests
 * troubleshooten characters ophalen
 * characters toevoegen aan de firestore collectie Characters
+
+### 13/11/2019 - 2 uur
+* routering oefening toevoegen
+* routering toepassen op quizanime
