@@ -4,6 +4,7 @@ import Home from './components/home';
 import Gegevens from './components/gegeven';
 import {BrowserRouter, Route} from 'react-router-dom';
 import TrendingAnime from './components/TrendingAnime';
+import Quiz from './components/quiz';
 
 class App extends React.Component {
     render(){
@@ -14,6 +15,7 @@ class App extends React.Component {
                     <Gegevens />
                 </div>
                 <Route path='/trendingAnime' component={TrendingAnime} />
+                <Route path='/trendingAnime/quiz' component={Quiz} />
             </BrowserRouter>
         );
     } //render
