@@ -85,6 +85,7 @@
 * routering toepassen op quizanime
 * werken met setState
 
-### 17/11/2019 - 1 uur
+### 17/11/2019 - 2 uur
 * werken met setState
 * localstorage onderzoeken
+* local storage toevoegen en tonen
