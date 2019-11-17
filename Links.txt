@@ -54,4 +54,8 @@ https://github.com/googleapis/nodejs-firestore/issues/64
 --Multiple firebase apps error
 https://github.com/zeit/next.js/issues/1999
 
+--Local storage
+https://medium.com/@siobhanpmahoney/local-storage-in-a-react-single-page-application-34ba30fc977d
+https://github.com/siobhanpmahoney/newswire-app/tree/master/src
+
 Figure en figcaption voor de homepage trending anime posters en naam

@@ -26,11 +26,11 @@ class Gegevens extends React.Component {
   render(){
     return (
         <div className="Gegevens">
-          <button onClick={() => {this.toonAnime()}}>Show trending anime</button>
+          <button onClick={() => {this.toonAnime()}}> Show trending anime </button>
           <button onClick={() => {this.toonPosters()}}>Show posters</button>
           <button onClick={() => {this.toonTitles()}}>Show titles</button>
           <button onClick={() => {this.toonSynopsis()}}>Show synopsis'</button>
-          <button onClick={() => {this.toonCharacters()}}>Show characters</button>
+          <button onClick={() => {this.toonCharacters()}}> Show characters </button>
       </div>
     );
 } //render
