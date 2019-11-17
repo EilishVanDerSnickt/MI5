@@ -57,6 +57,7 @@ toonAnime = () => {
             synopsis[i] = items.data[i].attributes.synopsis;
     
             Firebase.collection("TrendingAnime").add({
+            index: i,
             id: ids[i],
             posterURL: posters[i],
             en_ja_title: enjp_titles[i],

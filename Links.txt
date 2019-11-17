@@ -60,4 +60,7 @@ https://github.com/siobhanpmahoney/newswire-app/tree/master/src
 --show all local storage items
 https://stackoverflow.com/questions/5410820/how-can-i-show-all-the-localstorage-saved-variables
 
+--random
+https://medium.com/@josephcardillo/using-math-random-in-javascript-c49eff920b11
+
 Figure en figcaption voor de homepage trending anime posters en naam

@@ -6,14 +6,16 @@ class Quiz extends React.Component {
         super(props);
         this.state = {
             titels: [],
-            local: []
+            local: [],
+            vraag: null
         }
-    }
+    } // constructor
 
     componentWillMount() {
 
 
-    }
+    } // ComponentWillMount
+
     componentDidMount() {
         const that = this;
         var newTitles = [];
@@ -36,9 +38,34 @@ class Quiz extends React.Component {
                 local: array
             });
             console.log("st", that.state);
+
+            that.StelVraag();
         });
         // that.setState({ titels }) = newTitles.map((d) => <li key={d.name}>{d.name}</li>);
+    } // ComponentDidMount
+
+    StelVraag = () => {
+        var {titels} = this.state;
+        var aantalTitels = titels.length;
+        var random = Math.ceil(Math.random() * aantalTitels)
+
+        let postsRef = Firebase.collection("TrendingAnime")
+        let queryRef = postsRef.where("index", ">=", random)
+                   .orderBy("index")
+                   .limit(1)
+
+        queryRef.get().then(function(querySnapshot) {
+            if (querySnapshot.empty) {
+                console.log('no documents found');
+              } else {
+                querySnapshot.forEach(function (documentSnapshot) {
+                    var data = documentSnapshot.data();
+                    console.log(data);
+                });
+              }
+        });
     }
+
     render() {
         return (
             <div>
@@ -47,7 +74,7 @@ class Quiz extends React.Component {
                 <ul>{this.state.local}</ul>
             </div>
         );
-    }
+    } // render
 }
 
 export default Quiz;
