@@ -5,7 +5,8 @@ class Quiz extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            titels: []
+            titels: [],
+            local: []
         }
     }
 
@@ -16,6 +17,12 @@ class Quiz extends React.Component {
     componentDidMount() {
         const that = this;
         var newTitles = [];
+        var array = [];
+
+        for (var i = 0; i < localStorage.length; i++){
+            console.log(localStorage.getItem(localStorage.key(i)));
+            array.push(localStorage.getItem(localStorage.key(i)));
+        }
 
         Firebase.collection("TrendingAnime").get().then(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
@@ -24,19 +31,20 @@ class Quiz extends React.Component {
             });
             // update new titles 
             //newTitles = newTitles.map((d) => <li key={d.name}>{d.name}</li>);
-            that.setState({titels: newTitles});
+            that.setState({
+                titels: newTitles,
+                local: array
+            });
             console.log("st", that.state);
-
-
         });
         // that.setState({ titels }) = newTitles.map((d) => <li key={d.name}>{d.name}</li>);
     }
     render() {
-
         return (
             <div>
                 <h1>Welcome to the quiz!</h1>
                 <ul>{this.state.titels}</ul>
+                <ul>{this.state.local}</ul>
             </div>
         );
     }

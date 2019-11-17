@@ -1,5 +1,6 @@
 import React from 'react';
 import Firebase from './firebaseInit';
+import ls from 'local-storage';
 
 class Gegevens extends React.Component {
   constructor(props){
@@ -7,8 +8,7 @@ class Gegevens extends React.Component {
     this.state = {
       items: [],
       isLoadedAnime: false,
-      APIcharacters: [],
-      isLoadedCharacters: false
+      localStorage: []
     }
   } //constructor
 
@@ -65,13 +65,28 @@ toonAnime = () => {
             })
             .then(function(docRef) {
                 console.log("Document written with ID: ", docRef.id);
+
             })
             .catch(function(error) {
                 console.error("Error adding document: ", error);
             }); 
         }
+        this.addToLocalStorage(posters);
     }
 } //toonAnime
+
+addToLocalStorage = (array) => {
+    this.setState({
+        localStorage: array
+    })
+
+    ls.set('TrendingAnime', array);
+
+   
+    for (var i = 0; i < localStorage.length; i++){
+        console.log(localStorage.getItem(localStorage.key(i)));
+    }
+}
 
 toonPosters = () => {
     console.log("Posters");
@@ -157,7 +172,7 @@ toonSynopsis = () => {
 toonCharacters = () => {
     console.log("Characters");
 
-    var {items, isLoadedAnime, APIcharacters, isLoadedCharacters} = this.state;
+    var {items, isLoadedAnime} = this.state;
 
     if (!isLoadedAnime) {
     return <p>Loading ... </p>
@@ -170,24 +185,6 @@ toonCharacters = () => {
             //console.log(ids[i]);
     
             this.haalCharacterIDsOp(ids[i]);
-            
-            //var charactersOpgehaald = false;
-    
-            //var charactersOpgehaald = this.haalCharactersOp(ids[i]);
-    
-            //this.haalCharactersOp(ids[i]);
-    
-            /** 
-     
-            if (isLoadedCharacters){
-            console.log(APIcharacters);
-            for (let j = 0; j < 10; j++) {
-                characters[i] = ourdata.data[j].id;
-            
-                console.log(characters[i]);
-            }
-            
-            } */
         }
     }
 } //toonCharacters
