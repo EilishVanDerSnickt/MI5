@@ -85,7 +85,9 @@
 * routering toepassen op quizanime
 * werken met setState
 
-### 17/11/2019 - 2 uur
+### 17/11/2019 - 3 uur
 * werken met setState
 * localstorage onderzoeken
 * local storage toevoegen en tonen
+* krijg een random document
+* troubleshooten alleen documenten krijgen anders dan het reeds gekregen document

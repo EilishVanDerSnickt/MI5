@@ -46,6 +46,9 @@ class Quiz extends React.Component {
 
     StelVraag = () => {
         var {titels} = this.state;
+        const that = this;
+
+        //haal een random document op
         var aantalTitels = titels.length;
         var random = Math.ceil(Math.random() * aantalTitels)
 
@@ -60,7 +63,35 @@ class Quiz extends React.Component {
               } else {
                 querySnapshot.forEach(function (documentSnapshot) {
                     var data = documentSnapshot.data();
-                    console.log(data);
+                    console.log(data.en_ja_title);
+
+                    //bepaal de gevraagde anime door de status van vraag gelijk te zetten met de titel van de anime
+                    that.setState({
+                        vraag: data.en_ja_title
+                    });
+
+                    that.HaalAndereAnimeOp();
+                });
+              }
+        });
+    } // StelVraag
+
+    HaalAndereAnimeOp = () => {
+        var {vraag} = this.state;
+
+       
+        let postsRef = Firebase.collection("Titles")
+        let queryRef1 = postsRef.where("en_ja_title", "==", vraag)
+            .orderBy("en_ja_title")
+    
+        
+        queryRef1.get().then(function(querySnapshot) {
+            if (querySnapshot.empty) {
+                console.log('no documents found');
+              } else {
+                querySnapshot.forEach(function (documentSnapshot) {
+                    var data = documentSnapshot.data();
+                    console.log(data.en_ja_title);
                 });
               }
         });
