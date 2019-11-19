@@ -93,6 +93,6 @@
 * troubleshooten alleen documenten krijgen anders dan het reeds gekregen document
 
 ## Week 9
-### 19/11/2019
+### 19/11/2019 - 4 uur
 * troubleshooten documenten verkrijgen anders dan het reeds gekregen document
-* aanmaken quiz niveau 1
+* aanmaken quiz niveau 1 (het juiste antwoord wordt altijd als laatste geplaatst)

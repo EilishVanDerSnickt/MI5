@@ -80,24 +80,38 @@ class QuizNiveau1 extends React.Component {
 
         let postsRef1 = Firebase.collection("Synopsis")
         let queryRef1 = postsRef1.where("index", "<", vraagIndex)
-            .limit(2)
+            .limit(1)
         let queryRef2 = postsRef1.where("index", ">", vraagIndex)
-            .limit(2)
+            .limit(1)
+        let queryRef3 = postsRef1.where("index", "==", vraagIndex)
+            .limit(1)
         
         queryRef1.get().then(function(querySnapshot1) {
             if (querySnapshot1.empty) {
                 console.log('no documents found');
             } else {
                 querySnapshot1.forEach(function (documentSnapshot1) {
-                    var data = documentSnapshot1.data();
-                    console.log(data.synopsis);
-                    antwoorden.push(data.synopsis);
+                    var data1 = documentSnapshot1.data();
+                    console.log(data1.synopsis);
+                    antwoorden.push(data1.synopsis);
                 });
-            }
 
-            that.setState({
-                mogelijkeAntwoorden: antwoorden
-            });
+                that.shuffleAntwoorden(antwoorden)
+            }
+        });
+
+        queryRef3.get().then(function(querySnapshot3) {
+            if (querySnapshot3.empty) {
+                console.log('no documents found');
+            } else {
+                querySnapshot3.forEach(function (documentSnapshot3) {
+                    var data3 = documentSnapshot3.data();
+                    console.log(data3.synopsis);
+                    antwoorden.push(data3.synopsis);
+                });
+
+                that.shuffleAntwoorden(antwoorden)
+            }
         });
 
         queryRef2.get().then(function(querySnapshot2) {
@@ -105,24 +119,39 @@ class QuizNiveau1 extends React.Component {
                 console.log('no documents found');
             } else {
             querySnapshot2.forEach(function (documentSnapshot2) {
-                    var data = documentSnapshot2.data();
-                    console.log(data.synopsis);
-                    antwoorden.push(data.synopsis);
+                    var data2 = documentSnapshot2.data();
+                    console.log(data2.synopsis);
+                    antwoorden.push(data2.synopsis);
                 });
+
+                that.shuffleAntwoorden(antwoorden)
             }
-            that.setState({
-                mogelijkeAntwoorden: antwoorden
-            });
         });
 
     } //haalAndereAnimesOp
+
+    // shuffle de array antwoorden
+    shuffleAntwoorden = (antwoorden) => {
+        var j, x, i;
+        const that = this;
+        for (i = antwoorden.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = antwoorden[i];
+            antwoorden[i] = antwoorden[j];
+            antwoorden[j] = x;
+        }
+
+        that.setState ({
+            mogelijkeAntwoorden: antwoorden
+        });
+    } //shuffleAntwoorden
 
     render() {
         var {vraagIndex, vraagData, antwoord, mogelijkeAntwoorden} = this.state;
         const that = this;
 
         //antwoorden staan nu altijd als laatste
-        mogelijkeAntwoorden.push(antwoord);
+        //mogelijkeAntwoorden.push(antwoord);
         
         mogelijkeAntwoorden = mogelijkeAntwoorden.map(function(item, index){
             return (
