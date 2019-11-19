@@ -171,9 +171,11 @@ class QuizNiveau1 extends React.Component {
         var {antwoord} = this.state;
 
         if (item == antwoord) {
-            alert("Juist");
+            alert("juist");
+            window.location.reload(false);
         } else {
             alert("fout");
+            window.location.reload(false);
         }
         
        

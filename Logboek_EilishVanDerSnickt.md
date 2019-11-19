@@ -96,3 +96,6 @@
 ### 19/11/2019 - 4 uur
 * troubleshooten documenten verkrijgen anders dan het reeds gekregen document
 * aanmaken quiz niveau 1 (het juiste antwoord wordt altijd als laatste geplaatst)
+* antwoorden op een random plaats tonen
+* Pagina reloaden wanneer er een vraag is beantwoord
+* zoek (zorg ervoor dat de state niet wordt geupdate bij het herladen pagina => houdt bij hoeveel juiste of foute antwoorden)

@@ -63,4 +63,10 @@ https://stackoverflow.com/questions/5410820/how-can-i-show-all-the-localstorage-
 --random
 https://medium.com/@josephcardillo/using-math-random-in-javascript-c49eff920b11
 
+--shuffle an arry
+https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+
+--reload a page
+https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react
+
 Figure en figcaption voor de homepage trending anime posters en naam
