@@ -67,7 +67,7 @@ class Quiz extends React.Component {
 
                     //bepaal de gevraagde anime door de status van vraag gelijk te zetten met de titel van de anime
                     that.setState({
-                        vraag: data.en_ja_title
+                        vraag: data.index
                     });
 
                     console.log("st2", that.state);
@@ -82,20 +82,39 @@ class Quiz extends React.Component {
     HaalAndereAnimeOp = () => {
         var {vraag} = this.state;
 
-        //console.log(this.state.vraag);
+        console.log(this.state.vraag);
 
-       
+        /** Je krijgt alleen de laatste where te zien 
+        Firebase.collection("Titles").where("index", "<", vraag)
+        Firebase.collection("Titles").where("index", ">", vraag)
+        .get()
+        .then(snap => {
+            snap.forEach(doc => {
+                console.log(doc.data());
+            });
+        }); */
+
         let postsRef1 = Firebase.collection("Titles")
-        let queryRef1 = postsRef1.where("en_ja_title", "==", vraag)
-            .limit(1)
-    
+        let queryRef1 = postsRef1.where("index", "<", vraag)
+        let queryRef2 = postsRef1.where("index", ">", vraag)
         
-        queryRef1.get().then(function(querySnapshot) {
-            if (querySnapshot.empty) {
+        queryRef1.get().then(function(querySnapshot1) {
+            if (querySnapshot1.empty) {
                 console.log('no documents found');
               } else {
-                querySnapshot.forEach(function (documentSnapshot) {
-                    var data = documentSnapshot.data();
+                querySnapshot1.forEach(function (documentSnapshot1) {
+                    var data = documentSnapshot1.data();
+                    console.log(data.en_ja_title);
+                });
+              }
+        });
+
+        queryRef2.get().then(function(querySnapshot2) {
+            if (querySnapshot2.empty) {
+                console.log('no documents found');
+              } else {
+                querySnapshot2.forEach(function (documentSnapshot2) {
+                    var data = documentSnapshot2.data();
                     console.log(data.en_ja_title);
                 });
               }

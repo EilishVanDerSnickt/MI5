@@ -103,7 +103,8 @@ toonPosters = () => {
             posters[i] = items.data[i].attributes.posterImage.tiny;
     
             Firebase.collection("Posters").add({
-            posterURL: posters[i]
+                index: i,
+                posterURL: posters[i]
             })
             .then(function(docRef) {
                 console.log("Document written with ID: ", docRef.id);
@@ -131,8 +132,9 @@ toonTitles = () => {
             jajp_titles[i] = items.data[i].attributes.titles.ja_jp;
     
             Firebase.collection("Titles").add({
-            en_ja_title: enjp_titles[i],
-            japanese_title: jajp_titles[i]
+                index: i,
+                en_ja_title: enjp_titles[i],
+                japanese_title: jajp_titles[i]
             })
             .then(function(docRef) {
                 console.log("Document written with ID: ", docRef.id);
@@ -158,7 +160,8 @@ toonSynopsis = () => {
             synopsis[i] = items.data[i].attributes.synopsis;
     
             Firebase.collection("Synopsis").add({
-            synopsis: synopsis[i]
+                index: i,
+                synopsis: synopsis[i]
             })
             .then(function(docRef) {
                 console.log("Document written with ID: ", docRef.id);
