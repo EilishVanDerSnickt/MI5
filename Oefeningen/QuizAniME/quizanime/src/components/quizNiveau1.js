@@ -181,7 +181,6 @@ class QuizNiveau1 extends React.Component {
                 <ul>
                     {mogelijkeAntwoorden}
                 </ul>
-                <div>{button}</div>
             </div>
         );
     } //render
@@ -204,8 +203,6 @@ class QuizNiveau1 extends React.Component {
             localStorage.clear();
             console.log("Ga naar niveau 2")
         }
-        
-       
     } //checkAntwoord
 }
 
