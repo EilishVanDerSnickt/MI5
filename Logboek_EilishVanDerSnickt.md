@@ -74,7 +74,7 @@
 * collecties posters, titles en synopsis toevoegen
 * proberen alle characters van de trending anime's te verkrijgen
 
-## Week 8 
+## Week 8 - 9 uur
 ### 12/11/2019 - 4 uur
 * Characters ophalen via requests
 * troubleshooten characters ophalen
@@ -91,3 +91,6 @@
 * local storage toevoegen en tonen
 * krijg een random document
 * troubleshooten alleen documenten krijgen anders dan het reeds gekregen document
+
+## Week 9
+### 19/11/2019

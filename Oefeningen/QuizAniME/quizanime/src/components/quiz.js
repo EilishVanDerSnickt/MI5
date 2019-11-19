@@ -70,6 +70,9 @@ class Quiz extends React.Component {
                         vraag: data.en_ja_title
                     });
 
+                    console.log("st2", that.state);
+
+
                     that.HaalAndereAnimeOp();
                 });
               }
@@ -79,10 +82,12 @@ class Quiz extends React.Component {
     HaalAndereAnimeOp = () => {
         var {vraag} = this.state;
 
+        //console.log(this.state.vraag);
+
        
-        let postsRef = Firebase.collection("Titles")
-        let queryRef1 = postsRef.where("en_ja_title", "==", vraag)
-            .orderBy("en_ja_title")
+        let postsRef1 = Firebase.collection("Titles")
+        let queryRef1 = postsRef1.where("en_ja_title", "==", vraag)
+            .limit(1)
     
         
         queryRef1.get().then(function(querySnapshot) {
