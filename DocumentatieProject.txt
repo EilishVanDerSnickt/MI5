@@ -1,0 +1,9 @@
+Commerciele tekst
+ 	-> waar gaat de app over
+	-> korte inhoud doel app
+	-> waarom moeten gebruikers jouw app installeren
+
+Technisch deel
+	-> hoe zit de code in elkaar
+	-> wat heb je allemaal gebruikt (react, firestore, ...)
+	-> hoe zit de database in elkaar
