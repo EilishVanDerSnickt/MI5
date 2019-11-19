@@ -1,5 +1,5 @@
 import React from 'react';
-require('./App.css')
+import '../App.css';
 
 function footer() {
     return(

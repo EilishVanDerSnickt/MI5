@@ -311,3 +311,14 @@ var request = new XMLHttpRequest();
           console.log(naam);
         }
         request2.send();
+
+<div className="App">
+<div className="inputDiv"><input type="text" className="input" placeholder="Search..." /></div>
+<h1 className="Anime">AniME</h1>
+<Thomaach value={this.state} />
+<footer/>
+<div className="footer">
+  <a href="AnimeList">AnimeList</a>
+  <a href="TODO">Quiz</a>
+</div>
+</div>

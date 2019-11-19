@@ -93,7 +93,7 @@
 * troubleshooten alleen documenten krijgen anders dan het reeds gekregen document
 
 ## Week 9
-### 19/11/2019 - 5 uur
+### 19/11/2019 - 5 uur 30 minuten
 * troubleshooten documenten verkrijgen anders dan het reeds gekregen document
 * aanmaken quiz niveau 1 (het juiste antwoord wordt altijd als laatste geplaatst)
 * antwoorden op een random plaats tonen
@@ -102,3 +102,4 @@
 * refresh index opslaan in localstorage
 * wanneer index op 5 staat clear storage en ga naar het volgende niveau in de quiz
 * mooi maken anime project code
+* routering toevoegen aan anime project
