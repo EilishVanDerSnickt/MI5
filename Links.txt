@@ -57,8 +57,12 @@ https://github.com/zeit/next.js/issues/1999
 --Local storage
 https://medium.com/@siobhanpmahoney/local-storage-in-a-react-single-page-application-34ba30fc977d
 https://github.com/siobhanpmahoney/newswire-app/tree/master/src
+https://www.taniarascia.com/how-to-use-local-storage-with-javascript/
 --show all local storage items
 https://stackoverflow.com/questions/5410820/how-can-i-show-all-the-localstorage-saved-variables
+--make an int of a localstorage object
+https://www.dummies.com/web-design-development/site-development/numeric-values-and-local-storage-with-html5/
+
 
 --random
 https://medium.com/@josephcardillo/using-math-random-in-javascript-c49eff920b11

@@ -93,9 +93,11 @@
 * troubleshooten alleen documenten krijgen anders dan het reeds gekregen document
 
 ## Week 9
-### 19/11/2019 - 4 uur
+### 19/11/2019 - 4 uur 50 minuten
 * troubleshooten documenten verkrijgen anders dan het reeds gekregen document
 * aanmaken quiz niveau 1 (het juiste antwoord wordt altijd als laatste geplaatst)
 * antwoorden op een random plaats tonen
 * Pagina reloaden wanneer er een vraag is beantwoord
 * zoek (zorg ervoor dat de state niet wordt geupdate bij het herladen pagina => houdt bij hoeveel juiste of foute antwoorden)
+* refresh index opslaan in localstorage
+* wanneer index op 5 staat clear storage en ga naar het volgende niveau in de quiz

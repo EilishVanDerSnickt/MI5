@@ -1,5 +1,6 @@
 import React from 'react';
 import Firebase from './firebaseInit';
+import ls from 'local-storage';
 
 class QuizNiveau1 extends React.Component {
     constructor(props) {
@@ -9,7 +10,8 @@ class QuizNiveau1 extends React.Component {
             vraagIndex: null,
             vraagData: null,
             mogelijkeAntwoorden: [],
-            antwoord: null
+            antwoord: null,
+            refreshIndex: null
         }
     } // constructor
 
@@ -17,7 +19,23 @@ class QuizNiveau1 extends React.Component {
         //haal alle trending anime op om te weten hoeveel animes er in de collectie staan
         const that = this;
         var newTitles = [];
-        var array = [];
+        var reloadIndex;
+
+        // maak een teller aan in de localstorage die telt hoeveel keer de pagina refreshd
+        if (localStorage.getItem('Index')) {
+            reloadIndex = localStorage.getItem('Index');
+          } else {
+            reloadIndex = 0;
+          }
+
+        reloadIndex = parseInt(reloadIndex) + 1;
+
+        ls.set('Index', reloadIndex);
+
+        //zet de waarde van deze teller in de state
+        that.setState({
+            refreshIndex: reloadIndex
+        });
 
         Firebase.collection("TrendingAnime").get().then(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
@@ -163,19 +181,28 @@ class QuizNiveau1 extends React.Component {
                 <ul>
                     {mogelijkeAntwoorden}
                 </ul>
+                <div>{button}</div>
             </div>
         );
     } //render
 
     CheckAntwoord = (item) => {
-        var {antwoord} = this.state;
+        var {antwoord, refreshIndex} = this.state;
+
+        console.log(localStorage.getItem('Index'));
 
         if (item == antwoord) {
             alert("juist");
-            window.location.reload(false);
         } else {
             alert("fout");
+        }
+
+        //wanneer de pagina 5 keer heeft gerefreshed stop ermee en ga naar het volgende niveau
+        if (refreshIndex < 5) {
             window.location.reload(false);
+        } else {
+            localStorage.clear();
+            console.log("Ga naar niveau 2")
         }
         
        
