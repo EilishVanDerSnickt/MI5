@@ -1,28 +1,23 @@
 import React from 'react';
 import Firebase from './firebaseInit';
 
-class Quiz extends React.Component {
+class QuizNiveau1 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             titels: [],
-            local: [],
-            vraag: null
+            vraagIndex: null,
+            vraagData: null,
+            mogelijkeAntwoorden: [],
+            antwoord: null
         }
     } // constructor
 
     componentWillMount() {
-    } // ComponentWillMount
-
-    componentDidMount() {
+        //haal alle trending anime op om te weten hoeveel animes er in de collectie staan
         const that = this;
         var newTitles = [];
         var array = [];
-
-        for (var i = 0; i < localStorage.length; i++){
-            console.log(localStorage.getItem(localStorage.key(i)));
-            array.push(localStorage.getItem(localStorage.key(i)));
-        }
 
         Firebase.collection("TrendingAnime").get().then(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
@@ -33,15 +28,12 @@ class Quiz extends React.Component {
             //newTitles = newTitles.map((d) => <li key={d.name}>{d.name}</li>);
             that.setState({
                 titels: newTitles,
-                local: array
             });
             console.log("st", that.state);
 
             that.StelVraag();
         });
-        // that.setState({ titels }) = newTitles.map((d) => <li key={d.name}>{d.name}</li>);
-    } // ComponentDidMount
-
+    } // ComponentWillMount
     StelVraag = () => {
         var {titels} = this.state;
         const that = this;
@@ -65,70 +57,102 @@ class Quiz extends React.Component {
 
                     //bepaal de gevraagde anime door de status van vraag gelijk te zetten met de titel van de anime
                     that.setState({
-                        vraag: data.index
+                        vraagIndex: data.index,
+                        vraagData: data.en_ja_title,
+                        antwoord: data.synopsis
                     });
 
                     console.log("st2", that.state);
 
-
-                    that.HaalAndereAnimeOp();
+                    that.HaalAndereAnimesOp();
                 });
               }
         });
     } // StelVraag
 
-    HaalAndereAnimeOp = () => {
-        var {vraag} = this.state;
+    HaalAndereAnimesOp = () => {
+        var {vraagIndex, vraagData} = this.state;
+        const that = this;
+        var antwoorden = [];
 
-        console.log(this.state.vraag);
+        console.log(vraagIndex);
+        console.log(vraagData);
 
-        /** Je krijgt alleen de laatste where te zien 
-        Firebase.collection("Titles").where("index", "<", vraag)
-        Firebase.collection("Titles").where("index", ">", vraag)
-        .get()
-        .then(snap => {
-            snap.forEach(doc => {
-                console.log(doc.data());
-            });
-        }); */
-
-        let postsRef1 = Firebase.collection("Titles")
-        let queryRef1 = postsRef1.where("index", "<", vraag)
-        let queryRef2 = postsRef1.where("index", ">", vraag)
+        let postsRef1 = Firebase.collection("Synopsis")
+        let queryRef1 = postsRef1.where("index", "<", vraagIndex)
+            .limit(2)
+        let queryRef2 = postsRef1.where("index", ">", vraagIndex)
+            .limit(2)
         
         queryRef1.get().then(function(querySnapshot1) {
             if (querySnapshot1.empty) {
                 console.log('no documents found');
-              } else {
+            } else {
                 querySnapshot1.forEach(function (documentSnapshot1) {
                     var data = documentSnapshot1.data();
-                    console.log(data.en_ja_title);
+                    console.log(data.synopsis);
+                    antwoorden.push(data.synopsis);
                 });
-              }
+            }
+
+            that.setState({
+                mogelijkeAntwoorden: antwoorden
+            });
         });
 
         queryRef2.get().then(function(querySnapshot2) {
             if (querySnapshot2.empty) {
                 console.log('no documents found');
-              } else {
-                querySnapshot2.forEach(function (documentSnapshot2) {
+            } else {
+            querySnapshot2.forEach(function (documentSnapshot2) {
                     var data = documentSnapshot2.data();
-                    console.log(data.en_ja_title);
+                    console.log(data.synopsis);
+                    antwoorden.push(data.synopsis);
                 });
-              }
+            }
+            that.setState({
+                mogelijkeAntwoorden: antwoorden
+            });
         });
-    }
+
+    } //haalAndereAnimesOp
 
     render() {
+        var {vraagIndex, vraagData, antwoord, mogelijkeAntwoorden} = this.state;
+        const that = this;
+
+        //antwoorden staan nu altijd als laatste
+        mogelijkeAntwoorden.push(antwoord);
+        
+        mogelijkeAntwoorden = mogelijkeAntwoorden.map(function(item, index){
+            return (
+                <li id={index} onClick={() => {that.CheckAntwoord(item)}}>{item}</li>
+            );
+        });
+
         return (
             <div>
-                <h1>Welcome to the quiz!</h1>
-                <ul>{this.state.titels}</ul>
-                <ul>{this.state.local}</ul>
-                <button><a href="/quizniveau1">Ga naar quiz niveau 1</a></button>
+                <h1>Quiz level 1</h1>
+                <h2>Titles</h2>
+                <p>Duid de juiste synopsis aan voor {vraagData}</p>
+                <ul>
+                    {mogelijkeAntwoorden}
+                </ul>
             </div>
         );
-    } // render
+    } //render
+
+    CheckAntwoord = (item) => {
+        var {antwoord} = this.state;
+
+        if (item == antwoord) {
+            alert("Juist");
+        } else {
+            alert("fout");
+        }
+        
+       
+    } //checkAntwoord
 }
 
-export default Quiz;
+export default QuizNiveau1;

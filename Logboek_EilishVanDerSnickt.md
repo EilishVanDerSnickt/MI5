@@ -95,3 +95,4 @@
 ## Week 9
 ### 19/11/2019
 * troubleshooten documenten verkrijgen anders dan het reeds gekregen document
+* aanmaken quiz niveau 1
