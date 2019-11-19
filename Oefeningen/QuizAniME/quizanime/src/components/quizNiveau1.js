@@ -78,12 +78,12 @@ class QuizNiveau1 extends React.Component {
         console.log(vraagIndex);
         console.log(vraagData);
 
-        let postsRef1 = Firebase.collection("Synopsis")
-        let queryRef1 = postsRef1.where("index", "<", vraagIndex)
+        let postsRef = Firebase.collection("Synopsis")
+        let queryRef1 = postsRef.where("index", "<", vraagIndex)
             .limit(1)
-        let queryRef2 = postsRef1.where("index", ">", vraagIndex)
+        let queryRef2 = postsRef.where("index", ">", vraagIndex)
             .limit(1)
-        let queryRef3 = postsRef1.where("index", "==", vraagIndex)
+        let queryRef3 = postsRef.where("index", "==", vraagIndex)
             .limit(1)
         
         queryRef1.get().then(function(querySnapshot1) {
@@ -95,22 +95,6 @@ class QuizNiveau1 extends React.Component {
                     console.log(data1.synopsis);
                     antwoorden.push(data1.synopsis);
                 });
-
-                that.shuffleAntwoorden(antwoorden)
-            }
-        });
-
-        queryRef3.get().then(function(querySnapshot3) {
-            if (querySnapshot3.empty) {
-                console.log('no documents found');
-            } else {
-                querySnapshot3.forEach(function (documentSnapshot3) {
-                    var data3 = documentSnapshot3.data();
-                    console.log(data3.synopsis);
-                    antwoorden.push(data3.synopsis);
-                });
-
-                that.shuffleAntwoorden(antwoorden)
             }
         });
 
@@ -122,6 +106,18 @@ class QuizNiveau1 extends React.Component {
                     var data2 = documentSnapshot2.data();
                     console.log(data2.synopsis);
                     antwoorden.push(data2.synopsis);
+                });
+            }
+        });
+
+        queryRef3.get().then(function(querySnapshot3) {
+            if (querySnapshot3.empty) {
+                console.log('no documents found');
+            } else {
+                querySnapshot3.forEach(function (documentSnapshot3) {
+                    var data3 = documentSnapshot3.data();
+                    console.log(data3.synopsis);
+                    antwoorden.push(data3.synopsis);
                 });
 
                 that.shuffleAntwoorden(antwoorden)
@@ -140,7 +136,7 @@ class QuizNiveau1 extends React.Component {
             antwoorden[i] = antwoorden[j];
             antwoorden[j] = x;
         }
-
+       
         that.setState ({
             mogelijkeAntwoorden: antwoorden
         });
