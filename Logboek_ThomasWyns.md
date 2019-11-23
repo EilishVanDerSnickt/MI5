@@ -58,3 +58,10 @@
 ### 12/11/2019 - 4 uur
 * poster in state gekregen en ook kunnen displayen
 
+## Week 9 
+### 19/11/2019
+* Ziek
+### 23/11/2019 - 2 uur
+* afwerken PWA cursus
+
+
