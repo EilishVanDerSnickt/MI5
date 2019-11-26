@@ -13,7 +13,8 @@ class QuizNiveau1 extends React.Component {
             mogelijkeAntwoorden: [],
             antwoord: null,
             refreshIndex: null,
-            nieuwNiveau: false
+            nieuwNiveau: false,
+            punten: 0
         }
     } // constructor
 
@@ -70,6 +71,7 @@ class QuizNiveau1 extends React.Component {
         queryRef.get().then(function(querySnapshot) {
             if (querySnapshot.empty) {
                 console.log('no documents found');
+                window.location.reload(false);
               } else {
                 querySnapshot.forEach(function (documentSnapshot) {
                     var data = documentSnapshot.data();
@@ -183,28 +185,49 @@ class QuizNiveau1 extends React.Component {
                 <ul>
                     {mogelijkeAntwoorden}
                 </ul>
-                { that.state.nieuwNiveau && <QuizNiveau2 /> }
+                { that.state.nieuwNiveau && <a href="/quizniveau2"><button>Niveau 2 -></button></a> }
             </div>
         );
     } //render
 
     CheckAntwoord = (item) => {
-        var {antwoord, refreshIndex} = this.state;
+        var {antwoord, refreshIndex, punten} = this.state;
         const that = this;
+        var aantalPunten
 
+        if (refreshIndex == 1) {
+            ls.set('Punten', 0);
+        }
+
+        aantalPunten = localStorage.getItem('Punten');
+        
         console.log(localStorage.getItem('Index'));
+        console.log("Aantal punten: " + aantalPunten);
 
         if (item == antwoord) {
             alert("juist");
+            aantalPunten = parseInt(aantalPunten) + 1;
+            
+            ls.set('Punten', aantalPunten);
+
+            that.setState ({
+                punten: aantalPunten
+            });
         } else {
             alert("fout");
         }
+
+        console.log("Aantal punten: " + localStorage.getItem('Punten'));
 
         //wanneer de pagina 5 keer heeft gerefreshed stop ermee en ga naar het volgende niveau
         if (refreshIndex < 5) {
             window.location.reload(false);
         } else {
             localStorage.clear();
+
+            ls.set('Punten', aantalPunten);
+            console.log("Aantal punten: " + localStorage.getItem('Punten'));
+
             console.log("Ga naar niveau 2");
 
             that.setState ({
