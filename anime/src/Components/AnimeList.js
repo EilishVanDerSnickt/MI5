@@ -44,7 +44,7 @@ class AnimeList extends React.Component {
             for (let i = 0; i < 10; i++){
               //vul de arrays met de opgehaalde data
               ids[i] = data.data[i].id;
-              posters[i] = data.data[i].attributes.posterImage.tiny; 
+              posters[i] = data.data[i].attributes.posterImage.medium; 
               names[i] = data.data[i].attributes.canonicalTitle;
             }
         }).then(function addToState() {
