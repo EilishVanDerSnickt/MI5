@@ -64,4 +64,8 @@
 ### 23/11/2019 - 2 uur
 * afwerken PWA cursus
 
+## Week 10
+### 26/11/2019 - 4 uur
+* css fixen, doorgeven id
+
 
