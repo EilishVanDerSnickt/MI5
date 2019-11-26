@@ -75,4 +75,5 @@ https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
 --reload a page
 https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react
 
-Figure en figcaption voor de homepage trending anime posters en naam
+-- create a conditional routering in return 
+https://stackoverflow.com/questions/49649767/reactjs-how-do-you-switch-between-pages-in-react/49649856

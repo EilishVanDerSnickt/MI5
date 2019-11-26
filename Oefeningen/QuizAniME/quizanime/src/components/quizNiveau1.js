@@ -1,6 +1,7 @@
 import React from 'react';
 import Firebase from './firebaseInit';
 import ls from 'local-storage';
+import QuizNiveau2 from './quizNiveau2';
 
 class QuizNiveau1 extends React.Component {
     constructor(props) {
@@ -11,7 +12,8 @@ class QuizNiveau1 extends React.Component {
             vraagData: null,
             mogelijkeAntwoorden: [],
             antwoord: null,
-            refreshIndex: null
+            refreshIndex: null,
+            nieuwNiveau: false
         }
     } // constructor
 
@@ -161,7 +163,7 @@ class QuizNiveau1 extends React.Component {
     } //shuffleAntwoorden
 
     render() {
-        var {vraagIndex, vraagData, antwoord, mogelijkeAntwoorden} = this.state;
+        var {vraagIndex, vraagData, antwoord, mogelijkeAntwoorden, nieuwNiveau} = this.state;
         const that = this;
 
         //antwoorden staan nu altijd als laatste
@@ -181,12 +183,14 @@ class QuizNiveau1 extends React.Component {
                 <ul>
                     {mogelijkeAntwoorden}
                 </ul>
+                { that.state.nieuwNiveau && <QuizNiveau2 /> }
             </div>
         );
     } //render
 
     CheckAntwoord = (item) => {
         var {antwoord, refreshIndex} = this.state;
+        const that = this;
 
         console.log(localStorage.getItem('Index'));
 
@@ -201,7 +205,11 @@ class QuizNiveau1 extends React.Component {
             window.location.reload(false);
         } else {
             localStorage.clear();
-            console.log("Ga naar niveau 2")
+            console.log("Ga naar niveau 2");
+
+            that.setState ({
+                nieuwNiveau: true
+            });
         }
     } //checkAntwoord
 }
