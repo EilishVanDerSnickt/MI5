@@ -103,3 +103,8 @@
 * wanneer index op 5 staat clear storage en ga naar het volgende niveau in de quiz
 * mooi maken anime project code
 * routering toevoegen aan anime project
+
+## Week 10
+### 26/11/2019 - 4 uur
+* wanneer de pagina 5 keer is herladen, ga naar quiz niveau 2
+* hou de punten bij in local storage
