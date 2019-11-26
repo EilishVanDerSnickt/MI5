@@ -108,3 +108,4 @@
 ### 26/11/2019 - 4 uur
 * wanneer de pagina 5 keer is herladen, ga naar quiz niveau 2
 * hou de punten bij in local storage
+* troubleshooting properties en onclick methode
