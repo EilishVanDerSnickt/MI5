@@ -1,20 +1,33 @@
 import React from 'react';
-require('./App.css')
+import ls from 'local-storage';
+require('./App.css');
+
 
 function Thomaach({value}) {
     const {personen} = value
+
+   
+        
+
     return(
-        <div className="ninja">
+        <div className="grid-view">
             { 
                 personen.map(persoon => {
+                    
                     return (<div className="Thomaach" key={persoon.id}>
-                        <div className="Div-anime"><img src={persoon.poster} alt="Poster Anime"></img>{persoon.name} </div>
+                            <div className="Div-anime">                                
+                                <figure>
+                                    <a href={"/AnimeDetails/" + persoon.id}><img className="posterImg" src={persoon.poster} alt="Poster Anime"></img>
+                                    <figcaption className="figcapText">{persoon.name}</figcaption>
+                                    </a>
+                                </figure>
+                            </div>
                         </div>
                     )
                 })
             }
         </div>
     )
-  } //Tomaach
+  } 
 
 export default Thomaach
