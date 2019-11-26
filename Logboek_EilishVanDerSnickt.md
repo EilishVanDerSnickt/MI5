@@ -92,7 +92,7 @@
 * krijg een random document
 * troubleshooten alleen documenten krijgen anders dan het reeds gekregen document
 
-## Week 9
+## Week 9 - 5 uur 30 minuten
 ### 19/11/2019 - 5 uur 30 minuten
 * troubleshooten documenten verkrijgen anders dan het reeds gekregen document
 * aanmaken quiz niveau 1 (het juiste antwoord wordt altijd als laatste geplaatst)

@@ -15,7 +15,6 @@ class Poster extends Component{
                 <img src={this.props.foto} key={this.props.i} alt='OnePiece' onClick={(id) => {this.toonAnime(this.props.id)}}></img>
                 {/**<Info animeID={this.props.id} onClick={console.log({props})}/>*/}
             </div>
-            
         );
     }
 
