@@ -1,5 +1,4 @@
 import React from 'react';
-import ls from 'local-storage';
 require('./App.css');
 
 
