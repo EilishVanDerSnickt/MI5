@@ -61,7 +61,10 @@ class DataToFirebase extends React.Component {
         console.log(synopsis);
         */
 
-        that.vulTrendingAnime(ids, posters, enjp_titles, jajp_titles, synopsis);
+        //that.vulTrendingAnime(ids, posters, enjp_titles, jajp_titles, synopsis);
+        //that.vulPosters(posters);
+        //that.vulTitles(enjp_titles, jajp_titles);
+        //that.vulSynopsis(synopsis);
 
     } // ophalenRelevanteData
 
@@ -85,6 +88,52 @@ class DataToFirebase extends React.Component {
         }
 
     } //vulTrendingAnime
+
+    vulPosters(posters) {
+        for (let i = 0; i < 10; i++) {
+            Firebase.collection("Posters").add({
+                index: i,
+                posterURL: posters[i]
+            })
+            .then(function(docRef) {
+                console.log("Document written with ID: ", docRef.id);
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+            }); 
+        }
+    } // vulPosters
+
+    vulTitles(enjp_titles, jajp_titles){
+        for (let i = 0; i < 10; i++) {
+            Firebase.collection("Titles").add({
+                index: i,
+                en_ja_title: enjp_titles[i],
+                japanese_title: jajp_titles[i]
+            })
+            .then(function(docRef) {
+                console.log("Document written with ID: ", docRef.id);
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+            }); 
+        }
+    } // vulTitles
+
+    vulSynopsis(synopsis) {
+        for (let i = 0; i < 10; i++) {
+            Firebase.collection("Synopsis").add({
+                index: i,
+                synopsis: synopsis[i]
+            })
+            .then(function(docRef) {
+                console.log("Document written with ID: ", docRef.id);
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+            }); 
+        }
+    } // vulSynopsis
 }
 
 export default DataToFirebase;

@@ -9,6 +9,7 @@ class AnimeList extends React.Component {
         this.state = {
           personen : [],
           items: [],
+          //bij elke setState moet de index verhoogt worden
           index: 0
         }
       } // constructor
