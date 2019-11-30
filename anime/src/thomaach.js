@@ -3,11 +3,8 @@ require('./App.css');
 
 
 function Thomaach({value}) {
-    const {personen} = value
-
+    const {personen} = value;
    
-        
-
     return(
         <div className="grid-view">
             { 
