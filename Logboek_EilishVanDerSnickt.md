@@ -109,3 +109,6 @@
 * wanneer de pagina 5 keer is herladen, ga naar quiz niveau 2
 * hou de punten bij in local storage
 * troubleshooting properties en onclick methode
+
+### 30/11/2019 - 1 uur 20 minuten
+* firestore toevoegen aan project anime

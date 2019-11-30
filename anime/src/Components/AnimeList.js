@@ -9,15 +9,17 @@ class AnimeList extends React.Component {
         this.state = {
           personen : [],
           items: [],
-          animeLoaded: false
+          index: 0
         }
       } // constructor
       
       addAnime(anime) {
         //console.log("ok")
         let animes = [...this.state.personen, anime]
+        var counter = this.state.index;
         this.setState({
-          personen: animes
+          personen: animes,
+          index: counter + 1
         })
         console.log(this.state)
       } //addAnime
@@ -37,6 +39,7 @@ class AnimeList extends React.Component {
         var posters = [];
         var names = [];
         const that = this;
+        var counter = that.state.index;
           
         fetch('https://kitsu.io/api/edge/trending/anime')
         .then(response => {
@@ -48,7 +51,7 @@ class AnimeList extends React.Component {
 
             that.setState({
               items: data,
-              animeLoaded: true,
+              index: counter + 1,
           })
 
             for (let i = 0; i < 10; i++){
@@ -67,7 +70,7 @@ class AnimeList extends React.Component {
       } // componentDidMount
       
       render(){
-        var {items, animeLoaded} = this.state;
+        var {items, index} = this.state;
         const that = this;
       
         return (
@@ -80,7 +83,7 @@ class AnimeList extends React.Component {
                     <a href="/">AnimeList</a>
                     <a href="/Quiz">Quiz</a>
                 </div>
-                { animeLoaded && <DatatoFirebase data={that.state.items}/> }
+                { index == 1 && <DatatoFirebase data={items}/> }
                 
             </div>
         );
