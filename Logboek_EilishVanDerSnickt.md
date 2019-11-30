@@ -110,6 +110,7 @@
 * hou de punten bij in local storage
 * troubleshooting properties en onclick methode
 
-### 30/11/2019 - 2 uur
+### 30/11/2019 - 2 uur 15 minuten
 * firestore toevoegen aan project anime
 * vul de firestore
+* verschillende soorten quizzes toevoegen
