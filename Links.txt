@@ -67,6 +67,9 @@ https://www.dummies.com/web-design-development/site-development/numeric-values-a
 --remove ant item
 https://developer.mozilla.org/en-US/docs/Web/API/Storage/removeItem
 
+--convert string to int
+https://gomakethings.com/converting-strings-to-numbers-with-vanilla-javascript/
+
 --random
 https://medium.com/@josephcardillo/using-math-random-in-javascript-c49eff920b11
 

@@ -115,5 +115,7 @@
 * vul de firestore
 * verschillende soorten quizzes toevoegen
 
-### 01/12/2019 - 55 minuten
+### 01/12/2019 - 1 uur 50 minuten
 * synopsis quiz toevoegen
+* alle niveaus synopsis quiz toevoegen
+* troubleshooten punten in localstorage
