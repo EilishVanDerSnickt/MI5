@@ -176,7 +176,7 @@ shuffleAntwoorden = (antwoorden) => {
     return(
       <div>
         <h1>Welcome to the synopsis quiz</h1>
-        <p>Duid de juiste synopsis aan voor {vraagData}</p>
+        <p>Duid de juiste titel aan voor {vraagData}</p>
         <ul>
             {mogelijkeAntwoorden}
         </ul>
@@ -186,7 +186,7 @@ shuffleAntwoorden = (antwoorden) => {
   } // render
 
   CheckAntwoord = (item) => {
-    var {antwoord, refreshIndex, punten} = this.state;
+    var {antwoord, refreshIndex} = this.state;
     const that = this;
     var aantalPunten
 
