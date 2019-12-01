@@ -1,6 +1,9 @@
 import React from 'react';
 
 const Quiz = () => {
+    localStorage.removeItem("Punten");
+    localStorage.removeItem("Index");
+
     return (
         <div className="Quiz">
             <h1>Welcome on the Quiz page</h1>

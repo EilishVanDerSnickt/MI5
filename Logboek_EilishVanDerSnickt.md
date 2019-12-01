@@ -114,3 +114,6 @@
 * firestore toevoegen aan project anime
 * vul de firestore
 * verschillende soorten quizzes toevoegen
+
+### 01/12/2019 - 55 minuten
+* synopsis quiz toevoegen

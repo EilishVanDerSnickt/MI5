@@ -4,8 +4,9 @@ import AnimeList from './Components/AnimeList';
 import Quiz from './Components/Quiz';
 import AnimeDetails from './Components/AnimeDetails';
 import SynopsisQuizNiveau1 from './Components/SynopsisQuizNiveau1';
-import PosterQuizNiveau1 from './Components/PosterQuizNiveau1';
+import PosterQuizNiveau1 from './Components/SynopsisQuizNiveau1';
 import TitlesQuizNiveau1 from './Components/TitlesQuizNiveau1';
+import SynopsisQuizNiveau2 from './Components/SynopsisQuizNiveau2';
 
 class App extends React.Component {
   render(){
@@ -17,6 +18,7 @@ class App extends React.Component {
         <Route path='/SynopsisQuiz_1' component={SynopsisQuizNiveau1} />
         <Route path='/PosterQuiz_1' component={PosterQuizNiveau1} />
         <Route path='/TitlesQuiz_1' component={TitlesQuizNiveau1} />
+        <Route path='/SynopsisQuiz_2' component={SynopsisQuizNiveau2} />
       </BrowserRouter>
     );
   } // render

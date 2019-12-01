@@ -65,7 +65,6 @@ https://stackoverflow.com/questions/5410820/how-can-i-show-all-the-localstorage-
 --make an int of a localstorage object
 https://www.dummies.com/web-design-development/site-development/numeric-values-and-local-storage-with-html5/
 
-
 --random
 https://medium.com/@josephcardillo/using-math-random-in-javascript-c49eff920b11
 
