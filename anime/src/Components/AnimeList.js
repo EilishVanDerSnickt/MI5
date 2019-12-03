@@ -1,6 +1,6 @@
 import React from 'react';
 import Thomaach from '../thomaach';
-import footer from './footer';
+
 import DatatoFirebase from './DataToFirebase';
 
 class AnimeList extends React.Component {
@@ -79,7 +79,7 @@ class AnimeList extends React.Component {
                 <div className="inputDiv"><input type="text" className="input" placeholder="Search..." /></div>
                 <h1 className="Anime">AniME</h1>
                 <Thomaach value={that.state} />
-                <footer/>
+                
                 <div className="footer">
                     <a href="/">AnimeList</a>
                     <a href="/Quiz">Quiz</a>
