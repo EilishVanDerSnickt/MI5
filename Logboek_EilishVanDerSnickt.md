@@ -125,3 +125,4 @@
 * layout animelist
 * troubleshooten punten in localstorage
 * maak poster quiz
+* maak titles quiz
