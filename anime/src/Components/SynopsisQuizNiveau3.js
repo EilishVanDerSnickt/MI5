@@ -178,7 +178,7 @@ class SynopsisQuizNiveau3 extends React.Component{
         <ul>
             {mogelijkeAntwoorden}
         </ul>
-        { that.state.nieuwNiveau && <a href="/SynopsisQuiz_3"><button>Niveau 3 -></button></a> }
+        { that.state.nieuwNiveau && <a href="/"><button>Ga naar het einde</button></a> }
             </div>
         
         );
@@ -215,6 +215,11 @@ class SynopsisQuizNiveau3 extends React.Component{
             });
         } else {
             alert("fout");
+            aantalPunten = parseInt(aantalPunten);
+
+            that.setState ({
+                punten: aantalPunten
+            });
         }
     
         console.log("Aantal punten: " + localStorage.getItem('Punten'));

@@ -104,7 +104,7 @@
 * mooi maken anime project code
 * routering toevoegen aan anime project
 
-## Week 10
+## Week 10 - 8 uur 5 minuten
 ### 26/11/2019 - 4 uur
 * wanneer de pagina 5 keer is herladen, ga naar quiz niveau 2
 * hou de punten bij in local storage
@@ -119,3 +119,5 @@
 * synopsis quiz toevoegen
 * alle niveaus synopsis quiz toevoegen
 * troubleshooten punten in localstorage
+
+## Week 11

@@ -220,7 +220,7 @@ shuffleAntwoorden = (antwoorden) => {
     } else {
         localStorage.removeItem('Index');
 
-        ls.set('Punten', aantalPunten);
+        ls.set('Punten', parseInt(aantalPunten));
         console.log("Aantal punten: " + localStorage.getItem('Punten'));
 
         console.log("Ga naar niveau 2");

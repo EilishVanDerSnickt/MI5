@@ -192,7 +192,7 @@ class SynopsisQuizNiveau2 extends React.Component{
         var aantalPunten;
 
         if (refreshIndex == 1) {
-            console.log(localStorage.getItem('Punten'))
+            console.log(localStorage.getItem('Punten'));
             aantalPunten = localStorage.getItem('Punten');
             localStorage.removeItem("Punten");
             ls.set('Punten', parseInt(aantalPunten));
@@ -217,6 +217,11 @@ class SynopsisQuizNiveau2 extends React.Component{
             });
         } else {
             alert("fout");
+            aantalPunten = parseInt(aantalPunten);
+
+            that.setState ({
+                punten: aantalPunten
+            });
         }
     
         console.log("Aantal punten: " + localStorage.getItem('Punten'));
