@@ -127,3 +127,4 @@
 * maak poster quiz
 * maak titles quiz
 * zet trending anime in local storage
+* probeer trending anime te tonen aan de hand van local storage

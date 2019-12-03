@@ -66,6 +66,8 @@ https://stackoverflow.com/questions/5410820/how-can-i-show-all-the-localstorage-
 https://www.dummies.com/web-design-development/site-development/numeric-values-and-local-storage-with-html5/
 --remove ant item
 https://developer.mozilla.org/en-US/docs/Web/API/Storage/removeItem
+-- check if localstorage item exists
+https://stackoverflow.com/questions/3262605/how-to-check-whether-a-storage-item-is-set
 
 --convert string to int
 https://gomakethings.com/converting-strings-to-numbers-with-vanilla-javascript/
