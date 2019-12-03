@@ -121,8 +121,9 @@
 * troubleshooten punten in localstorage
 
 ## Week 11
-### 03/12/2019
+### 03/12/2019 - 4 uur
 * layout animelist
 * troubleshooten punten in localstorage
 * maak poster quiz
 * maak titles quiz
+* zet trending anime in local storage

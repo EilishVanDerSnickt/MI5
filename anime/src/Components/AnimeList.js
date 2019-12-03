@@ -1,7 +1,8 @@
 import React from 'react';
 import Thomaach from '../thomaach';
-
 import DatatoFirebase from './DataToFirebase';
+import { lstat } from 'fs';
+import ls from 'local-storage';
 
 class AnimeList extends React.Component {
     constructor(props) {
@@ -10,7 +11,8 @@ class AnimeList extends React.Component {
           personen : [],
           items: [],
           //bij elke setState moet de index verhoogt worden
-          index: 0
+          index: 0,
+          localstorage: []
         }
       } // constructor
       
@@ -67,8 +69,23 @@ class AnimeList extends React.Component {
               //this.addAnime(new anime(names[i], posters[i] ,ids[i]));
                 //console.log(i)
             }
+
+            that.addToLocalStorage(ids, "IDs");
+            that.addToLocalStorage(posters, "Posters");
+            that.addToLocalStorage(names, "ENJP_titles");
         })
       } // componentDidMount
+
+      addToLocalStorage = (array, benaming) => {
+        this.setState({
+          localstorage: array
+        })
+
+        ls.set(benaming, array);
+
+        console.log("Local storage: " + localStorage.getItem(benaming));
+      
+      } // addToLocalStorage
       
       render(){
         var {items, index} = this.state;
