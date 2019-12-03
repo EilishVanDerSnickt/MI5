@@ -173,7 +173,7 @@ class SynopsisQuizNiveau3 extends React.Component{
 
         return(
             <div>
-                <h1>Welcome to the synopsis quiz level 2</h1>
+                <h1>Welcome to the synopsis quiz level 3</h1>
                 <p>Duid de juiste titel aan voor {vraagData}</p>
         <ul>
             {mogelijkeAntwoorden}
@@ -190,11 +190,9 @@ class SynopsisQuizNiveau3 extends React.Component{
         var aantalPunten;
 
         if (refreshIndex == 1) {
-            console.log(localStorage.getItem('Punten'))
             aantalPunten = localStorage.getItem('Punten');
             localStorage.removeItem("Punten");
             ls.set('Punten', parseInt(aantalPunten));
-            console.log(aantalPunten);
             aantalPunten = parseInt(aantalPunten, 10);
             console.log(aantalPunten);
         }

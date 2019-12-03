@@ -2,7 +2,7 @@ import React from 'react';
 import Firebase from './FirebaseInit';
 import ls from 'local-storage';
 
-class SynopsisQuizNiveau2 extends React.Component{
+class PosterQuizNiveau2 extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -42,7 +42,7 @@ class SynopsisQuizNiveau2 extends React.Component{
         Firebase.collection("TrendingAnime").get().then(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
                 // doc.data() is never undefined for query doc snapshots
-                vragen.push(doc.data().synopsis);
+                vragen.push(doc.data().en_ja_title);
             });
             // update new titles 
             //newTitles = newTitles.map((d) => <li key={d.name}>{d.name}</li>);
@@ -74,13 +74,13 @@ class SynopsisQuizNiveau2 extends React.Component{
               } else {
                 querySnapshot.forEach(function (documentSnapshot) {
                     var data = documentSnapshot.data();
-                    console.log(data.synopsis);
+                    console.log(data.en_ja_title);
     
                     //bepaal de gevraagde anime door de status van vraag gelijk te zetten met de titel van de anime
                     that.setState({
                         vraagIndex: data.index,
-                        vraagData: data.synopsis,
-                        antwoord: data.en_ja_title
+                        vraagData: data.en_ja_title,
+                        antwoord: data.posterURL
                     });
     
                     console.log("st2", that.state);
@@ -99,7 +99,7 @@ class SynopsisQuizNiveau2 extends React.Component{
         console.log(vraagIndex);
         console.log(vraagData);
     
-        let postsRef = Firebase.collection("Titles")
+        let postsRef = Firebase.collection("Posters")
         let queryRef1 = postsRef.where("index", "<", vraagIndex)
             .limit(2)
         let queryRef2 = postsRef.where("index", ">", vraagIndex)
@@ -113,8 +113,8 @@ class SynopsisQuizNiveau2 extends React.Component{
             } else {
                 querySnapshot1.forEach(function (documentSnapshot1) {
                     var data1 = documentSnapshot1.data();
-                    console.log(data1.en_ja_title);
-                    antwoorden.push(data1.en_ja_title);
+                    console.log(data1.posterURL);
+                    antwoorden.push(data1.posterURL);
                 });
             }
         });
@@ -125,8 +125,8 @@ class SynopsisQuizNiveau2 extends React.Component{
             } else {
             querySnapshot2.forEach(function (documentSnapshot2) {
                     var data2 = documentSnapshot2.data();
-                    console.log(data2.en_ja_title);
-                    antwoorden.push(data2.en_ja_title);
+                    console.log(data2.posterURL);
+                    antwoorden.push(data2.posterURL);
                 });
             }
         });
@@ -137,8 +137,8 @@ class SynopsisQuizNiveau2 extends React.Component{
             } else {
                 querySnapshot3.forEach(function (documentSnapshot3) {
                     var data3 = documentSnapshot3.data();
-                    console.log(data3.en_ja_title);
-                    antwoorden.push(data3.en_ja_title);
+                    console.log(data3.posterURL);
+                    antwoorden.push(data3.posterURL);
                 });
     
                 that.shuffleAntwoorden(antwoorden)
@@ -169,18 +169,18 @@ class SynopsisQuizNiveau2 extends React.Component{
 
         mogelijkeAntwoorden = mogelijkeAntwoorden.map(function(item, index){
             return (
-                <li id={index} onClick={() => {that.CheckAntwoord(item)}}>{item}</li>
+                <img src={item} id={index} onClick={() => {that.CheckAntwoord(item)}}></img>
             );
         });
 
         return(
             <div>
-                <h1>Welcome to the synopsis quiz level 2</h1>
-                <p>Duid de juiste titel aan voor {vraagData}</p>
+                <h1>Welcome to the poster quiz level 2</h1>
+                <p>Duid de juiste poster aan voor {vraagData}</p>
         <ul>
             {mogelijkeAntwoorden}
         </ul>
-        { that.state.nieuwNiveau && <a href="/SynopsisQuiz_3"><button>Niveau 3 -></button></a> }
+        { that.state.nieuwNiveau && <a href="/PosterQuiz_3"><button>Niveau 3 -></button></a> }
             </div>
         
         );
@@ -242,4 +242,4 @@ class SynopsisQuizNiveau2 extends React.Component{
     } // checkAntwoord
 }
 
-export default SynopsisQuizNiveau2;
+export default PosterQuizNiveau2;
