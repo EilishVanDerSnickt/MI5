@@ -13,6 +13,9 @@ class AnimeDetails extends React.Component {
     componentDidMount(){
         const AnimeID = (window.location.href).substring(35, (window.location.href).length)
         const that = this;
+        var array = [];
+        
+        var arrayNames = [];
         var anime = function(name, poster, id, synopsis, rating, charLink, char1, char2, char3, char4, char5, char6, char7, char8, char9, char10) {
             this.name = name
             this.poster = poster
@@ -59,7 +62,7 @@ class AnimeDetails extends React.Component {
                 .then(function handleData2(data2) {
                     console.log(data2.data.length)
                     var length = data2.data.length;
-                    var array = [];
+                    
                     
                     for (var i = 0; i < length; i++) {
                         array[i] = data2.data[i].id
@@ -67,6 +70,7 @@ class AnimeDetails extends React.Component {
                     
                     console.log(array);
 
+                }).then(function test(){
 
                     for (var j = 0; j < array.length; j++) {
                         fetch('https://kitsu.io/api/edge/media-characters/' + array[j] + "/character")
@@ -76,26 +80,25 @@ class AnimeDetails extends React.Component {
                         })
                         .then(function handleData3(data3) {
                             console.log(data3.data.attributes.name);
+                            arrayNames.push(data3.data.attributes.name) 
+                            
                         })
                         
                     }
+                    
+                }).then(function next(){
+                    var reAnime = new anime(data.data[0].attributes.titles.en_jp,data.data[0].attributes.posterImage.medium, data.data[0].id, data.data[0].attributes.synopsis, 
+                        data.data[0].attributes.averageRating, data.data[0].relationships.characters.links.related, arrayNames[0], arrayNames[1],arrayNames[2],arrayNames[3],
+                        arrayNames[4],arrayNames[5],arrayNames[6],arrayNames[7],arrayNames[8],arrayNames[9])
 
-                    var deAnime = new anime(data.data[0].attributes.titles.en_jp,data.data[0].attributes.posterImage.medium, data.data[0].id, data.data[0].attributes.synopsis, 
-                                            data.data[0].attributes.averageRating, data.data[0].relationships.characters.links.related, array[0], array[1],array[2],array[3],
-                                            array[4],array[5],array[6],array[7],array[8],array[9])
-                    //data.data[0].relationships.characters.links.related
                     that.setState({
-                        anime: deAnime
+                        anime: reAnime
                     })
 
-                    console.log(that.state)
+                    console.log("test")
                 })
-
                 
             })  
-            
-            
-            
         
         }
     
@@ -106,6 +109,18 @@ class AnimeDetails extends React.Component {
                 <div className="AnimeDetails">
                     <img></img><h4>Anime Titel</h4>
                     <div>{this.state.anime.id}</div>
+                    <ul>
+                        <li>{this.state.anime.char1}</li>
+                        <li>{this.state.anime.char2}</li>
+                        <li>{this.state.anime.char3}</li>
+                        <li>{this.state.anime.char4}</li>
+                        <li>{this.state.anime.char5}</li>
+                        <li>{this.state.anime.char6}</li>
+                        <li>{this.state.anime.char7}</li>
+                        <li>{this.state.anime.char8}</li>
+                        <li>{this.state.anime.char9}</li>
+                        <li>{this.state.anime.char10}</li>
+                    </ul>
                 </div>
             </div>
             
