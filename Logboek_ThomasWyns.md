@@ -67,5 +67,11 @@
 ## Week 10
 ### 26/11/2019 - 4 uur
 * css fixen, doorgeven id
+### 28/11/2019 - 2 uur
+* doorgeven id, id in html krijgen (niet gelukt)
+
+## Week 11
+### 03/12/2019 - 4 uur
+* fetch in html krijgen (gelukt)
 
 
