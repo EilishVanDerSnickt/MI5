@@ -71,7 +71,7 @@
 * doorgeven id, id in html krijgen (niet gelukt)
 
 ## Week 11
-### 03/12/2019 - 4 uur
+### 03/12/2019 - 5 uur
 * fetch in html krijgen (gelukt)
 
 
