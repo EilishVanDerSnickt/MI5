@@ -73,5 +73,9 @@
 ## Week 11
 ### 03/12/2019 - 5 uur
 * fetch in html krijgen (gelukt)
+* characters in pagina krijgen
 
+## Week 12
+### 10/12/2019 - 5 uur
+* characters in pagina krijgen
 
