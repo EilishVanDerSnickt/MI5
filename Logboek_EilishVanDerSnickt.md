@@ -130,10 +130,11 @@
 * probeer trending anime te tonen aan de hand van local storage
 
 ## Week 12
-### 10/12/2019 - 4 uur
+### 10/12/2019 - 5 uur 25 minuten
 * troubleshooten trending anime tonen dmv local storage -> de laatste wordt getoond
 * alterneren tussen localstorage en API adhv de localstorage
 * Betere naamgeving nakijken
 * troubleshooting alle trending anime tonen adhv localstorage
 * firebase deploy
 * manifest file en service worker toevoegen
+* testen PWA app op mobiele toestellen
