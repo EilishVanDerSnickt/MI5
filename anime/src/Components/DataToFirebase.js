@@ -20,7 +20,7 @@ class DataToFirebase extends React.Component {
 
     render() {
         const that = this;
-        //console.log(that.props.data);
+        console.log(that.props.data);
 
         that.ophalenRelevanteData();
 

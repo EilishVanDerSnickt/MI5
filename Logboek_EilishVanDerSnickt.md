@@ -120,7 +120,7 @@
 * alle niveaus synopsis quiz toevoegen
 * troubleshooten punten in localstorage
 
-## Week 11
+## Week 11 - 4 uur
 ### 03/12/2019 - 4 uur
 * layout animelist
 * troubleshooten punten in localstorage
@@ -128,3 +128,10 @@
 * maak titles quiz
 * zet trending anime in local storage
 * probeer trending anime te tonen aan de hand van local storage
+
+## Week 12
+### 10/12/2019 - 4 uur
+* troubleshooten trending anime tonen dmv local storage -> de laatste wordt getoond
+* alterneren tussen localstorage en API adhv de localstorage
+* Betere naamgeving nakijken
+* troubleshooting alle trending anime tonen adhv localstorage
