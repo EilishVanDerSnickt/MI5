@@ -29,6 +29,8 @@ body{
 .posterImg {
   border-radius: 0.5em;
   box-shadow: 0.25em 0.25em 0.25em black;
+  max-width: 100%;
+  min-width: 10em;
 }
 
 
