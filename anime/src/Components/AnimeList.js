@@ -25,8 +25,6 @@ class AnimeList extends React.Component {
           animes: animeList,
           index: counter + 1
         })
-
-        
       } // addAnime
       
       componentWillMount() {
@@ -84,8 +82,6 @@ class AnimeList extends React.Component {
           var names2 = JSON.parse(names);
           var posters2 = JSON.parse(posters);
 
-          console.log(that.state);
-
           that.setState({
             items: alles2,
             index: counter + 1
@@ -93,7 +89,6 @@ class AnimeList extends React.Component {
 
           var animeArray = [];
 
-          console.log(that.state);
           for (let i = 0; i < ids2.length; i++) {
            animeArray.push(new anime(names2[i], posters2[i] ,ids2[i]));
             //that.addAnime(new anime(names2[i], posters2[i] ,ids2[i]));
@@ -115,9 +110,7 @@ class AnimeList extends React.Component {
       render(){
         var {items, index} = this.state;
         const that = this;
-
-        console.log(that.state);
-      
+  
         return (
             <div className="App">
                 <div className="inputDiv"><input type="text" className="input" placeholder="Search..." /></div>

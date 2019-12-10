@@ -135,3 +135,5 @@
 * alterneren tussen localstorage en API adhv de localstorage
 * Betere naamgeving nakijken
 * troubleshooting alle trending anime tonen adhv localstorage
+* firebase deploy
+* manifest file en service worker toevoegen
