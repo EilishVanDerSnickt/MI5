@@ -1,5 +1,5 @@
 import React from 'react';
-import Thomaach from '../thomaach';
+import AnimePoster from './AnimePoster';
 import DatatoFirebase from './DataToFirebase';
 import { lstat } from 'fs';
 import ls from 'local-storage';
@@ -9,42 +9,40 @@ class AnimeList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          personen : [],
+          animes: [],
           items: [],
           //bij elke setState moet de index verhoogt worden
-          index: 0,
-          localStorageItems: []
+          index: 0
         }
       } // constructor
       
       addAnime(anime) {
         //console.log("ok")
-        let animes = [...this.state.personen, anime]
+        let animeList = [...this.state.animes, anime];
         var counter = this.state.index;
+
         this.setState({
-          personen: animes,
+          animes: animeList,
           index: counter + 1
         })
-        console.log(this.state)
-      } //addAnime
+
+        
+      } // addAnime
       
-      componentDidMount() {
-          const StatePls = (anime) =>  {
-            return this.addAnime(anime)
-          }
-      
-          var anime = function(name, poster, id) {
-            this.name = name
-            this.poster = poster
-            this.id = id
-          }
-      
-          var ids = [];
-          var posters = [];
-          var names = [];
-          const that = this;
-          var counter = that.state.index;
-            
+      componentWillMount() {
+        const that = this;
+        var counter = that.state.index;
+
+        var anime = function(name, poster, id) {
+          this.name = name
+          this.poster = poster
+          this.id = id
+        }
+        var ids = [];
+        var posters = [];
+        var names = [];
+       
+        if (localStorage.getItem("Alles") === null) {
           fetch('https://kitsu.io/api/edge/trending/anime')
           .then(response => {
             if(response.ok) return response.json();
@@ -57,49 +55,79 @@ class AnimeList extends React.Component {
                 items: data,
                 index: counter + 1,
             })
-  
+
               for (let i = 0; i < 10; i++){
                 //vul de arrays met de opgehaalde data
                 ids[i] = data.data[i].id;
                 posters[i] = data.data[i].attributes.posterImage.medium; 
                 names[i] = data.data[i].attributes.canonicalTitle;
               }
+
           }).then(function addToState() {
               for (let i = 0; i < ids.length; i++) {
-                StatePls(new anime(names[i], posters[i] ,ids[i]))
-                //this.addAnime(new anime(names[i], posters[i] ,ids[i]));
-                  //console.log(i)
+                that.addAnime(new anime(names[i], posters[i] ,ids[i]));
               }
   
               that.addToLocalStorage(ids, "IDs");
               that.addToLocalStorage(posters, "Posters");
               that.addToLocalStorage(names, "ENJP_titles");
+              that.addToLocalStorage(that.state.items, "Alles");
           })
-      } // componentDidMount
+        } else {
+          var alles = localStorage.getItem("Alles");
+          names = localStorage.getItem("ENJP_titles");
+          posters = localStorage.getItem("Posters");
+          ids = localStorage.getItem("IDs");
+
+          var alles2 = JSON.parse(alles); 
+          var ids2 = JSON.parse(ids);
+          var names2 = JSON.parse(names);
+          var posters2 = JSON.parse(posters);
+
+          console.log(that.state);
+
+          that.setState({
+            items: alles2,
+            index: counter + 1
+          }) 
+
+          var animeArray = [];
+
+          console.log(that.state);
+          for (let i = 0; i < ids2.length; i++) {
+           animeArray.push(new anime(names2[i], posters2[i] ,ids2[i]));
+            //that.addAnime(new anime(names2[i], posters2[i] ,ids2[i]));
+          }
+
+          counter = that.state.index;
+
+          this.setState({
+            animes: animeArray,
+            index: counter + 1
+          })
+        }
+      } // componentWillMount
 
       addToLocalStorage = (array, benaming) => {
         ls.set(benaming, array);
-
-        console.log("Local storage: " + localStorage.getItem(benaming));
-      
       } // addToLocalStorage
       
       render(){
         var {items, index} = this.state;
         const that = this;
+
+        console.log(that.state);
       
         return (
             <div className="App">
                 <div className="inputDiv"><input type="text" className="input" placeholder="Search..." /></div>
                 <h1 className="Anime">AniME</h1>
-                <Thomaach value={that.state} />
-                
+                <AnimePoster value={that.state} />
                 <div className="footer">
                     <a href="/">AnimeList</a>
                     <a href="/Quiz">Quiz</a>
                 </div>
-                { index == 1 && <DatatoFirebase data={items}/> }
-                
+                {index == 1 && <DatatoFirebase data={items}/> }
             </div>
         );
       } // render
