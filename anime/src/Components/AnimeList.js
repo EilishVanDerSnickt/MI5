@@ -4,6 +4,7 @@ import DatatoFirebase from './DataToFirebase';
 import { lstat } from 'fs';
 import ls from 'local-storage';
 import { cpus } from 'os';
+import { Offline, Online } from 'react-detect-offline';
 
 class AnimeList extends React.Component {
     constructor(props) {
@@ -113,6 +114,10 @@ class AnimeList extends React.Component {
   
         return (
             <div className="App">
+              <Offline>
+                <h1>You are offline</h1>
+                </Offline>
+              <Online>
                 <div className="inputDiv"><input type="text" className="input" placeholder="Search..." /></div>
                 <h1 className="Anime">AniME</h1>
                 <AnimePoster value={that.state} />
@@ -121,6 +126,7 @@ class AnimeList extends React.Component {
                     <a href="/Quiz">Quiz</a>
                 </div>
                 {index == 1 && <DatatoFirebase data={items}/> }
+                </Online>
             </div>
         );
       } // render

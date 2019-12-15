@@ -85,3 +85,6 @@ https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react
 
 -- create a conditional routering in return 
 https://stackoverflow.com/questions/49649767/reactjs-how-do-you-switch-between-pages-in-react/49649856
+
+-- react check internet connection component
+https://www.npmjs.com/package/react-detect-offline
