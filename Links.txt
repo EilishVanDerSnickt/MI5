@@ -88,3 +88,8 @@ https://stackoverflow.com/questions/49649767/reactjs-how-do-you-switch-between-p
 
 -- react check internet connection component
 https://www.npmjs.com/package/react-detect-offline
+-- in de inspector kijk de code na om online/offline component te gebruiken
+https://chris.bolin.co/offline/
+
+-- how to create a sticky element
+https://www.w3schools.com/howto/howto_css_sticky_element.asp

@@ -33,8 +33,6 @@ body{
   min-width: 10em;
 }
 
-
-
 @media screen and (max-width: 399px) and (max-height: 600px) {
 
   .grid-view {

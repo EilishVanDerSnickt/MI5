@@ -138,3 +138,8 @@
 * firebase deploy
 * manifest file en service worker toevoegen
 * testen PWA app op mobiele toestellen
+
+### 15/12/2019 - 45 minuten
+* offline/online component toevoegen in react
+* pas de AniME app aan naarglang je on/off line bent
+* verzorg de layout offline mededeling
