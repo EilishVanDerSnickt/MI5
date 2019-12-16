@@ -129,7 +129,7 @@
 * zet trending anime in local storage
 * probeer trending anime te tonen aan de hand van local storage
 
-## Week 12
+## Week 12 - 6 uur 10 minuten
 ### 10/12/2019 - 5 uur 25 minuten
 * troubleshooten trending anime tonen dmv local storage -> de laatste wordt getoond
 * alterneren tussen localstorage en API adhv de localstorage
@@ -144,6 +144,7 @@
 * pas de AniME app aan naarglang je on/off line bent
 * verzorg de layout offline mededeling
 
+## Week 13
 ### 16/12/2019 - 1 uur
 * sticky element troubleshooten
 * redirect http to https
