@@ -5,7 +5,7 @@ import { lstat } from 'fs';
 import ls from 'local-storage';
 import { cpus } from 'os';
 import { Offline, Online } from 'react-detect-offline';
-//import '../ComponentLayout/AnimeList.css';
+import '../App.css';
 
 class AnimeList extends React.Component {
     constructor(props) {
@@ -116,7 +116,7 @@ class AnimeList extends React.Component {
         return (
             <div className="App">
               <Offline>
-                <div class="stickyDiv">
+                <div className="stickyDiv">
                   <p>You are currently offline</p>
                 </div>
                 <h1 className="Anime">AniME</h1>

@@ -143,3 +143,6 @@
 * offline/online component toevoegen in react
 * pas de AniME app aan naarglang je on/off line bent
 * verzorg de layout offline mededeling
+
+### 16/12/2019 - 10 minuten
+* sticky element troubleshooten

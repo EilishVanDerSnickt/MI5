@@ -33,6 +33,11 @@ body{
   min-width: 10em;
 }
 
+.stickyDiv {
+  position: sticky;
+  top: 0;
+}
+
 @media screen and (max-width: 399px) and (max-height: 600px) {
 
   .grid-view {
