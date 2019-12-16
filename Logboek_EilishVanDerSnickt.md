@@ -144,7 +144,8 @@
 * pas de AniME app aan naarglang je on/off line bent
 * verzorg de layout offline mededeling
 
-### 16/12/2019 - 40 minuten
+### 16/12/2019 - 1 uur
 * sticky element troubleshooten
 * redirect http to https
 * redirect http to https troubleshooting
+* troublehoot firebase tool install
