@@ -1,4 +1,5 @@
 import React from 'react';
+import HttpsRedirect from 'react-https-redirect';
 import {BrowserRouter, Route} from 'react-router-dom';
 import AnimeList from './Components/AnimeList';
 import Quiz from './Components/Quiz';
@@ -16,20 +17,22 @@ import TitlesQuizNiveau3 from './Components/TitlesQuizNiveau3';
 class App extends React.Component {
   render(){
     return (
-      <BrowserRouter>
-        <Route exact path='/' component={AnimeList} />
-        <Route path='/Quiz' component={Quiz} />
-        <Route path='/AnimeDetails' component={AnimeDetails} />
-        <Route path='/SynopsisQuiz_1' component={SynopsisQuizNiveau1} />
-        <Route path='/SynopsisQuiz_2' component={SynopsisQuizNiveau2} />
-        <Route path='/SynopsisQuiz_3' component={SynopsisQuizNiveau3} />
-        <Route path='/PosterQuiz_1' component={PosterQuizNiveau1} />
-        <Route path='/PosterQuiz_2' component={PosterQuizNiveau2} />
-        <Route path='/PosterQuiz_3' component={PosterQuizNiveau3} />
-        <Route path='/TitlesQuiz_1' component={TitlesQuizNiveau1} />
-        <Route path='/TitlesQuiz_2' component={TitlesQuizNiveau2} />
-        <Route path='/TitlesQuiz_3' component={TitlesQuizNiveau3} />
-      </BrowserRouter>
+      <HttpsRedirect>
+         <BrowserRouter>
+            <Route exact path='/' component={AnimeList} />
+            <Route path='/Quiz' component={Quiz} />
+            <Route path='/AnimeDetails' component={AnimeDetails} />
+            <Route path='/SynopsisQuiz_1' component={SynopsisQuizNiveau1} />
+            <Route path='/SynopsisQuiz_2' component={SynopsisQuizNiveau2} />
+            <Route path='/SynopsisQuiz_3' component={SynopsisQuizNiveau3} />
+            <Route path='/PosterQuiz_1' component={PosterQuizNiveau1} />
+            <Route path='/PosterQuiz_2' component={PosterQuizNiveau2} />
+            <Route path='/PosterQuiz_3' component={PosterQuizNiveau3} />
+            <Route path='/TitlesQuiz_1' component={TitlesQuizNiveau1} />
+            <Route path='/TitlesQuiz_2' component={TitlesQuizNiveau2} />
+            <Route path='/TitlesQuiz_3' component={TitlesQuizNiveau3} />
+        </BrowserRouter>
+      </HttpsRedirect>
     );
   } // render
 }

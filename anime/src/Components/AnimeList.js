@@ -5,7 +5,6 @@ import { lstat } from 'fs';
 import ls from 'local-storage';
 import { cpus } from 'os';
 import { Offline, Online } from 'react-detect-offline';
-import '../App.css';
 
 class AnimeList extends React.Component {
     constructor(props) {
