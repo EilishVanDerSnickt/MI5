@@ -5,80 +5,75 @@ class AnimeDetails extends React.Component {
         super(props);
         this.state = {
           anime : [],
-          chars : []
+          chars : [],
+          pics : []
         }
       } // constructor
 
       
 
     componentDidMount(){
+        //aanmaken belangrijke variabelen
         const AnimeID = (window.location.href).substring(35, (window.location.href).length)
         const that = this;
         var array = new Array(9);
         var charTest;
-       
-        
         var arrayNames = [];
-        var anime = function(name, poster, id, synopsis, rating, charLink) {
+        var arrayPic = [];
+
+        //aanmaken object van animes
+        var anime = function(name, poster, id, synopsis, rating, charLink, year) {
             this.name = name
             this.poster = poster
             this.id = id
             this.synopsis = synopsis
             this.rating = rating
             this.charLink = charLink
-            
+            this.year = year
           }
 
-        var characters = function(char1, char2, char3, char4, char5, char6, char7, char8, char9, char10) {
-            this.char1 = char1
-            this.char2 = char2
-            this.char3 = char3
-            this.char4 = char4
-            this.char5 = char5
-            this.char6 = char6
-            this.char7 = char7
-            this.char8 = char8
-            this.char9 = char9
-            this.char10 = char10
-        }
+        
     
+        //get request van een specifieke anime 
         fetch('https://kitsu.io/api/edge/anime?filter[id]=' + AnimeID)
             .then(response => {
                 if(response.ok) return response.json();
                 throw new Error(response.statusText)  // throw an error if there's something wrong with the response
             })
             .then(function handleData(data) {
-                console.log(data.data[0].id);
-                //console.log(data.data[0].relationships.characters.links.related)
-                
+                //loggen van data
+                console.log(data.data[0])
 
-                //console.log(that.state.anime.charLink)
-
+                //Data in het object anime stoppen en de state updaten
                 var deAnime = new anime(data.data[0].attributes.titles.en_jp,data.data[0].attributes.posterImage.medium, data.data[0].id, data.data[0].attributes.synopsis, 
-                    data.data[0].attributes.averageRating, data.data[0].relationships.characters.links.related)
+                    data.data[0].attributes.averageRating, data.data[0].relationships.characters.links.related, data.data[0].attributes.startDate)
                     //data.data[0].relationships.characters.links.related
                 that.setState({
                     anime: deAnime
                 })
 
+                //nieuwe fetch van alle anime ids van de gefetchte anime
                 fetch(that.state.anime.charLink)
                 .then(response => {
                     if(response.ok) return response.json();
                     throw new Error(response.statusText)  // throw an error if there's something wrong with the response
                 })
                 .then(function handleData2(data2) {
+                    //loggen en lengte bepalen
                     console.log(data2.data.length)
                     var length = data2.data.length;
                     
-                    
+                    //alle ids in de array stoppen
                     for (var i = 0; i < length; i++) {
                         array[i] = data2.data[i].id
                     }
-                    
+                    //toon de array
                     console.log(array);
 
+                    //als deze functie klaar is dan functie test uitvoeren
                 }).then(function test(){
                  
+                    //een for om voor elke id in de array die bepaalde personage uit de database te halen
                     for (var j = 0; j < array.length; j++) {
                         fetch('https://kitsu.io/api/edge/media-characters/' + array[j] + "/character")
                         .then(response => {
@@ -87,13 +82,16 @@ class AnimeDetails extends React.Component {
                         })
                         // eslint-disable-next-line no-loop-func
                         .then(function handleData3(data3) {
+                            //na de forloop dit uitvoeren en de characters in een object stoppen en dat doorgeven aan een nieuwe functie
                             //console.log(data3.data.attributes.name);
-                            arrayNames.push(data3.data.attributes.name) 
+                            arrayNames.push(data3.data.attributes.name)
                             
-                            charTest = new characters(arrayNames[0], arrayNames[1], arrayNames[2], arrayNames[3], arrayNames[4], arrayNames[5], arrayNames[6], arrayNames[7], arrayNames[8], arrayNames[9])
+                            arrayPic.push(data3.data.attributes.image.original)
+                            
+                            //charTest = new characters(arrayNames[0], arrayNames[1], arrayNames[2], arrayNames[3], arrayNames[4], arrayNames[5], arrayNames[6], arrayNames[7], arrayNames[8], arrayNames[9])
                             //console.log(charTest)
                             
-                            that.teststate(arrayNames);
+                            that.teststate(arrayNames, arrayPic);
                         })
                         
                     }
@@ -106,32 +104,38 @@ class AnimeDetails extends React.Component {
 
         }
 
-        teststate = (arrayNames) => {
+        //dit is een state update functie
+        teststate = (arrayNames, arrayPic) => {
             if (arrayNames.length > 9)
             {
                 this.setState({
-                    chars: arrayNames
+                    chars: arrayNames,
+                    pics: arrayPic
                 })
-                console.log(this.state.chars)
+                console.log(this.state)
             }
             
             
         }
     
-            
+    //html fixen
     render(){
         return (
             <div>
                 <div className="AnimeDetails">
-                    <img src={this.state.anime.poster} alt={this.state.anime.name}></img><h4>Anime Titel</h4>
-                    <div>{this.state.anime.id}
+                <img className="posterDetails" src={this.state.anime.poster} alt={this.state.anime.name}></img>
+                <h3 className="h4Details">{this.state.anime.name}</h3><p className="h4Details">{this.state.anime.year}</p>
+                    
                     <ul>
                         {this.state.chars.map(item => (
                             <li key={item}>{item}</li>
-                        ))}
-                        
+                        ))}                        
                     </ul>
-                    </div>
+
+                    {this.state.pics.map(pic => (
+                            <img src={pic}></img>
+                        ))}
+                    
                     
                 </div>
             </div>
