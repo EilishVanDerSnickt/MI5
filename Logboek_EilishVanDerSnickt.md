@@ -151,8 +151,9 @@
 * redirect http to https troubleshooting
 * troublehoot firebase tool install
 
-### 17/12/2019 - 1 uur 30 minuten
+### 17/12/2019 - 1 uur 55 minuten
 * Combinatie quiz niveau 1 maken
 * Combinatie quiz niveau 1 troubleshooten
 * layout troubleshooten
 * Combinatie quiz alle niveaus maken
+* Combinatie quiz troubleshooten

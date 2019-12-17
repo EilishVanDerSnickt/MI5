@@ -59,7 +59,7 @@ class PosterQuizNiveau2 extends React.Component{
     componentDidMount() {
         const that = this;
         // haal het pad uit de link om te weten of het gaat om een combinatiequiz
-        const QuizLink = (window.location.href).substring(21, (window.location.href).length - 1);
+        const QuizLink = (window.location.href).substring((window.location.href).length - 18, (window.location.href).length - 1);
     
         console.log("Link:" + QuizLink);
     
