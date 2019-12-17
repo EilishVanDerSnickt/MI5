@@ -1,4 +1,5 @@
 import React from 'react';
+
 class AnimeDetails extends React.Component {
 
     constructor(props) {
@@ -98,10 +99,7 @@ class AnimeDetails extends React.Component {
 
                 })
                 
-            }) 
-        
-           
-
+            })  
         }
 
         //dit is een state update functie
@@ -114,8 +112,6 @@ class AnimeDetails extends React.Component {
                 })
                 console.log(this.state)
             }
-            
-            
         }
     
     //html fixen

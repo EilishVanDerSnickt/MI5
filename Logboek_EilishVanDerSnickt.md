@@ -150,3 +150,8 @@
 * redirect http to https
 * redirect http to https troubleshooting
 * troublehoot firebase tool install
+
+### 17/12/2019 - 1 uur
+* Combinatie quiz niveau 1 maken
+* Combinatie quiz niveau 1 troubleshooten
+* layout troubleshooten

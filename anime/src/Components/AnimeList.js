@@ -130,7 +130,7 @@ class AnimeList extends React.Component {
                     <a href="/Quiz">Quiz</a>
                 </div>
                 {index == 1 && <DatatoFirebase data={items}/> }
-                </Online>
+              </Online>
             </div>
         );
       } // render
