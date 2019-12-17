@@ -1,9 +1,9 @@
 import React from 'react';
-import PosterQuizNiveau1 from './PosterQuizNiveau1';
-import SynopsisQuizNiveau1 from './SynopsisQuizNiveau1';
-import TitlesQuizNiveau1 from './TitlesQuizNiveau1';
+import PosterQuizNiveau2 from './PosterQuizNiveau2';
+import SynopsisQuizNiveau2 from './SynopsisQuizNiveau2';
+import TitlesQuizNiveau2 from './TitlesQuizNiveau2';
 
-class CombinatieQuizNiveau1 extends React.Component{
+class CombinatieQuizNiveau2 extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -97,12 +97,12 @@ class CombinatieQuizNiveau1 extends React.Component{
 
         return (
             <div>                
-                { poster && <PosterQuizNiveau1 /> }
-                { synopsis && <SynopsisQuizNiveau1 /> }
-                { titles && <TitlesQuizNiveau1 /> }
+                { poster && <PosterQuizNiveau2 /> }
+                { synopsis && <SynopsisQuizNiveau2 /> }
+                { titles && <TitlesQuizNiveau2 /> }
             </div>
         );
     } // render
 }
 
-export default CombinatieQuizNiveau1;
+export default CombinatieQuizNiveau2;

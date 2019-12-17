@@ -15,7 +15,7 @@ class AnimeDetails extends React.Component {
 
     componentDidMount(){
         //aanmaken belangrijke variabelen
-        const AnimeID = (window.location.href).substring(35, (window.location.href).length)
+        const AnimeID = (window.location.href).substring(35, (window.location.href).length);
         const that = this;
         var array = new Array(9);
         var charTest;

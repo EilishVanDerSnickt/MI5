@@ -13,7 +13,8 @@ class TitlesQuizNiveau2 extends React.Component{
             antwoord: null,
             refreshIndex: null,
             nieuwNiveau: false,
-            punten: 0
+            punten: 0,
+            nieuwNiveauLink: null,
         }
     } // constructor
     
@@ -54,6 +55,19 @@ class TitlesQuizNiveau2 extends React.Component{
             that.StelVraag();
         });
     } // ComponentWillMount
+
+    componentDidMount() {
+        const that = this;
+        // haal het pad uit de link om te weten of het gaat om een combinatiequiz
+        const QuizLink = (window.location.href).substring(21, (window.location.href).length - 1);
+    
+        console.log("Link:" + QuizLink);
+    
+        that.setState({
+            nieuwNiveauLink: QuizLink + "3",
+        });
+    } // ComponentDidMount
+
     StelVraag = () => {
         var {mogelijkeVragen} = this.state;
         const that = this;
@@ -164,7 +178,7 @@ class TitlesQuizNiveau2 extends React.Component{
     } //shuffleAntwoorden
     
     render(){
-        var {vraagData, mogelijkeAntwoorden, nieuwNiveau} = this.state;
+        var {vraagData, mogelijkeAntwoorden, nieuwNiveau, nieuwNiveauLink} = this.state;
         const that = this;
 
         mogelijkeAntwoorden = mogelijkeAntwoorden.map(function(item, index){
@@ -180,7 +194,7 @@ class TitlesQuizNiveau2 extends React.Component{
         <ul>
             {mogelijkeAntwoorden}
         </ul>
-        { that.state.nieuwNiveau && <a href="/TitlesQuiz_3"><button>Niveau 3 -></button></a> }
+        { nieuwNiveau && <a href={nieuwNiveauLink}><button>Niveau 3 -></button></a> }
             </div>
         
         );
