@@ -79,3 +79,8 @@
 ### 10/12/2019 - 5 uur
 * characters in pagina krijgen
 
+## Week 13
+### 16/12/2019 - 2 uur
+* foto's character verkrijgen
+### 17/12/2019
+
