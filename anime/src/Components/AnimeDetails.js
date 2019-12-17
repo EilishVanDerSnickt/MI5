@@ -1,4 +1,5 @@
 import React from 'react';
+
 class AnimeDetails extends React.Component {
 
     constructor(props) {
@@ -14,7 +15,7 @@ class AnimeDetails extends React.Component {
 
     componentDidMount(){
         //aanmaken belangrijke variabelen
-        const AnimeID = (window.location.href).substring(35, (window.location.href).length)
+        const AnimeID = (window.location.href).substring(35, (window.location.href).length);
         const that = this;
         var array = new Array(9);
         var charTest;
@@ -98,10 +99,7 @@ class AnimeDetails extends React.Component {
 
                 })
                 
-            }) 
-        
-           
-
+            })  
         }
 
         //dit is een state update functie
@@ -114,8 +112,6 @@ class AnimeDetails extends React.Component {
                 })
                 console.log(this.state)
             }
-            
-            
         }
 
     /*<ul>

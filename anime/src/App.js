@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import HttpsRedirect from 'react-https-redirect';
 import {BrowserRouter, Route} from 'react-router-dom';
 import AnimeList from './Components/AnimeList';
@@ -13,6 +14,9 @@ import PosterQuizNiveau2 from './Components/PosterQuizNiveau2';
 import PosterQuizNiveau3 from './Components/PosterQuizNiveau3';
 import TitlesQuizNiveau2 from './Components/TitlesQuizNiveau2';
 import TitlesQuizNiveau3 from './Components/TitlesQuizNiveau3';
+import CombinatieQuizNiveau1 from './Components/CombinatieQuizNiveau1';
+import CombinatieQuizNiveau2 from './Components/CombinatieQuizNiveau2';
+import CombinatieQuizNiveau3 from './Components/CombinatieQuizNiveau3';
 
 class App extends React.Component {
   render(){
@@ -31,6 +35,9 @@ class App extends React.Component {
             <Route path='/TitlesQuiz_1' component={TitlesQuizNiveau1} />
             <Route path='/TitlesQuiz_2' component={TitlesQuizNiveau2} />
             <Route path='/TitlesQuiz_3' component={TitlesQuizNiveau3} />
+            <Route path='/CombinationQuiz_1' component={CombinatieQuizNiveau1} />
+            <Route path='/CombinationQuiz_2' component={CombinatieQuizNiveau2} />
+            <Route path='/CombinationQuiz_3' component={CombinatieQuizNiveau3} />
         </BrowserRouter>
       </HttpsRedirect>
     );
