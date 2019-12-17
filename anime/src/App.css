@@ -50,11 +50,13 @@ body{
   display: inline;
 }
 
-
-
 .omkader {
   border: 3px double #1C6EA4;
   border-radius: 10px 10px 10px 10px;
+}
+
+.detailsCharPic {
+  max-width: 9em;
 }
 
 

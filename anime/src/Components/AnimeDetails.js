@@ -117,6 +117,38 @@ class AnimeDetails extends React.Component {
             
             
         }
+
+    /*<ul>
+                        {this.state.pics.map(pic => (
+                                <li className="PersDetails"><img  src={pic}></img></li>
+                            ))}
+                    </ul>
+
+
+
+
+                    <ul>
+                        
+                        {this.state.chars[1]}</li>
+                        <img className="detailsCharPic" src={this.state.pics[1]}></img>
+                        {this.state.chars[2]}</li>
+                        <img className="detailsCharPic" src={this.state.pics[2]}></img>
+                        {this.state.chars[3]}</li>
+                        <img className="detailsCharPic" src={this.state.pics[3]}></img>
+                        {this.state.chars[4]}</li>
+                        <img className="detailsCharPic" src={this.state.pics[4]}></img>
+                        {this.state.chars[5]}</li>
+                        <img className="detailsCharPic" src={this.state.pics[5]}></img>
+                        {this.state.chars[6]}</li>
+                        <img className="detailsCharPic" src={this.state.pics[6]}></img>
+                        {this.state.chars[7]}</li>
+                        <img className="detailsCharPic" src={this.state.pics[7]}></img>
+                        {this.state.chars[8]}</li>
+                        <img className="detailsCharPic" src={this.state.pics[8]}></img>
+                        {this.state.chars[9]}</li>
+                        <img className="detailsCharPic" src={this.state.pics[9]}></img>
+                    </ul>
+                    */
     
     //html fixen
     render(){
@@ -125,16 +157,40 @@ class AnimeDetails extends React.Component {
                 <div className="AnimeDetails">
                 <img className="posterDetails" src={this.state.anime.poster} alt={this.state.anime.name}></img>
                 <h3 className="h4Details">{this.state.anime.name}</h3><p className="h4Details">{this.state.anime.year}</p>
+                <p>{this.state.anime.synopsis}</p>
                     
-                    <ul>
-                        {this.state.chars.map(item => (
-                            <li key={item}>{item}</li>
-                        ))}                        
-                    </ul>
-
-                    {this.state.pics.map(pic => (
-                            <img src={pic}></img>
-                        ))}
+                    <table className="TableClass">
+                    <h3>Characters</h3>
+                        <tr>
+                            <th>{this.state.chars[0]}</th>
+                            <th><img className="detailsCharPic" src={this.state.pics[0]}></img></th>
+                            <th>{this.state.chars[1]}</th>
+                            <th><img className="detailsCharPic" src={this.state.pics[1]}></img></th>
+                            <th>{this.state.chars[2]}</th>
+                            <th><img className="detailsCharPic" src={this.state.pics[2]}></img></th>
+                            <th>{this.state.chars[3]}</th>
+                            <th><img className="detailsCharPic" src={this.state.pics[3]}></img></th>
+                        </tr>
+                        <tr>
+                            <th>{this.state.chars[4]}</th>
+                            <th><img className="detailsCharPic" src={this.state.pics[4]}></img></th>
+                            <th>{this.state.chars[5]}</th>
+                            <th><img className="detailsCharPic" src={this.state.pics[5]}></img></th>
+                            <th>{this.state.chars[6]}</th>
+                            <th><img className="detailsCharPic" src={this.state.pics[6]}></img></th>
+                            <th>{this.state.chars[7]}</th>
+                            <th><img className="detailsCharPic" src={this.state.pics[7]}></img></th>
+                        </tr>
+                        <tr>
+                            <th>{this.state.chars[8]}</th>
+                            <th><img className="detailsCharPic" src={this.state.pics[8]}></img></th>
+                            <th>{this.state.chars[9]}</th>
+                            <th><img className="detailsCharPic" src={this.state.pics[9]}></img></th>
+                        </tr>
+                        
+                            
+                        
+                    </table>
                     
                     
                 </div>
