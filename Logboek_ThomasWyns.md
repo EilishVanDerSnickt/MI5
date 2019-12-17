@@ -82,5 +82,6 @@
 ## Week 13
 ### 16/12/2019 - 2 uur
 * foto's character verkrijgen
-### 17/12/2019
+### 17/12/2019 - 2 uur
+* foto's en characters goed plaatsen met table wss veranderen naar grid css later voor de media queries
 
