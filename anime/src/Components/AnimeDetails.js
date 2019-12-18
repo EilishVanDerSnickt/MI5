@@ -41,8 +41,6 @@ class AnimeDetails extends React.Component {
             this.year = year
           }
 
-        
-    
         //get request van een specifieke anime 
         fetch('https://kitsu.io/api/edge/anime?filter[id]=' + AnimeID)
             .then(response => {

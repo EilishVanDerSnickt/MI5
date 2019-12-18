@@ -178,7 +178,7 @@ class SynopsisQuizNiveau3 extends React.Component{
         <ul>
             {mogelijkeAntwoorden}
         </ul>
-        { that.state.nieuwNiveau && <a href="/"><button>Ga naar het einde</button></a> }
+        { that.state.nieuwNiveau && <a href="/ResultsQuiz"><button>Ga naar het einde</button></a> }
             </div>
         
         );

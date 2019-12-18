@@ -26,9 +26,9 @@ class TitlesQuizNiveau3 extends React.Component{
         // maak een teller aan in de localstorage die telt hoeveel keer de pagina refreshd
         if (localStorage.getItem('Index')) {
             reloadIndex = localStorage.getItem('Index');
-          } else {
+        } else {
             reloadIndex = 0;
-          }
+        }
     
         reloadIndex = parseInt(reloadIndex) + 1;
     
@@ -178,7 +178,7 @@ class TitlesQuizNiveau3 extends React.Component{
         <ul>
             {mogelijkeAntwoorden}
         </ul>
-        { that.state.nieuwNiveau && <a href="/"><button>Ga naar het einde</button></a> }
+        { that.state.nieuwNiveau && <a href="/ResultsQuiz"><button>Ga naar het einde</button></a> }
             </div>
         
         );

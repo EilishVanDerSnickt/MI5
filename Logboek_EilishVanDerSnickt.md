@@ -158,5 +158,6 @@
 * Combinatie quiz alle niveaus maken
 * Combinatie quiz troubleshooten
 
-### 18/12/2019 - 30 minuten
+### 18/12/2019 - 50 minuten
 * Anime details page troubleshooten
+* resultaat quiz pagina maken
