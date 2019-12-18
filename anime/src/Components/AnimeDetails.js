@@ -11,11 +11,19 @@ class AnimeDetails extends React.Component {
         }
       } // constructor
 
-      
-
     componentDidMount(){
+        // zoek de index waarop de laatste / zich bevindt om de ID te vinden
+        var startIndex = 0, index, laatsteIndex;
+        
+        while ((index = (window.location.href).indexOf("/", startIndex)) > -1) {
+            laatsteIndex = index;
+            startIndex = index + 1;
+        }
+
+        console.log("uiteindelijke index: " + laatsteIndex);
+
         //aanmaken belangrijke variabelen
-        const AnimeID = (window.location.href).substring(35, (window.location.href).length);
+        const AnimeID = (window.location.href).substring(laatsteIndex + 1, (window.location.href).length);
         const that = this;
         var array = new Array(9);
         var charTest;
