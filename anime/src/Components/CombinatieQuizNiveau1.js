@@ -88,7 +88,6 @@ class CombinatieQuizNiveau1 extends React.Component{
         default:
           return console.log("Er is iets misgegaan");
       }
-
     } // bepaalDeQuiz
 
     render() {
