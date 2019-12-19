@@ -163,5 +163,7 @@
 * resultaat quiz pagina maken
 * resultaat quiz pagina troubleshooten
 
-### 19/12/2019 - 45 minuten
+### 19/12/2019 - 1 uur 55 minuten
 * Beginnen aan documentatie
+* resultaat pagina troubleshooten
+* quizzes troubleshooten

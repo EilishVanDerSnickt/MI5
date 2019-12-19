@@ -27,18 +27,18 @@ class App extends React.Component {
             <Route exact path='/' component={AnimeList} />
             <Route path='/Quiz' component={Quiz} />
             <Route path='/AnimeDetails' component={AnimeDetails} />
-            <Route path='/SynopsisQuiz_1' component={SynopsisQuizNiveau1} />
-            <Route path='/SynopsisQuiz_2' component={SynopsisQuizNiveau2} />
-            <Route path='/SynopsisQuiz_3' component={SynopsisQuizNiveau3} />
+            <Route path='/SynopsQuiz_1' component={SynopsisQuizNiveau1} />
+            <Route path='/SynopsQuiz_2' component={SynopsisQuizNiveau2} />
+            <Route path='/SynopsQuiz_3' component={SynopsisQuizNiveau3} />
             <Route path='/PosterQuiz_1' component={PosterQuizNiveau1} />
             <Route path='/PosterQuiz_2' component={PosterQuizNiveau2} />
             <Route path='/PosterQuiz_3' component={PosterQuizNiveau3} />
             <Route path='/TitlesQuiz_1' component={TitlesQuizNiveau1} />
             <Route path='/TitlesQuiz_2' component={TitlesQuizNiveau2} />
             <Route path='/TitlesQuiz_3' component={TitlesQuizNiveau3} />
-            <Route path='/CombinationQuiz_1' component={CombinatieQuizNiveau1} />
-            <Route path='/CombinationQuiz_2' component={CombinatieQuizNiveau2} />
-            <Route path='/CombinationQuiz_3' component={CombinatieQuizNiveau3} />
+            <Route path='/CombinQuiz_1' component={CombinatieQuizNiveau1} />
+            <Route path='/CombinQuiz_2' component={CombinatieQuizNiveau2} />
+            <Route path='/CombinQuiz_3' component={CombinatieQuizNiveau3} />
             <Route path='/ResultsQuiz' component={ResultaatQuiz} />
         </BrowserRouter>
       </HttpsRedirect>

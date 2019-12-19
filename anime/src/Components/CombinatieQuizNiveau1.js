@@ -27,8 +27,9 @@ class CombinatieQuizNiveau1 extends React.Component{
 
     componentDidMount() {
         const that = this;
+        
         that.bepaalDeQuiz();
-    }
+    } // componentDidMount
 
     bepaalDeQuiz = () => {
         var {randomNR} = this.state;
@@ -36,57 +37,30 @@ class CombinatieQuizNiveau1 extends React.Component{
 
        switch(randomNR) {
         case 1:
-            that.setState({
-                poster: true,
-            });
-          return console.log("poster");
         case 2:
-            that.setState({
-                poster: true,
-            });
-          return console.log("poster");
         case 3:
             that.setState({
                 poster: true,
             });
           return console.log("poster");
         case 4:
-            that.setState({
-                synopsis: true,
-            });
-          return console.log("synopsis");
         case 5:
-            that.setState({
-                synopsis: true,
-            });
-          return console.log("synopsis");
         case 6:
             that.setState({
                 synopsis: true,
             });
           return console.log("synopsis");
         case 7:
-            that.setState({
-                titles: true,
-            });
-          return console.log("titles");
         case 8:
-            that.setState({
-                titles: true,
-            });
-          return console.log("titles");
         case 9:
-            that.setState({
-                titles: true,
-            });
-          return console.log("titles");
         case 10:
             that.setState({
                 titles: true,
             });
           return console.log("titles");
         default:
-          return console.log("Er is iets misgegaan");
+            window.location.reload(false);
+            return console.log("Er is iets misgegaan");
       }
     } // bepaalDeQuiz
 
