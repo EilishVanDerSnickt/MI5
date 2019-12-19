@@ -162,3 +162,6 @@
 * Anime details page troubleshooten
 * resultaat quiz pagina maken
 * resultaat quiz pagina troubleshooten
+
+### 19/12/2019 - 45 minuten
+* Beginnen aan documentatie
