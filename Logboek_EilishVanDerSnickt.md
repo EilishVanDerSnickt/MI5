@@ -144,7 +144,7 @@
 * pas de AniME app aan naarglang je on/off line bent
 * verzorg de layout offline mededeling
 
-## Week 13
+## Week 13 - 6 uur 20 minuten
 ### 16/12/2019 - 1 uur
 * sticky element troubleshooten
 * redirect http to https
@@ -168,3 +168,8 @@
 * resultaat pagina troubleshooten
 * quizzes troubleshooten
 * naamgeving onderhouden css
+
+## Week 14
+### 23/12/2019 - 1 uur 15 minuten
+* layout overzichtelijk maken door verschillende css bestanden voor elk component
+* layout Quiz.js maken

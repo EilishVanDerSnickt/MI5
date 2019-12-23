@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import HttpsRedirect from 'react-https-redirect';
 import {BrowserRouter, Route} from 'react-router-dom';
 import AnimeList from './Components/AnimeList';

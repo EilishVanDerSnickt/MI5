@@ -1,5 +1,5 @@
 import React from 'react';
-require('../App.css');
+require('./styles/AnimePoster.css');
 
 function AnimePoster({value}) {
     const {animes} = value;

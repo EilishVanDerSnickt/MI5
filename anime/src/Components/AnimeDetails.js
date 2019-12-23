@@ -1,4 +1,5 @@
 import React from 'react';
+require('./styles/AnimeDetails.css');
 
 class AnimeDetails extends React.Component {
 
@@ -155,8 +156,7 @@ class AnimeDetails extends React.Component {
     //html fixen
     render(){
         return (
-            <div>
-                <div className="AnimeDetails">
+            <div className="AnimeDetails">
                 <img className="posterDetails" src={this.state.anime.poster} alt={this.state.anime.name}></img>
                 <h3 className="h4Details">{this.state.anime.name}</h3><p className="h4Details">{this.state.anime.year}</p>
                 <p>{this.state.anime.synopsis}</p>
@@ -193,9 +193,6 @@ class AnimeDetails extends React.Component {
                             
                         
                     </table>
-                    
-                    
-                </div>
             </div>
             
         )

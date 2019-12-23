@@ -1,0 +1,21 @@
+.Quiz {
+    text-align: center;
+}
+
+.Quizh2 {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.Div-QuizButtons button {
+    background-color: #ffffcc;
+    border-top: 5px, solid, black;
+    border-bottom: 5px, solid, black;
+    border-left: none;
+    border-right: none;
+    border-color: black;
+}
+
+.Div-QuizButtons button a {
+    color:black;
+}
