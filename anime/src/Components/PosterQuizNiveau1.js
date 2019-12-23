@@ -1,6 +1,7 @@
 import React from 'react';
 import Firebase from './FirebaseInit';
 import ls from 'local-storage';
+require('./styles/PosterQuiz.css');
 
 class PosterQuizNiveau1 extends React.Component{
   constructor(props) {
@@ -187,16 +188,15 @@ shuffleAntwoorden = (antwoorden) => {
   });
 
     return(
-      <div>
-        <h1>Welcome to the poster quiz</h1>
-        <p>Duid de juiste poster aan voor {vraagData}</p>
-        <ul>
+      <div className="Div-PosterQuiz">
+        <h1 className="PosterQuizh1">Duid de juiste poster aan voor <span className="VraagDataPosters">{vraagData}:</span></h1>
+        <ul className="MogelijkeAntwoordenPosters">
             {mogelijkeAntwoorden}
         </ul>
         { nieuwNiveau && <a href={nieuwNiveauLink} ><button>Niveau 2 -></button></a> }
       </div>
     );
-  }
+  } // render
 
   CheckAntwoord = (item) => {
     var {antwoord, refreshIndex} = this.state;

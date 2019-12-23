@@ -1,6 +1,7 @@
 import React from 'react';
 import Firebase from './FirebaseInit';
 import ls from 'local-storage';
+require('./styles/TitlesQuiz.css');
 
 class TitlesQuizNiveau2 extends React.Component{
     constructor(props) {

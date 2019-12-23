@@ -1,6 +1,7 @@
 import React from 'react';
 import Firebase from './FirebaseInit';
 import ls from 'local-storage';
+require('./styles/PosterQuiz.css');
 
 class PosterQuizNiveau3 extends React.Component{
     constructor(props) {
@@ -172,13 +173,12 @@ class PosterQuizNiveau3 extends React.Component{
         });
 
         return(
-            <div>
-                <h1>Welcome to the poster quiz level 3</h1>
-                <p>Duid de juiste poster aan voor {vraagData}</p>
-        <ul>
-            {mogelijkeAntwoorden}
-        </ul>
-        { nieuwNiveau && <a href="/ResultsQuiz"><button>Ga naar het einde</button></a> }
+            <div className="Div-PosterQuiz">
+                <h1 className="PosterQuizh1">Duid de juiste poster aan voor <span className="VraagDataPosters">{vraagData}:</span></h1>
+                <ul className="MogelijkeAntwoordenPosters">
+                    {mogelijkeAntwoorden}
+                </ul>
+                { nieuwNiveau && <a href="/ResultsQuiz"><button>Ga naar het einde</button></a> }
             </div>
         
         );

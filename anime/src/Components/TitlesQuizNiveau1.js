@@ -1,6 +1,7 @@
 import React from 'react';
 import Firebase from './FirebaseInit';
 import ls from 'local-storage';
+require('./styles/TitlesQuiz.css');
 
 class TitlesQuizNiveau1 extends React.Component{
   constructor(props) {
@@ -188,10 +189,9 @@ shuffleAntwoorden = (antwoorden) => {
   });
 
     return(
-      <div>
-        <h1>Welcome to the titles quiz</h1>
-        <p>Duid de juiste titel aan voor {vraagData}</p>
-        <ul>
+      <div className="Div-TitlesQuiz">
+        <h1 className="TitlesQuizh1">Duid de juiste titel aan voor <span className="VraagDataTitles">{vraagData}:</span></h1>
+        <ul className="MogelijkeAntwoordenTitles">
             {mogelijkeAntwoorden}
         </ul>
         { nieuwNiveau && <a href={nieuwNiveauLink}><button>Niveau 2 -></button></a> }

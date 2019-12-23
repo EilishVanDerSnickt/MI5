@@ -17,6 +17,7 @@ import CombinatieQuizNiveau1 from './Components/CombinatieQuizNiveau1';
 import CombinatieQuizNiveau2 from './Components/CombinatieQuizNiveau2';
 import CombinatieQuizNiveau3 from './Components/CombinatieQuizNiveau3';
 import ResultaatQuiz from './Components/ResultaatQuiz';
+require('./App.css');
 
 class App extends React.Component {
   render(){

@@ -46,7 +46,7 @@ class DataToFirebase extends React.Component {
             console.log("loaded");
             for (let i = 0; i < 10; i++) {
                 ids[i] = trendingAnime.data[i].id;
-                posters[i] = trendingAnime.data[i].attributes.posterImage.tiny;
+                posters[i] = trendingAnime.data[i].attributes.posterImage.medium;
                 enjp_titles[i] = trendingAnime.data[i].attributes.titles.en_jp;
                 jajp_titles[i] = trendingAnime.data[i].attributes.titles.ja_jp;
                 synopsis[i] = trendingAnime.data[i].attributes.synopsis;

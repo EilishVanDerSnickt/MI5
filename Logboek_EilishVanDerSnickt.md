@@ -170,6 +170,7 @@
 * naamgeving onderhouden css
 
 ## Week 14
-### 23/12/2019 - 1 uur 40 minuten
+### 23/12/2019 - 2 uur 30 minuten
 * layout overzichtelijk maken door verschillende css bestanden voor elk component
 * layout Quiz.js maken
+* layout poster en titles quiz basis maken
