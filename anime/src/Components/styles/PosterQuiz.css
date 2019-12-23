@@ -17,7 +17,7 @@
 }
 
 .MogelijkeAntwoordenPosters img:hover{
-    width: 30%;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 399px) {
@@ -30,6 +30,10 @@
         margin-top: 5%;
         margin-left: 3%;
         margin-right: 3%;
+    }
+
+    .MogelijkeAntwoordenPosters img:hover{
+        width: 60%;
     }
   }
   
@@ -44,6 +48,10 @@
         margin-left: 3%;
         margin-right: 3%;
     }
+
+    .MogelijkeAntwoordenPosters img:hover{
+        width: 60%;
+    }
   }
   
   @media screen and (min-width: 400px) and (max-width: 799px) {
@@ -57,6 +65,10 @@
         margin-left: 3%;
         margin-right: 3%;
     }
+
+    .MogelijkeAntwoordenPosters img:hover{
+        width: 50%;
+    }
   }
   
   @media screen and (min-width: 800px)  {
@@ -69,5 +81,9 @@
         margin-top: 5%;
         margin-left: 3%;
         margin-right: 3%;
+    }
+
+    .MogelijkeAntwoordenPosters img:hover{
+        width: 40%;
     }
   }

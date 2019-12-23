@@ -10,9 +10,26 @@
     font-weight: bold;
 }
 
+.MogelijkeAntwoordenTitles li{
+    transition: 0.5s;
+    border: 5px, solid, black;
+    border-color: black;
+    border-style: solid;
+}
+
+.MogelijkeAntwoordenTitles li:hover{
+   cursor: pointer;
+   text-decoration: underline;
+   font-weight: bold;
+}
+
 @media screen and (max-width: 399px) {
     .TitlesQuizh1 {
         font-size: 10px;
+    }
+
+    .MogelijkeAntwoordenTitles li{
+        font-size: 5px;
     }
   }
   
@@ -20,16 +37,28 @@
     .TitlesQuizh1 {
         font-size: 20px;
     }
+
+    .MogelijkeAntwoordenTitles li{
+        font-size: 10px;
+    }
   }
   
   @media screen and (min-width: 400px) and (max-width: 799px) {
     .TitlesQuizh1 {
         font-size: 25px;
     }
+
+    .MogelijkeAntwoordenTitles li{
+        font-size: 15px;
+    }
   }
   
   @media screen and (min-width: 800px)  {
     .TitlesQuizh1 {
         font-size: 35px;
+    }
+
+    .MogelijkeAntwoordenTitles li{
+        font-size: 20px;
     }
   }
