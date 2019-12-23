@@ -2,9 +2,15 @@
     text-align: center;
 }
 
+.Quizh1 {
+    font-weight: 400;
+}
+
 .Quizh2 {
     text-decoration: underline;
     font-style: italic;
+    margin-bottom: 5%;
+    font-weight: 200;
 }
 
 .Div-QuizButtons button {
@@ -14,8 +20,75 @@
     border-left: none;
     border-right: none;
     border-color: black;
+    display: block;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 .Div-QuizButtons button a {
-    color:black;
+    color:black; 
 }
+
+.Div-QuizButtons button a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 399px) {
+    .Quizh1 {
+        font-size: 20px;
+    }
+
+    .Quizh2 {
+        font-size: 15px;
+    }
+
+    .Div-QuizButtons button a{
+        font-size: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 399px) and (min-height: 600px) {
+    .Quizh1 {
+        font-size: 30px;
+    }
+
+    .Quizh2 {
+        font-size: 20px;
+    }
+
+    .Div-QuizButtons button a{
+        font-size: 15px;
+    }
+  }
+  
+  @media screen and (min-width: 400px) and (max-width: 799px) {
+    .Quizh1 {
+        font-size: 50px;
+    }
+
+    .Quizh2 {
+        font-size: 35px;
+    }
+
+    .Div-QuizButtons button a{
+        font-size: 25px;
+    }
+  }
+  
+  @media screen and (min-width: 800px)  {
+    .Quizh1 {
+        font-size: 75px;
+    }
+
+    .Quizh2 {
+        font-size: 50px;
+    }
+
+    .Div-QuizButtons button a{
+        font-size: 35px;
+    }
+  }

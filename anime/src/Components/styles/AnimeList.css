@@ -2,35 +2,9 @@
     position: sticky;
     top: 0;
   }
-  
-  @media screen and (max-width: 399px) and (max-height: 600px) {
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(2,50vw);
-        font-size: medium;
-      }
-  }
-  
-  @media screen and (max-width: 399px) and (min-height: 600px) {
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(2,50vw);
-        font-size: medium;
-      }
-  }
-  
-  @media screen and (min-width: 400px) and (max-width: 799px) {
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(2,50vw);
-        font-size: medium;
-      }
-  }
-  
-  @media screen and (min-width: 800px)  {
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(2,50vw);
-        font-size: x-large;
-      }
+
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2,50vw);
+    font-size: medium;
   }
