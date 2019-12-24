@@ -174,3 +174,6 @@
 * layout overzichtelijk maken door verschillende css bestanden voor elk component
 * layout Quiz.js maken
 * layout poster en titles quiz basis maken
+
+### 24/12/2019 - 15 minuten
+* layout titles quiz verder afwerken
