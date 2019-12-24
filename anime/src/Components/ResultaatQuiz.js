@@ -1,4 +1,5 @@
 import React from 'react';
+require('./styles/QuizResults.css')
 
 class ResultaatQuiz extends React.Component {
     constructor(props) {
@@ -44,7 +45,7 @@ class ResultaatQuiz extends React.Component {
             case 4:
             case 5:
             case 6:
-                aangepasteTekst = "Jammer, je hebt " + punten + "/15 gehaald. Blijf oefenen!";
+                aangepasteTekst = "Sorry, you only scored " + punten + "/15. Keep on practicing!";
                 that.setState({
                     boodschap: aangepasteTekst,
                 });
@@ -52,7 +53,7 @@ class ResultaatQuiz extends React.Component {
             case 7:
             case 8:
             case 9:
-                aangepasteTekst = "Super, je hebt " + punten + "/15 gehaald. Goed resultaat!";
+                aangepasteTekst = "Great, you scored " + punten + "/15. Good result!";
                 that.setState({
                     boodschap: aangepasteTekst,
                 });
@@ -61,20 +62,20 @@ class ResultaatQuiz extends React.Component {
             case 11:
             case 12:
             case 13:
-                aangepasteTekst = "Proficiat, je hebt " + punten + "/15 gehaald. Geweldig resultaat!";
+                aangepasteTekst = "Congrats, you scored " + punten + "/15. Great result!";
                 that.setState({
                     boodschap: aangepasteTekst,
                 });
                 return;
             case 14:
             case 15:
-                aangepasteTekst = "Wow, je hebt " + punten + "/15 gehaald. Je bent een expert in de trending anime!";
+                aangepasteTekst = "Wow, you scored " + punten + "/15. You're an anime expert!";
                 that.setState({
                     boodschap: aangepasteTekst,
                 });
                 return;
             default:
-                aangepasteTekst = "Er is iets misgegaan";
+                aangepasteTekst = "Something went wrong";
                 that.setState({
                     boodschap: aangepasteTekst,
                 });
@@ -88,9 +89,9 @@ class ResultaatQuiz extends React.Component {
 
         return (
             <div className="QuizResults">
-                <h1>Welcome on the Quiz Results page</h1>
-                { allesOke && <p> { boodschap } </p> }
-                { nietOke && <p> Er is iets misgelopen met de punten </p> }
+                <h1 className="QuizResultsh1">Quiz results</h1>
+                { allesOke && <p className="QuizResultp"> { boodschap } </p> }
+                { nietOke && <p className="QuizResultp"> Something went wrong regarding the obtained points </p> }
                 <a href="/"><button>Ga verder</button></a>
             </div>
         );

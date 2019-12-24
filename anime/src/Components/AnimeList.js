@@ -1,4 +1,5 @@
 import React from 'react';
+//import '../App.css';
 import AnimePoster from './AnimePoster';
 import DatatoFirebase from './DataToFirebase';
 import { lstat } from 'fs';
@@ -6,6 +7,7 @@ import ls from 'local-storage';
 import { cpus } from 'os';
 import { Offline, Online } from 'react-detect-offline';
 require('./styles/AnimeList.css');
+//require('../App.css');
 
 class AnimeList extends React.Component {
     constructor(props) {

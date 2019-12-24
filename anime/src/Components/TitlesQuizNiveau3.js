@@ -174,7 +174,7 @@ class TitlesQuizNiveau3 extends React.Component{
 
         return(
             <div className="Div-TitlesQuiz">
-                <h1 className="TitlesQuizh1">Duid de juiste titel aan voor <span className="VraagDataTitles">{vraagData} :</span></h1>
+                <h1 className="TitlesQuizh1">Select the right title for <span className="VraagDataTitles">{vraagData} :</span></h1>
                 <ul className="MogelijkeAntwoordenTitles">
                     {mogelijkeAntwoorden}
                 </ul>

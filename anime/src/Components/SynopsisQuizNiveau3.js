@@ -176,7 +176,7 @@ class SynopsisQuizNiveau3 extends React.Component{
         return(
             <div className="Div-SynopsisQuiz">
                 <div className="Scrollbox">
-                    <h1 className="SynopsisQuizh1">Duid de juiste titel aan voor <span className="VraagDataSynopsis">{vraagData} :</span></h1>
+                    <h1 className="SynopsisQuizh1">Select the right title for <span className="VraagDataSynopsis">{vraagData} :</span></h1>
                 </div>
                 <ul className="MogelijkeAntwoordenSynopsis">
                     {mogelijkeAntwoorden}

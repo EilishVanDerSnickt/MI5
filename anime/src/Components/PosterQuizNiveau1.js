@@ -189,7 +189,7 @@ shuffleAntwoorden = (antwoorden) => {
 
     return(
       <div className="Div-PosterQuiz">
-        <h1 className="PosterQuizh1">Duid de juiste poster aan voor <span className="VraagDataPosters">{vraagData}:</span></h1>
+        <h1 className="PosterQuizh1">Select the right poster for <span className="VraagDataPosters">{vraagData}:</span></h1>
         <ul className="MogelijkeAntwoordenPosters">
             {mogelijkeAntwoorden}
         </ul>

@@ -99,3 +99,6 @@ https://stackoverflow.com/questions/46592833/how-to-use-switch-statement-inside-
 
 -- vind alle indexes van een bepaalde string in een andere string
 https://stackoverflow.com/questions/3410464/how-to-find-indices-of-all-occurrences-of-one-string-in-another-in-javascript
+
+-- html scrollbox
+https://www.quackit.com/html/codes/html_scroll_box.cfm
