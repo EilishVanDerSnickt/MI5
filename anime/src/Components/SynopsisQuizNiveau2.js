@@ -1,6 +1,8 @@
 import React from 'react';
 import Firebase from './FirebaseInit';
 import ls from 'local-storage';
+require('./styles/SynopsisQuiz.css');
+
 
 class SynopsisQuizNiveau2 extends React.Component{
     constructor(props) {
@@ -188,13 +190,14 @@ class SynopsisQuizNiveau2 extends React.Component{
         });
 
         return(
-            <div>
-                <h1>Welcome to the synopsis quiz level 2</h1>
-                <p>Duid de juiste titel aan voor {vraagData}</p>
-        <ul>
-            {mogelijkeAntwoorden}
-        </ul>
-        { nieuwNiveau && <a href={nieuwNiveauLink}><button>Niveau 3 -></button></a> }
+            <div className="Div-SynopsisQuiz">
+                <div className="Scrollbox">
+                    <h1 className="SynopsisQuizh1">Duid de juiste titel aan voor <span className="VraagDataSynopsis">{vraagData} :</span></h1>
+                </div>
+                <ul className="MogelijkeAntwoordenSynopsis">
+                    {mogelijkeAntwoorden}
+                </ul>
+                { nieuwNiveau && <a href={nieuwNiveauLink}><button>Niveau 3 -></button></a> }
             </div>
         
         );

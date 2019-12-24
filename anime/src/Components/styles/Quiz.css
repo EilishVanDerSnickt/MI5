@@ -15,10 +15,6 @@
 
 .Div-QuizButtons button {
     background-color: #ffffcc;
-    border-top: 5px, solid, black;
-    border-bottom: 5px, solid, black;
-    border-left: none;
-    border-right: none;
     border-color: black;
     display: block;
     width: 50%;
@@ -49,6 +45,12 @@
     .Div-QuizButtons button a{
         font-size: 10px;
     }
+
+    .Div-QuizButtons button {
+        border-width: 1px;
+        border-left: none;
+        border-right: none;
+    }
   }
   
   @media screen and (max-width: 399px) and (min-height: 600px) {
@@ -62,6 +64,12 @@
 
     .Div-QuizButtons button a{
         font-size: 15px;
+    }
+
+    .Div-QuizButtons button {
+        border-width: 1px;
+        border-left: none;
+        border-right: none;
     }
   }
   
@@ -77,6 +85,12 @@
     .Div-QuizButtons button a{
         font-size: 25px;
     }
+
+    .Div-QuizButtons button {
+        border-width: 2px;
+        border-left: none;
+        border-right: none;
+    }
   }
   
   @media screen and (min-width: 800px)  {
@@ -90,5 +104,11 @@
 
     .Div-QuizButtons button a{
         font-size: 35px;
+    }
+
+    .Div-QuizButtons button {
+        border-width: 3px;
+        border-left: none;
+        border-right: none;
     }
   }

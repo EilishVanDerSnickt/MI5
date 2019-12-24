@@ -175,5 +175,6 @@
 * layout Quiz.js maken
 * layout poster en titles quiz basis maken
 
-### 24/12/2019 - 15 minuten
+### 24/12/2019 - 1 uur 5 minuten
 * layout titles quiz verder afwerken
+* layout synopsis quiz maken

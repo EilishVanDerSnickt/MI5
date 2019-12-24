@@ -190,7 +190,7 @@ shuffleAntwoorden = (antwoorden) => {
 
     return(
       <div className="Div-TitlesQuiz">
-        <h1 className="TitlesQuizh1">Duid de juiste titel aan voor <span className="VraagDataTitles">{vraagData}:</span></h1>
+        <h1 className="TitlesQuizh1">Duid de juiste titel aan voor <span className="VraagDataTitles">{vraagData} :</span></h1>
         <ul className="MogelijkeAntwoordenTitles">
             {mogelijkeAntwoorden}
         </ul>

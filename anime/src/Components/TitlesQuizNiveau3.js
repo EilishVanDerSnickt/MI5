@@ -173,13 +173,12 @@ class TitlesQuizNiveau3 extends React.Component{
         });
 
         return(
-            <div>
-                <h1>Welcome to the titles quiz level 3</h1>
-                <p>Duid de juiste titel aan voor {vraagData}</p>
-        <ul>
-            {mogelijkeAntwoorden}
-        </ul>
-        { that.state.nieuwNiveau && <a href="/ResultsQuiz"><button>Ga naar het einde</button></a> }
+            <div className="Div-TitlesQuiz">
+                <h1 className="TitlesQuizh1">Duid de juiste titel aan voor <span className="VraagDataTitles">{vraagData} :</span></h1>
+                <ul className="MogelijkeAntwoordenTitles">
+                    {mogelijkeAntwoorden}
+                </ul>
+                { that.state.nieuwNiveau && <a href="/ResultsQuiz"><button>Ga naar het einde</button></a> }
             </div>
         
         );
