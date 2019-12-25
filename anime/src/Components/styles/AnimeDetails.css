@@ -1,15 +1,76 @@
 .posterDetails {
-    margin-left: 2em;
-    float: left;
-    max-width: 25em;
-    min-width: 10em;
+  margin-left: 2em;
+  float: left;
+  max-width: 25em;
+  min-width: 10em;
+}
+
+.h4Details {
+  padding-left: 2em;
+  display: inline;
+}
+
+.detailsCharPic {
+  max-width: 9em;
+}
+
+.details-posterImg {
+  border-radius: 0.5em;
+  box-shadow: 0.25em 0.25em 0.25em black;
+  max-width: 100%;
+  min-width: 10em;
+}
+
+@media screen and (max-width: 399px) and (max-height: 600px) {
+  .details-grid-view {
+    display: grid;
+    grid-template-columns: repeat(2,40vw);
   }
 
-    .h4Details {
-    padding-left: 2em;
-    display: inline;
+  .details-Div-anime {
+    height: 60vw;
+    width: 38vw;
   }
 
-  .detailsCharPic {
-    max-width: 9em;
+  .details-posterImg {
+    height: 50vw;
+    width: 38vw;
   }
+}
+
+@media screen and (max-width: 399px) and (min-height: 600px) {
+  .details-grid-view {
+    display: grid;
+    grid-template-columns: repeat(2,40vw);
+  }
+
+  .details-Div-anime {
+    height: 70vw;
+    width: 38vw;
+  }
+
+  .details-posterImg {
+    height: 50vw;
+    width: 38vw;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 799px) {
+  .details-grid-view {
+    display: grid;
+    grid-template-columns: repeat(2,40vw);
+  }
+
+  .details-Div-anime {
+    height: 60vw;
+    width: 38vw;
+  }
+  
+}
+
+@media screen and (min-width: 800px)  {
+  .details-grid-view {
+    display: grid;
+    grid-template-columns: repeat(3,25vw);
+  }
+}

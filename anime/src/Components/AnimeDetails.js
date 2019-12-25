@@ -121,38 +121,6 @@ class AnimeDetails extends React.Component {
             }
         }
 
-    /*<ul>
-                        {this.state.pics.map(pic => (
-                                <li className="PersDetails"><img  src={pic}></img></li>
-                            ))}
-                    </ul>
-
-
-
-
-                    <ul>
-                        
-                        {this.state.chars[1]}</li>
-                        <img className="detailsCharPic" src={this.state.pics[1]}></img>
-                        {this.state.chars[2]}</li>
-                        <img className="detailsCharPic" src={this.state.pics[2]}></img>
-                        {this.state.chars[3]}</li>
-                        <img className="detailsCharPic" src={this.state.pics[3]}></img>
-                        {this.state.chars[4]}</li>
-                        <img className="detailsCharPic" src={this.state.pics[4]}></img>
-                        {this.state.chars[5]}</li>
-                        <img className="detailsCharPic" src={this.state.pics[5]}></img>
-                        {this.state.chars[6]}</li>
-                        <img className="detailsCharPic" src={this.state.pics[6]}></img>
-                        {this.state.chars[7]}</li>
-                        <img className="detailsCharPic" src={this.state.pics[7]}></img>
-                        {this.state.chars[8]}</li>
-                        <img className="detailsCharPic" src={this.state.pics[8]}></img>
-                        {this.state.chars[9]}</li>
-                        <img className="detailsCharPic" src={this.state.pics[9]}></img>
-                    </ul>
-                    */
-    
     //html fixen
     render(){
         return (
@@ -161,38 +129,83 @@ class AnimeDetails extends React.Component {
                 <h3 className="h4Details">{this.state.anime.name}</h3><p className="h4Details">{this.state.anime.year}</p>
                 <p>{this.state.anime.synopsis}</p>
                     
-                    <table className="TableClass">
+                    
+
                     <h3>Characters</h3>
-                        <tr>
-                            <th>{this.state.chars[0]}</th>
-                            <th><img className="detailsCharPic" src={this.state.pics[0]}></img></th>
-                            <th>{this.state.chars[1]}</th>
-                            <th><img className="detailsCharPic" src={this.state.pics[1]}></img></th>
-                            <th>{this.state.chars[2]}</th>
-                            <th><img className="detailsCharPic" src={this.state.pics[2]}></img></th>
-                            <th>{this.state.chars[3]}</th>
-                            <th><img className="detailsCharPic" src={this.state.pics[3]}></img></th>
-                        </tr>
-                        <tr>
-                            <th>{this.state.chars[4]}</th>
-                            <th><img className="detailsCharPic" src={this.state.pics[4]}></img></th>
-                            <th>{this.state.chars[5]}</th>
-                            <th><img className="detailsCharPic" src={this.state.pics[5]}></img></th>
-                            <th>{this.state.chars[6]}</th>
-                            <th><img className="detailsCharPic" src={this.state.pics[6]}></img></th>
-                            <th>{this.state.chars[7]}</th>
-                            <th><img className="detailsCharPic" src={this.state.pics[7]}></img></th>
-                        </tr>
-                        <tr>
-                            <th>{this.state.chars[8]}</th>
-                            <th><img className="detailsCharPic" src={this.state.pics[8]}></img></th>
-                            <th>{this.state.chars[9]}</th>
-                            <th><img className="detailsCharPic" src={this.state.pics[9]}></img></th>
-                        </tr>
+                    <div className="details-grid-view">
+
+
+                        <div className="details-Div-anime">                                
+                            <figure>
+                                <img className="details-posterImg" src={this.state.pics[0]} alt={"Poster Character " + this.state.chars[0]}></img>
+                                <figcaption className="figcapText">{this.state.chars[0]}</figcaption>
+                                </figure>
+                        </div>
+
+                        <div className="details-Div-anime">                                
+                            <figure>
+                                <img className="details-posterImg" src={this.state.pics[1]} alt={"Poster Character " + this.state.chars[1]}></img>
+                                <figcaption className="figcapText">{this.state.chars[1]}</figcaption>
+                                </figure>
+                        </div>
+
+                        <div className="details-Div-anime">                                
+                            <figure>
+                                <img className="details-posterImg" src={this.state.pics[2]} alt={"Poster Character " + this.state.chars[2]}></img>
+                                <figcaption className="figcapText">{this.state.chars[2]}</figcaption>
+                                </figure>
+                        </div>
+
+                        <div className="details-Div-anime">                                
+                            <figure>
+                                <img className="details-posterImg" src={this.state.pics[3]} alt={"Poster Character " + this.state.chars[3]}></img>
+                                <figcaption className="figcapText">{this.state.chars[3]}</figcaption>
+                                </figure>
+                        </div>
+
+                        <div className="details-Div-anime">                                
+                            <figure>
+                                <img className="details-posterImg" src={this.state.pics[4]} alt={"Poster Character " + this.state.chars[4]}></img>
+                                <figcaption className="figcapText">{this.state.chars[4]}</figcaption>
+                                </figure>
+                        </div>
+
+                        <div className="details-Div-anime">                                
+                            <figure>
+                                <img className="details-posterImg" src={this.state.pics[5]} alt={"Poster Character " + this.state.chars[5]}></img>
+                                <figcaption className="figcapText">{this.state.chars[5]}</figcaption>
+                                </figure>
+                        </div>
+
+                        <div className="details-Div-anime">                                
+                            <figure>
+                                <img className="details-posterImg" src={this.state.pics[6]} alt={"Poster Character " + this.state.chars[6]}></img>
+                                <figcaption className="figcapText">{this.state.chars[6]}</figcaption>
+                                </figure>
+                        </div>
+
+                        <div className="details-Div-anime">                                
+                            <figure>
+                                <img className="details-posterImg" src={this.state.pics[7]} alt={"Poster Character " + this.state.chars[7]}></img>
+                                <figcaption className="figcapText">{this.state.chars[7]}</figcaption>
+                                </figure>
+                        </div>
+
+                        <div className="details-Div-anime">                                
+                            <figure>
+                                <img className="posterImg" src={this.state.pics[8]} alt={"Poster Character " + this.state.chars[8]}></img>
+                                <figcaption className="figcapText">{this.state.chars[8]}</figcaption>
+                                </figure>
+                        </div>
+
+                        <div className="details-Div-anime">                                
+                            <figure>
+                                <img className="posterImg" src={this.state.pics[9]} alt={"Poster Character " + this.state.chars[9]}></img>
+                                <figcaption className="figcapText">{this.state.chars[9]}</figcaption>
+                                </figure>
+                        </div>
                         
-                            
-                        
-                    </table>
+                    </div>
             </div>
             
         )
@@ -201,6 +214,8 @@ class AnimeDetails extends React.Component {
 }
 
 export default AnimeDetails;
+
+
 
 
  
