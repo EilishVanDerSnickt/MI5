@@ -85,3 +85,7 @@
 ### 17/12/2019 - 2 uur
 * foto's en characters goed plaatsen met table wss veranderen naar grid css later voor de media queries
 
+## Week 14
+### 25/12/2019 - 4 uur
+* foto's van characters laten scalen in grid (css updated niet ookal stond mijn cache uit, is wel gelukt uiteindelijk)
+
