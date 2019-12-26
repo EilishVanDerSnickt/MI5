@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer';
 require('./styles/AnimeDetails.css');
 
 class AnimeDetails extends React.Component {
@@ -206,6 +207,7 @@ class AnimeDetails extends React.Component {
                         </div>
                         
                     </div>
+                    <Footer />
             </div>
             
         )

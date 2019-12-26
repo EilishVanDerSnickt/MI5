@@ -6,6 +6,7 @@ import { lstat } from 'fs';
 import ls from 'local-storage';
 import { cpus } from 'os';
 import { Offline, Online } from 'react-detect-offline';
+import Footer from './Footer';
 require('./styles/AnimeList.css');
 //require('../App.css');
 
@@ -128,10 +129,7 @@ class AnimeList extends React.Component {
                 <div className="inputDiv"><input type="text" className="input" placeholder="Search..." /></div>
                 <h1 className="Anime">AniME</h1>
                 <AnimePoster value={that.state} />
-                <div className="footer">
-                    <a href="/">AnimeList</a>
-                    <a href="/Quiz">Quiz</a>
-                </div>
+                <Footer />
                 {index == 1 && <DatatoFirebase data={items}/> }
               </Online>
             </div>

@@ -181,3 +181,8 @@
 * layout quiz resultaat maken
 * alles vertalen naar engels
 * audit testen
+
+### 26/12/2019 - 1 uur 15 minuten
+* layout quizzes optimaliseren voor mobiele formaten
+* footer apart component maken
+* layout footer

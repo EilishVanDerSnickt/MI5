@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer';
 require('./styles/Quiz.css');
 
 const Quiz = () => {
@@ -15,6 +16,7 @@ const Quiz = () => {
                 <button className="Synops-btn"><a href="/SynopsQuiz_1">Synopsis Quiz</a></button>
                 <button className="Titles-btn"><a href="/TitlesQuiz_1">Titles Quiz</a></button>
             </div>
+            <Footer />
         </div>
     );
 }

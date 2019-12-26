@@ -4,7 +4,7 @@
 
 .TitlesQuizh1 { 
     font-style: italic;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 
 .VraagDataTitles {
@@ -17,11 +17,11 @@
     border-right: 0;
     border-color: black;
     border-style: solid;
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    width: 75%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .MogelijkeAntwoordenTitles li:hover{
@@ -36,7 +36,7 @@
     }
 
     .MogelijkeAntwoordenTitles li{
-        font-size: 5px;
+        font-size: 9px;
         border-width: 1px;
         border-left: none;
         border-right: none;
@@ -49,7 +49,7 @@
     }
 
     .MogelijkeAntwoordenTitles li{
-        font-size: 10px;
+        font-size: 17px;
         border-width: 1px;
         border-left: none;
         border-right: none;
@@ -62,7 +62,7 @@
     }
 
     .MogelijkeAntwoordenTitles li{
-        font-size: 15px;
+        font-size: 20px;
         border-width: 2px;
         border-left: none;
         border-right: none;
@@ -75,7 +75,7 @@
     }
 
     .MogelijkeAntwoordenTitles li{
-        font-size: 20px;
+        font-size: 25px;
         border-width: 3px;
         border-left: none;
         border-right: none;

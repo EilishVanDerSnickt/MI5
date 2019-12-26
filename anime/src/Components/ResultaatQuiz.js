@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer';
 require('./styles/QuizResults.css')
 
 class ResultaatQuiz extends React.Component {
@@ -92,7 +93,7 @@ class ResultaatQuiz extends React.Component {
                 <h1 className="QuizResultsh1">Quiz results</h1>
                 { allesOke && <p className="QuizResultp"> { boodschap } </p> }
                 { nietOke && <p className="QuizResultp"> Something went wrong regarding the obtained points </p> }
-                <a href="/"><button>Ga verder</button></a>
+                <Footer />
             </div>
         );
     } // render

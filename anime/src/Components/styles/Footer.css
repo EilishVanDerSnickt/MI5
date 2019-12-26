@@ -1,0 +1,74 @@
+.footer {
+    text-align: center;
+    position: relative;
+    bottom: 5%;
+    width: 20%;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10%;
+}
+
+.footer a {
+    text-decoration: underline;
+    color: black;
+}
+
+  @media screen and (max-width: 399px) and (max-height: 600px) {
+    .footer {
+        font-size: 9px;
+      }
+
+      .AnimeLista {
+        padding-right: 50%;
+    }
+    
+    .Quiza {
+        padding-left: 50%;
+        margin-right: 35%;
+    }
+  }
+  
+  @media screen and (max-width: 399px) and (min-height: 600px) {
+    .footer {
+        font-size: 17px;
+      }
+
+      .AnimeLista {
+        padding-right: 50%;
+    }
+    
+    .Quiza {
+        padding-left: 50%;
+        margin-right: 35%;
+    }
+  }
+  
+  @media screen and (min-width: 400px) and (max-width: 799px) {
+    .footer {
+        font-size: 20px;
+      }  
+
+    .AnimeLista {
+        padding-right: 50%;
+    }
+    
+    .Quiza {
+        padding-left: 50%;
+        margin-right: 35%;
+    }
+  }
+  
+  @media screen and (min-width: 800px)  {
+    .footer {
+        font-size: 25px;
+      }
+
+      .AnimeLista {
+        padding-right: 50%;
+    }
+    
+    .Quiza {
+        padding-left: 50%;
+        margin-right: 35%;
+    }
+}
