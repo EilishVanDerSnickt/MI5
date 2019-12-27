@@ -186,3 +186,7 @@
 * layout quizzes optimaliseren voor mobiele formaten
 * footer apart component maken
 * layout footer
+
+### 27/12/2019 - 40 minuten
+* layout footer afwerken
+* project deployen met firebase en op mobiel toestel toevoegen
