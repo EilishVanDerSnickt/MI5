@@ -89,3 +89,6 @@
 ### 25/12/2019 - 4 uur
 * foto's van characters laten scalen in grid (css updated niet ookal stond mijn cache uit, is wel gelukt uiteindelijk)
 
+### 28/12/2019 - 3 uur
+* css adjustments anime details
+

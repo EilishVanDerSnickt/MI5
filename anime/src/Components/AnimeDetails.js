@@ -128,11 +128,11 @@ class AnimeDetails extends React.Component {
             <div className="AnimeDetails">
                 <img className="posterDetails" src={this.state.anime.poster} alt={this.state.anime.name}></img>
                 <h3 className="h4Details">{this.state.anime.name}</h3><p className="h4Details">{this.state.anime.year}</p>
-                <p>{this.state.anime.synopsis}</p>
+                <p className="Synopsis">{this.state.anime.synopsis}</p>
                     
                     
 
-                    <h3>Characters</h3>
+                    <h3 className="h3Char">Characters</h3>
                     <div className="details-grid-view">
 
 
@@ -194,14 +194,14 @@ class AnimeDetails extends React.Component {
 
                         <div className="details-Div-anime">                                
                             <figure>
-                                <img className="posterImg" src={this.state.pics[8]} alt={"Poster Character " + this.state.chars[8]}></img>
+                                <img className="details-posterImg" src={this.state.pics[8]} alt={"Poster Character " + this.state.chars[8]}></img>
                                 <figcaption className="figcapText">{this.state.chars[8]}</figcaption>
                                 </figure>
                         </div>
 
                         <div className="details-Div-anime">                                
                             <figure>
-                                <img className="posterImg" src={this.state.pics[9]} alt={"Poster Character " + this.state.chars[9]}></img>
+                                <img className="details-posterImg" src={this.state.pics[9]} alt={"Poster Character " + this.state.chars[9]}></img>
                                 <figcaption className="figcapText">{this.state.chars[9]}</figcaption>
                                 </figure>
                         </div>

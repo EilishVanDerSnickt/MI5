@@ -1,12 +1,14 @@
 .posterDetails {
-  margin-left: 2em;
+  margin-left: 1em;
   float: left;
-  max-width: 25em;
+  max-width: 23em;
   min-width: 10em;
+  border-radius: 0.5em;
+  box-shadow: 0.25em 0.25em 0.25em black;
 }
 
 .h4Details {
-  padding-left: 2em;
+  padding-left: 1em;
   display: inline;
 }
 
@@ -17,9 +19,23 @@
 .details-posterImg {
   border-radius: 0.5em;
   box-shadow: 0.25em 0.25em 0.25em black;
-  max-width: 100%;
+  max-width: 90%;
   min-width: 10em;
+
 }
+
+.AnimeDetails{
+  max-width: 100%;
+  padding-top: 2em;
+}
+
+.Synopsis {
+  max-width: 90%;
+  margin-left: 1em;
+  font-size: large;
+}
+ 
+
 
 @media screen and (max-width: 399px) and (max-height: 600px) {
   .details-grid-view {
@@ -72,5 +88,16 @@
   .details-grid-view {
     display: grid;
     grid-template-columns: repeat(3,25vw);
+    clear: both;
   }
+
+  .h3Char {
+    padding-top: 1em;
+    clear: both;
+  }
+  .Synopsis{
+    padding-top: 2em;
+    padding-left: 22em;
+  }
+
 }
