@@ -187,6 +187,9 @@
 * footer apart component maken
 * layout footer
 
-### 27/12/2019 - 40 minuten
+### 27/12/2019 - 1 uur
 * layout footer afwerken
 * project deployen met firebase en op mobiel toestel toevoegen
+
+### 28/12/2019 - 25 minuten
+* applicatie flow documentatie schrijven
