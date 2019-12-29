@@ -33,7 +33,7 @@ class AnimeDetails extends React.Component {
         var arrayPic = [];
 
         //aanmaken object van animes
-        var anime = function(name, poster, id, synopsis, rating, charLink, year) {
+        var anime = function(name, poster, id, synopsis, rating, charLink, year, avgRating) {
             this.name = name
             this.poster = poster
             this.id = id
@@ -41,6 +41,7 @@ class AnimeDetails extends React.Component {
             this.rating = rating
             this.charLink = charLink
             this.year = year
+            this.avgRating= avgRating
           }
 
         //get request van een specifieke anime 
@@ -55,7 +56,7 @@ class AnimeDetails extends React.Component {
 
                 //Data in het object anime stoppen en de state updaten
                 var deAnime = new anime(data.data[0].attributes.titles.en_jp,data.data[0].attributes.posterImage.medium, data.data[0].id, data.data[0].attributes.synopsis, 
-                    data.data[0].attributes.averageRating, data.data[0].relationships.characters.links.related, data.data[0].attributes.startDate)
+                    data.data[0].attributes.averageRating, data.data[0].relationships.characters.links.related, data.data[0].attributes.startDate, data.data[0].attributes.averageRating)
                     //data.data[0].relationships.characters.links.related
                 that.setState({
                     anime: deAnime
@@ -83,26 +84,34 @@ class AnimeDetails extends React.Component {
                 }).then(function test(){
                  
                     //een for om voor elke id in de array die bepaalde personage uit de database te halen
-                    for (var j = 0; j < array.length; j++) {
-                        fetch('https://kitsu.io/api/edge/media-characters/' + array[j] + "/character")
-                        .then(response => {
-                         if(response.ok) return response.json();
-                        throw new Error(response.statusText)  // throw an error if there's something wrong with the response
-                        })
-                        // eslint-disable-next-line no-loop-func
-                        .then(function handleData3(data3) {
-                            //na de forloop dit uitvoeren en de characters in een object stoppen en dat doorgeven aan een nieuwe functie
-                            //console.log(data3.data.attributes.name);
-                            arrayNames.push(data3.data.attributes.name)
+                    if (array.length >= 0)  {
+                        for (var j = 0; j < array.length; j++) {
+                            fetch('https://kitsu.io/api/edge/media-characters/' + array[j] + "/character")
+                            .then(response => {
+                             if(response.ok) return response.json();
+                            throw new Error(response.statusText)  // throw an error if there's something wrong with the response
+                            })
+                            // eslint-disable-next-line no-loop-func
+                            .then(function handleData3(data3) {
+                                //na de forloop dit uitvoeren en de characters in een object stoppen en dat doorgeven aan een nieuwe functie
+                                //console.log(data3.data.attributes.name);
+                                arrayNames.push(data3.data.attributes.name)
+                                
+                                try {
+                                    arrayPic.push(data3.data.attributes.image.original)
+                                }
+                                catch {
+                                    
+                                }
+    
+                                
+                                //charTest = new characters(arrayNames[0], arrayNames[1], arrayNames[2], arrayNames[3], arrayNames[4], arrayNames[5], arrayNames[6], arrayNames[7], arrayNames[8], arrayNames[9])
+                                //console.log(charTest)
+                                
+                                that.teststate(arrayNames, arrayPic);
+                            })
                             
-                            arrayPic.push(data3.data.attributes.image.original)
-                            
-                            //charTest = new characters(arrayNames[0], arrayNames[1], arrayNames[2], arrayNames[3], arrayNames[4], arrayNames[5], arrayNames[6], arrayNames[7], arrayNames[8], arrayNames[9])
-                            //console.log(charTest)
-                            
-                            that.teststate(arrayNames, arrayPic);
-                        })
-                        
+                        }
                     }
 
                 })
@@ -129,6 +138,7 @@ class AnimeDetails extends React.Component {
                 <img className="posterDetails" src={this.state.anime.poster} alt={this.state.anime.name}></img>
                 <h3 className="h4Details">{this.state.anime.name}</h3><p className="h4Details">{this.state.anime.year}</p>
                 <p className="Synopsis">{this.state.anime.synopsis}</p>
+                <p className="Synopsis">average Rating: {this.state.anime.avgRating}%</p>
                     
                     
 

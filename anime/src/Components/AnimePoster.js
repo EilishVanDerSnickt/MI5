@@ -3,6 +3,7 @@ require('./styles/AnimePoster.css');
 
 function AnimePoster({value}) {
     const {animes} = value;
+    
    
     return(
         <div className="grid-view">

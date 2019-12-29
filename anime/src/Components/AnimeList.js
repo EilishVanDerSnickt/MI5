@@ -7,6 +7,8 @@ import ls from 'local-storage';
 import { cpus } from 'os';
 import { Offline, Online } from 'react-detect-offline';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom'
 require('./styles/AnimeList.css');
 //require('../App.css');
 
@@ -31,7 +33,8 @@ class AnimeList extends React.Component {
           index: counter + 1
         })
       } // addAnime
-      
+
+
       componentWillMount() {
         const that = this;
         var counter = that.state.index;
@@ -108,6 +111,28 @@ class AnimeList extends React.Component {
         }
       } // componentWillMount
 
+      onFormSubmit = (e) => {
+        const that = this;
+        e.preventDefault();
+        var search = document.getElementById("Searchbar").value
+        console.log(search);
+
+        fetch('https://kitsu.io/api/edge/anime?filter[text]=' + search)
+        .then(response => {
+          if(response.ok) return response.json();
+          throw new Error(response.statusText)  // throw an error if there's something wrong with the response
+        })
+        .then(function handleData(data) {
+            console.log(data);
+            var searchID = data.data[0].id;
+            //this.router.push("/AnimeDetails/" + searchID);
+            var link = "/AnimeDetails/" + searchID;
+            //return <Redirect to={Link}/>
+            that.props.history.push('/AnimeDetails/' + searchID)
+        })
+      }
+      
+
       addToLocalStorage = (array, benaming) => {
         ls.set(benaming, array);
       } // addToLocalStorage
@@ -126,7 +151,7 @@ class AnimeList extends React.Component {
                 <AnimePoster value={that.state} />
               </Offline>
               <Online>
-                <div className="inputDiv"><input type="text" className="input" placeholder="Search..." /></div>
+                <div className="inputDiv"><input id="Searchbar" type="text" className="input" placeholder="Search..."/><button onClick={this.onFormSubmit}>Search </button></div>
                 <h1 className="Anime">AniME</h1>
                 <AnimePoster value={that.state} />
                 <Footer />
