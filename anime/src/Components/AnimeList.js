@@ -112,24 +112,26 @@ class AnimeList extends React.Component {
       } // componentWillMount
 
       onFormSubmit = (e) => {
-        const that = this;
-        e.preventDefault();
         var search = document.getElementById("Searchbar").value
-        console.log(search);
+        if (search =! undefined) {
+          const that = this;
+          e.preventDefault();
+          console.log(search);
 
-        fetch('https://kitsu.io/api/edge/anime?filter[text]=' + search)
-        .then(response => {
-          if(response.ok) return response.json();
-          throw new Error(response.statusText)  // throw an error if there's something wrong with the response
-        })
-        .then(function handleData(data) {
-            console.log(data);
-            var searchID = data.data[0].id;
-            //this.router.push("/AnimeDetails/" + searchID);
-            var link = "/AnimeDetails/" + searchID;
-            //return <Redirect to={Link}/>
-            that.props.history.push('/AnimeDetails/' + searchID)
-        })
+          fetch('https://kitsu.io/api/edge/anime?filter[text]=' + search)
+          .then(response => {
+            if(response.ok) return response.json();
+            throw new Error(response.statusText)  // throw an error if there's something wrong with the response
+          })
+          .then(function handleData(data) {
+              console.log(data);
+              var searchID = data.data[0].id;
+              //this.router.push("/AnimeDetails/" + searchID);
+              var link = "/AnimeDetails/" + searchID;
+              //return <Redirect to={Link}/>
+              that.props.history.push('/AnimeDetails/' + searchID);
+          })
+        }
       }
       
 
@@ -148,10 +150,10 @@ class AnimeList extends React.Component {
                   <p>You are currently offline</p>
                 </div>
                 <h1 className="Anime">AniME</h1>
-                <AnimePoster value={that.state} />
+                <AnimePoster value={that.state}/>
               </Offline>
               <Online>
-                <div className="inputDiv"><input id="Searchbar" type="text" className="input" placeholder="Search..."/><button onClick={this.onFormSubmit}>Search </button></div>
+                <div className="inputDiv"><input id="Searchbar" type="text" className="input" placeholder="Search..."/><button className="waves-effect waves-light btn-small" onClick={this.onFormSubmit}>Search </button></div>
                 <h1 className="Anime">AniME</h1>
                 <AnimePoster value={that.state} />
                 <Footer />
