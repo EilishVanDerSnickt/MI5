@@ -113,25 +113,29 @@ class AnimeList extends React.Component {
 
       onFormSubmit = (e) => {
         var search = document.getElementById("Searchbar").value
-        if (search =! undefined) {
+        
           const that = this;
           e.preventDefault();
           console.log(search);
 
+
+          if (document.getElementById("Searchbar").value !== "") {
           fetch('https://kitsu.io/api/edge/anime?filter[text]=' + search)
           .then(response => {
-            if(response.ok) return response.json();
+            if(response.ok) return response.json()
             throw new Error(response.statusText)  // throw an error if there's something wrong with the response
           })
           .then(function handleData(data) {
-              console.log(data);
+              console.log(data)
               var searchID = data.data[0].id;
               //this.router.push("/AnimeDetails/" + searchID);
               var link = "/AnimeDetails/" + searchID;
               //return <Redirect to={Link}/>
               that.props.history.push('/AnimeDetails/' + searchID);
           })
-        }
+        
+          }
+
       }
       
 
