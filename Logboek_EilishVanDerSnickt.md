@@ -169,7 +169,7 @@
 * quizzes troubleshooten
 * naamgeving onderhouden css
 
-## Week 14
+## Week 14 - 7 uur 25 minuten
 ### 23/12/2019 - 2 uur 45 minuten
 * layout overzichtelijk maken door verschillende css bestanden voor elk component
 * layout Quiz.js maken
@@ -193,3 +193,8 @@
 
 ### 28/12/2019 - 25 minuten
 * applicatie flow documentatie schrijven
+
+## Week 15 - 
+### 30/12/2019 - 1 uur 10 minuten
+* app nakijken, builden en deployen
+* anime debuggen

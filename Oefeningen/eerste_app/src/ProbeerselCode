@@ -617,3 +617,49 @@ if (localStorage.getItem("Posters") === null) {
     border-radius: 10px 10px 10px 10px;
   }
 
+  ----------------------------------------------------------------------------
+  --mediaqueries
+  and (max-height: 600px)
+
+   @media screen and (max-width: 399px) and (min-height: 600px) {
+    
+    .grid-view {
+      display: grid;
+      grid-template-columns: repeat(2,40vw);
+    }
+    
+    .figcapText{
+      font-size: medium;
+    }
+    
+    figure img {
+        vertical-align: top;
+      }
+    
+    figure figcaption {
+        text-align: center;
+    }
+    
+    figure {
+      display: inline-block;
+      text-align: center;
+    }
+    
+    .Div-anime {
+      height: 70vw;
+      width: 38vw;
+    }
+  
+    .posterImg {
+      height: 50vw;
+      width: 38vw;
+    }
+  
+    .Div-Posters {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 5vw;
+    }
+  }
+
