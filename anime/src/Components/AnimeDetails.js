@@ -84,34 +84,43 @@ class AnimeDetails extends React.Component {
                 }).then(function test(){
                  
                     //een for om voor elke id in de array die bepaalde personage uit de database te halen
-                    if (array.length >= 0)  {
-                        for (var j = 0; j < array.length; j++) {
-                            fetch('https://kitsu.io/api/edge/media-characters/' + array[j] + "/character")
-                            .then(response => {
-                             if(response.ok) return response.json();
-                            throw new Error(response.statusText)  // throw an error if there's something wrong with the response
-                            })
-                            // eslint-disable-next-line no-loop-func
-                            .then(function handleData3(data3) {
-                                //na de forloop dit uitvoeren en de characters in een object stoppen en dat doorgeven aan een nieuwe functie
-                                //console.log(data3.data.attributes.name);
-                                arrayNames.push(data3.data.attributes.name)
+                    try {
+                        if (array.length >= 0)  {
+                            for (var j = 0; j < array.length; j++) {
                                 
-                                try {
-                                    arrayPic.push(data3.data.attributes.image.original)
-                                }
-                                catch {
+                                fetch('https://kitsu.io/api/edge/media-characters/' + array[j] + "/character")
+                                .then(response => {
+                                if(response.ok) return response.json();
+                                    //throw new Error(response.statusText)  // throw an error if there's something wrong with the response
+                                })
+                                // eslint-disable-next-line no-loop-func
+                                .then(function handleData3(data3) {
+                                    //na de forloop dit uitvoeren en de characters in een object stoppen en dat doorgeven aan een nieuwe functie
+                                    //console.log(data3.data.attributes.name);
+                                    if (data3 !== undefined) {
+                                        arrayNames.push(data3.data.attributes.name);
                                     
-                                }
-    
-                                
-                                //charTest = new characters(arrayNames[0], arrayNames[1], arrayNames[2], arrayNames[3], arrayNames[4], arrayNames[5], arrayNames[6], arrayNames[7], arrayNames[8], arrayNames[9])
-                                //console.log(charTest)
-                                
-                                that.teststate(arrayNames, arrayPic);
-                            })
+                                        try {
+                                            arrayPic.push(data3.data.attributes.image.original)
+                                        }
+                                        catch {
+                                            
+                                        }
+                                    }
+        
+                                    
+                                    //charTest = new characters(arrayNames[0], arrayNames[1], arrayNames[2], arrayNames[3], arrayNames[4], arrayNames[5], arrayNames[6], arrayNames[7], arrayNames[8], arrayNames[9])
+                                    //console.log(charTest)
+                                    
+                                    that.teststate(arrayNames, arrayPic);
+                                })
                             
+                                
+                            }
                         }
+                    }
+                    catch {
+                        alert("dit lukt momenteel niet, probeer een ander woord of later opnieuw!")
                     }
 
                 })
