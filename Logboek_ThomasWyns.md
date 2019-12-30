@@ -92,4 +92,6 @@
 * css adjustments anime details
 ### 29/12/2019 - 4 uur
 * avg score toevoegen, search laten werken
+### 30/12/2019 - 1,5 uur
+* search perfectioneren
 
