@@ -195,6 +195,7 @@
 * applicatie flow documentatie schrijven
 
 ## Week 15 - 
-### 30/12/2019 - 1 uur 10 minuten
+### 30/12/2019 - 2 uur
 * app nakijken, builden en deployen
 * anime debuggen
+* documentatie afwerken
