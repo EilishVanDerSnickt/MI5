@@ -178,7 +178,7 @@ class TitlesQuizNiveau3 extends React.Component{
                 <ul className="MogelijkeAntwoordenTitles">
                     {mogelijkeAntwoorden}
                 </ul>
-                { that.state.nieuwNiveau && <a href="/ResultsQuiz"><button>Ga naar het einde</button></a> }
+                { that.state.nieuwNiveau && <a href="/ResultsQuiz"><button className="NextBTN">NEXT -></button></a> }
             </div>
         
         );

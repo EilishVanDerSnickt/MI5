@@ -20,6 +20,22 @@
     cursor: pointer;
 }
 
+.NextBTN {
+    background-color: #ffffcc;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 40%;
+    text-align: center;
+    border: none;
+}
+
+.NextBTN:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 399px) {
     .PosterQuizh1 {
         font-size: 10px;
@@ -34,6 +50,13 @@
 
     .MogelijkeAntwoordenPosters img:hover{
         width: 53%;
+    }
+
+    .NextBTN {
+       font-size: 7px;
+        width: 40%;
+        height: 10%;
+        box-shadow: 2px 5px 2px 2px;
     }
   }
   
@@ -52,6 +75,13 @@
     .MogelijkeAntwoordenPosters img:hover{
         width: 53%;
     }
+
+    .NextBTN {
+        font-size: 14px;
+        width: 30%;
+        height: 10%;
+        box-shadow: 3px 7px 3px 3px;
+    }
   }
   
   @media screen and (min-width: 400px) and (max-width: 799px) {
@@ -69,6 +99,13 @@
     .MogelijkeAntwoordenPosters img:hover{
         width: 40%;
     }
+
+    .NextBTN {
+        font-size: 20px;
+        width: 20%;
+        height: 10%;
+        box-shadow: 5px 10px 5px 5px;
+    }
   }
   
   @media screen and (min-width: 800px)  {
@@ -85,5 +122,12 @@
 
     .MogelijkeAntwoordenPosters img:hover{
         width: 30%;
+    }
+
+    .NextBTN {
+        font-size: 25px;
+        width: 20%;
+        height: 10%;
+        box-shadow: 5px 10px 5px 5px;
     }
   }

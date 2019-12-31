@@ -178,7 +178,7 @@ class PosterQuizNiveau3 extends React.Component{
                 <ul className="MogelijkeAntwoordenPosters">
                     {mogelijkeAntwoorden}
                 </ul>
-                { nieuwNiveau && <a href="/ResultsQuiz"><button>Ga naar het einde</button></a> }
+                { nieuwNiveau && <a href="/ResultsQuiz"><button className="NextBTN">NEXT -></button></a> }
             </div>
         
         );

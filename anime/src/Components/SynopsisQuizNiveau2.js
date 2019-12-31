@@ -197,7 +197,7 @@ class SynopsisQuizNiveau2 extends React.Component{
                 <ul className="MogelijkeAntwoordenSynopsis">
                     {mogelijkeAntwoorden}
                 </ul>
-                { nieuwNiveau && <a href={nieuwNiveauLink}><button>Niveau 3 -></button></a> }
+                { nieuwNiveau && <a href={nieuwNiveauLink}><button className="NextBTN">NEXT -></button></a> }
             </div>
         
         );

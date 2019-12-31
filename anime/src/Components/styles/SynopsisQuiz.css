@@ -38,6 +38,22 @@
    font-weight: bold;
 }
 
+.NextBTN {
+    background-color: #ffffcc;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 40%;
+    text-align: center;
+    border: none;
+}
+
+.NextBTN:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 399px) {
     .SynopsisQuizh1 {
         font-size: 10px;
@@ -53,6 +69,13 @@
     .Scrollbox {
         height: 100px;
     }
+
+    .NextBTN {
+        font-size: 7px;
+         width: 40%;
+         height: 10%;
+         box-shadow: 2px 5px 2px 2px;
+     }
   }
   
   @media screen and (max-width: 399px) and (min-height: 600px) {
@@ -69,6 +92,13 @@
 
     .Scrollbox {
         height: 200px;
+    }
+
+    .NextBTN {
+        font-size: 14px;
+        width: 30%;
+        height: 10%;
+        box-shadow: 3px 7px 3px 3px;
     }
   }
   
@@ -87,6 +117,13 @@
     .Scrollbox {
         height: 300px;
     }
+
+    .NextBTN {
+        font-size: 20px;
+        width: 20%;
+        height: 10%;
+        box-shadow: 5px 10px 5px 5px;
+    }
   }
   
   @media screen and (min-width: 800px)  {
@@ -103,5 +140,12 @@
 
     .Scrollbox {
         height: 400px;
+    }
+
+    .NextBTN {
+        font-size: 25px;
+        width: 20%;
+        height: 10%;
+        box-shadow: 5px 10px 5px 5px;
     }
   }

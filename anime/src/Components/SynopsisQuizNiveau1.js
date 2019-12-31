@@ -196,7 +196,7 @@ shuffleAntwoorden = (antwoorden) => {
         <ul className="MogelijkeAntwoordenSynopsis">
             {mogelijkeAntwoorden}
         </ul>
-        { nieuwNiveau && <a href={nieuwNiveauLink}><button>Niveau 2 -></button></a> }
+        { nieuwNiveau && <a href={nieuwNiveauLink}><button className="NextBTN">NEXT -></button></a> }
       </div>
     );
   } // render
