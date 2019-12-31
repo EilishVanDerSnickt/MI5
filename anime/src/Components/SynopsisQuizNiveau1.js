@@ -216,7 +216,6 @@ shuffleAntwoorden = (antwoorden) => {
     console.log("Aantal punten: " + aantalPunten);
 
     if (item == antwoord) {
-        alert("juist");
         aantalPunten = parseInt(aantalPunten) + 1;
         
         ls.set('Punten', aantalPunten);
@@ -225,7 +224,7 @@ shuffleAntwoorden = (antwoorden) => {
             punten: aantalPunten
         });
     } else {
-        alert("fout");
+        console.log("fout");
     }
 
     console.log("Aantal punten: " + localStorage.getItem('Punten'));

@@ -206,7 +206,6 @@ class SynopsisQuizNiveau3 extends React.Component{
         console.log("Aantal punten: " + aantalPunten);
     
         if (item == antwoord) {
-            alert("juist");
             aantalPunten = parseInt(aantalPunten) + 1;
             
             ls.set('Punten', aantalPunten);
@@ -215,7 +214,6 @@ class SynopsisQuizNiveau3 extends React.Component{
                 punten: aantalPunten
             });
         } else {
-            alert("fout");
             aantalPunten = parseInt(aantalPunten);
 
             that.setState ({
