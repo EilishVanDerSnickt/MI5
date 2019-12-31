@@ -2,13 +2,13 @@ import React from 'react';
 //import '../App.css';
 import AnimePoster from './AnimePoster';
 import DatatoFirebase from './DataToFirebase';
-import { lstat } from 'fs';
+//import { lstat } from 'fs';
 import ls from 'local-storage';
-import { cpus } from 'os';
+//import { cpus } from 'os';
 import { Offline, Online } from 'react-detect-offline';
 import Footer from './Footer';
-import { Link } from 'react-router-dom';
-import { Redirect } from 'react-router-dom'
+//import { Link } from 'react-router-dom';
+//import { Redirect } from 'react-router-dom'
 require('./styles/AnimeList.css');
 //require('../App.css');
 
@@ -129,7 +129,7 @@ class AnimeList extends React.Component {
                 console.log(data)
                 var searchID = data.data[0].id;
                 //this.router.push("/AnimeDetails/" + searchID);
-                var link = "/AnimeDetails/" + searchID;
+                //var link = "/AnimeDetails/" + searchID;
                 //return <Redirect to={Link}/>
                 that.props.history.push('/AnimeDetails/' + searchID);
             })
@@ -166,7 +166,7 @@ class AnimeList extends React.Component {
                 <h1 className="Anime">AniME</h1>
                 <AnimePoster value={that.state} />
                 <Footer />
-                {index == 1 && <DatatoFirebase data={items}/> }
+                {index === 1 && <DatatoFirebase data={items}/> }
               </Online>
             </div>
         );

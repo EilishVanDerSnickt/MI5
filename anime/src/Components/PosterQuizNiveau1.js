@@ -183,7 +183,7 @@ shuffleAntwoorden = (antwoorden) => {
 
     mogelijkeAntwoorden = mogelijkeAntwoorden.map(function(item, index){
       return (
-          <img src={item} id={index} onClick={() => {that.CheckAntwoord(item)}}></img>
+          <img alt="Poster" src={item} id={index} onClick={() => {that.CheckAntwoord(item)}}></img>
       );
   });
 
@@ -203,7 +203,7 @@ shuffleAntwoorden = (antwoorden) => {
     const that = this;
     var aantalPunten
 
-    if (refreshIndex == 1) {
+    if (refreshIndex === 1) {
         ls.set('Punten', 0);
     }
 
@@ -212,7 +212,7 @@ shuffleAntwoorden = (antwoorden) => {
     console.log(localStorage.getItem('Index'));
     console.log("Aantal punten: " + aantalPunten);
 
-    if (item == antwoord) {
+    if (item === antwoord) {
         aantalPunten = parseInt(aantalPunten) + 1;
         
         ls.set('Punten', aantalPunten);

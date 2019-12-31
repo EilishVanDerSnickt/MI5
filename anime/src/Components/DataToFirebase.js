@@ -29,7 +29,6 @@ class DataToFirebase extends React.Component {
 
     ophalenRelevanteData() {
         var {trendingAnime, isLoaded} = this.state;
-        const that = this;
 
         console.log(trendingAnime);
 

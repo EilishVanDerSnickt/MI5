@@ -168,7 +168,7 @@ class PosterQuizNiveau3 extends React.Component{
 
         mogelijkeAntwoorden = mogelijkeAntwoorden.map(function(item, index){
             return (
-                <img src={item} id={index} onClick={() => {that.CheckAntwoord(item)}}></img>
+                <img alt="Poster" src={item} id={index} onClick={() => {that.CheckAntwoord(item)}}></img>
             );
         });
 
@@ -189,7 +189,7 @@ class PosterQuizNiveau3 extends React.Component{
         const that = this;
         var aantalPunten;
 
-        if (refreshIndex == 1) {
+        if (refreshIndex === 1) {
             aantalPunten = localStorage.getItem('Punten');
             localStorage.removeItem("Punten");
             ls.set('Punten', parseInt(aantalPunten));
@@ -202,7 +202,7 @@ class PosterQuizNiveau3 extends React.Component{
         console.log(localStorage.getItem('Index'));
         console.log("Aantal punten: " + aantalPunten);
     
-        if (item == antwoord) {
+        if (item === antwoord) {
             aantalPunten = parseInt(aantalPunten) + 1;
             
             ls.set('Punten', aantalPunten);

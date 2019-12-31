@@ -65,7 +65,6 @@ class CombinatieQuizNiveau3 extends React.Component{
 
     render() {
         var {poster, synopsis, titles} = this.state;
-        const that = this;
 
         return (
             <div>                

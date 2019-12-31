@@ -86,7 +86,6 @@ class ResultaatQuiz extends React.Component {
 
     render(){
         var {allesOke, nietOke, boodschap} = this.state;
-        const that = this;
 
         return (
             <div className="QuizResults">

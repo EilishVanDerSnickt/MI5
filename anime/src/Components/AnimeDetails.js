@@ -28,7 +28,6 @@ class AnimeDetails extends React.Component {
         const AnimeID = (window.location.href).substring(laatsteIndex + 1, (window.location.href).length);
         const that = this;
         var array = new Array(9);
-        var charTest;
         var arrayNames = [];
         var arrayPic = [];
 

@@ -200,7 +200,8 @@
 * anime debuggen
 * documentatie afwerken
 
-### 31/12/2019 - 1 uur 45 minuten
+### 31/12/2019 - 2 uur
 * documentatie afwerken
 * quiz bijwerken
 * layout laatste puntjes aanpassen
+* alle warnings oplossen
