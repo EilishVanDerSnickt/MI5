@@ -163,7 +163,7 @@ class AnimeList extends React.Component {
               </Offline>
               <Online>
                 <div className="inputDiv"><input id="Searchbar" type="text" className="input" placeholder="Search..."/><button className="waves-effect waves-light btn-small" onClick={this.onFormSubmit}>Search </button></div>
-                <h1 className="Anime">AniME</h1>
+                <img className="logo" src={require('./AniME.png')} alt="logo AniME"></img>
                 <AnimePoster value={that.state} />
                 <Footer />
                 {index === 1 && <DatatoFirebase data={items}/> }
