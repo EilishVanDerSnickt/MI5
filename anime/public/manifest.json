@@ -2,32 +2,12 @@
   "short_name": "AniME",
   "name": "AniME App",
   "icons": [{
-    "src": "AniME_logo48.png",
-    "sizes": "48x48",
-    "type": "image/png"
-  }, {
-    "src": "AniME_logo96.png",
-    "sizes": "96x96",
-    "type": "image/png"
-  }, {
-    "src": "AniME_logo128.png",
-    "sizes": "128x128",
-    "type": "image/png"
-  }, {
-    "src": "/AniME_logo144.png",
-    "sizes": "144x144",
-    "type": "image/png"
+    "src": "favicon.ico",
+    "sizes": "64x64 32x32 24x24 16x16",
+    "type": "image/x-icon"
   }, {
     "src": "AniME_logo192.png",
     "sizes": "192x192",
-    "type": "image/png"
-  }, {
-    "src": "AniME_logo256.png",
-    "sizes": "256x256",
-    "type": "image/png"
-  }, {
-    "src": "AniME_logo384.png",
-    "sizes": "384x384",
     "type": "image/png"
   }, {
     "src": "AniME_logo512.png",
