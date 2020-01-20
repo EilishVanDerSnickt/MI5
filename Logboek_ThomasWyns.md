@@ -95,3 +95,8 @@
 ### 30/12/2019 - 1,5 uur
 * search perfectioneren
 
+## Week 18
+### 19/01/2020 - 1 uur
+* Toevoegen logo (site gelukt, app mislukt)
+## 20/01/2020 - 3 uur
+* css adjustments, logo, ppt, filmpjes maken
