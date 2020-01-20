@@ -59,7 +59,7 @@
   @media screen and (min-width: 400px) and (max-width: 799px) {
     .footer {
         font-size: 20px;
-        margin-top: 5%;
+        margin-top: 7%;
       }  
 
     .AnimeLista {
@@ -75,7 +75,7 @@
   @media screen and (min-width: 800px)  {
     .footer {
         font-size: 25px;
-        margin-top: 5%;
+        margin-top: 7%;
       }
 
       .AnimeLista {

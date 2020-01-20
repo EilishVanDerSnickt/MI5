@@ -30,7 +30,7 @@
     }
     
     .Div-anime {
-      height: 60vw;
+      height: 65vw;
       width: 38vw;
     }
   
@@ -43,7 +43,7 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 5vw;
+      margin-bottom: 7vw;
     }
   
   }
@@ -73,7 +73,7 @@
     }
     
     .Div-anime {
-      height: 70vw;
+      height: 75vw;
       width: 38vw;
     }
   
@@ -86,7 +86,7 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 5vw;
+      margin-bottom: 7vw;
     }
   }
   
@@ -102,6 +102,7 @@
     
     .figcapText{
       font-size: medium;
+      margin-bottom: 3vw;
     }
 
     figure img {
@@ -118,7 +119,7 @@
     }
     
     .Div-anime {
-      height: 60vw;
+      height: 65vw;
       width: 38vw;
     }
   

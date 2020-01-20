@@ -144,7 +144,8 @@ class AnimeDetails extends React.Component {
         return (
             <div className="AnimeDetails">
                 <img className="posterDetails" src={this.state.anime.poster} alt={this.state.anime.name}></img>
-                <h3 className="h4Details">{this.state.anime.name}</h3><p className="h4Details">{this.state.anime.year}</p>
+                <h3 className="h4Details">{this.state.anime.name}</h3>
+                <p className="startYear">{this.state.anime.year}</p>
                 <p className="Synopsis">{this.state.anime.synopsis}</p>
                 <p className="Synopsis">average Rating: {this.state.anime.avgRating}%</p>
                     
