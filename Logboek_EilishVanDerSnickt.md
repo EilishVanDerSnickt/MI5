@@ -208,7 +208,8 @@
 * audits uitvoeren
 
 ## Week 16
-### 20/01/2020 - 2 uur
+### 20/01/2020 - 2 uur 30 minuten
 * presentatie maken
 * logo toevoegen
 * troubleshooten logo
+* details bekijken
