@@ -194,7 +194,7 @@
 ### 28/12/2019 - 25 minuten
 * applicatie flow documentatie schrijven
 
-## Week 15 - 
+## Week 15 - 5 uur
 ### 30/12/2019 - 2 uur 30 minuten
 * app nakijken, builden en deployen
 * anime debuggen
@@ -206,3 +206,8 @@
 * layout laatste puntjes aanpassen
 * alle warnings oplossen
 * audits uitvoeren
+
+## Week 16
+### 20/01/2020 - 1 uur 30
+* presentatie maken
+* logo toevoegen
